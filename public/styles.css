@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-headline {
+  background-color: #291720;
+  position: sticky;
+  top: 0;
+}
+
+.sale {
+  color: white;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+.contact {
+  color: rgb(218, 69, 89);
+  display: inline-block;
+  position: absolute;
+  right: 13px;
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 675px) {
+  .sale {
+    visibility: hidden;
+  }
+}
