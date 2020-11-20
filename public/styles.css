@@ -19,7 +19,7 @@
 /****  header ****/
 .top-headline {
   background-color: #CEE7E6;
-  padding: 1px 0px;
+  padding: 0;
   line-height: 30px;
   position: relative;
 }
@@ -59,7 +59,7 @@
   background-color: #94778B;
   color: white;
   padding: 0px;
-  height: 80px;
+  height: 83px;
   position: relative;
 }
 
@@ -74,10 +74,10 @@
 
 #domain-name {
   position: absolute;
-  left: 95px;
-  top: 1px;
+  left: 90px;
+  top: 4px;
   font-family: 'Turret Road', cursive;
-  font-size: 24px;
+  font-size: 25px;
 }
 
 .branding .navbar {
@@ -90,7 +90,7 @@
 .navbar ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 10px;
+  margin-top: 12px;
   background-color: rgba(147, 31, 29, .75);
 }
 
