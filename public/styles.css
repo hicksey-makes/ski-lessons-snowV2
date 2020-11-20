@@ -30,7 +30,7 @@
   margin: 5px 0px 5px 30px;
   display: inline-block;
   font-size: 0.9em;
-  line-height: 28px;
+  line-height: 29px;
   border-radius: 15px;
 }
 
@@ -59,7 +59,7 @@
   background-color: #94778B;
   color: white;
   padding: 0px;
-  height: 83px;
+  height: 82px;
   position: relative;
 }
 
@@ -74,7 +74,7 @@
 
 #domain-name {
   position: absolute;
-  left: 90px;
+  left: 91px;
   top: 4px;
   font-family: 'Turret Road', cursive;
   font-size: 25px;
@@ -90,7 +90,7 @@
 .navbar ul {
   list-style-type: none;
   padding: 0;
-  margin-top: 12px;
+  margin-top: 11px;
   background-color: rgba(147, 31, 29, .75);
 }
 
@@ -103,7 +103,7 @@ li a {
   border-collapse: collapse;
   display: block;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: .9em;
   padding: 5px 40px 5px 10px;
 }
