@@ -119,3 +119,8 @@ li a:hover {
     visibility: hidden;
   }
 }
+
+/*****  body   *****/
+body {
+  font-family: 'Lora', serif;
+}
