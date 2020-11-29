@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 /* dark purple: #291720
    dark nav: rgb(35, 35, 35);
    light nav: rgba(229, 229, 229, 0.25);
@@ -15,109 +11,148 @@
       pink: #94778B;
       red: #931F1D;
 */
+* {
+  box-sizing: border-box;
+}
 
-/****  header ****/
-.top-headline {
+/* style the top row: headline */
+.headline {
   background-color: #CEE7E6;
-  padding: 0;
-  line-height: 30px;
+  line-height: 16px;
+}
+
+/* style left column: sale info */
+.sale-info {
+  color: black;
+  font-size: 0.9em;
+ }
+
+/* create two equal colums that float beside another */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
   position: relative;
 }
 
-.head-left {
-  color: black;
-  padding: 0px 9px;
-  margin: 5px 0px 5px 30px;
+/*style right column: contact info */
+.contact-info {
   display: inline-block;
-  font-size: 0.9em;
-  line-height: 29px;
-  border-radius: 15px;
+  position: relative;
+
 }
 
-.contact {
+/* style contact info link */
+.contact-info a {
   color: #931F1D;
-  display: inline-block;
   position: absolute;
-  right: 55px;
-  top: 4px;
-  padding: 0px 15px;
-  font-size: 1.2em;
-}
-
-.contact a {
+  right: 25px;
   text-decoration: none;
-  color: rgb(218, 69, 89);
 }
 
-.contact a:hover {
+/* change color on hover */
+.contact-info a:hover {
   color: white;
-  border-bottom-style: solid;
-  border-color: rgb(218, 69, 89);
+  border-bottom: 3px solid hsl(0, 100%, 50%);
+  /* background-color: #555; */
+  /* color: #D4B000; */
 }
 
+/* style next row: branding */
 .branding {
   background-color: #94778B;
-  color: white;
-  padding: 0px;
-  height: 82px;
-  position: relative;
+  line-height: 56px;
 }
 
-.icon-left {
-  color: white;
-  padding: 0px 15px;
-  display: inline-block;
-  position: absolute;
-  top: 2px;
-  left: 55px;
+/* style left column: brand icon */
+
+.brand-img {
+  /* height: 1800px; */
+  width: auto;
+  background-color: green;
 }
 
-#domain-name {
-  position: absolute;
-  left: 91px;
-  top: 4px;
+/* position brand url next to icon image */
+.brand-url {
+  color: white;
   font-family: 'Turret Road', cursive;
-  font-size: 25px;
-}
-
-.branding .navbar {
-  display: inline-block;
-  padding: 0px 15px;
+  font-size: 30px;
   position: absolute;
-  right: 55px;
+  top: 13px;
+  left: 145px;
+  margin-top: 0;
 }
 
+/* position navbar */
+.navbar {
+  display: inline-block;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* style the navbar links */
 .navbar ul {
+  position: absolute;
+  right: 25px;
   list-style-type: none;
-  padding: 0;
-  margin-top: 11px;
-  background-color: rgba(147, 31, 29, .75);
+  margin: 0;
+  padding: 0px;
+  border: 1px solid black;
+  width: 11q5px;
+  background-color: #555;
+  line-height: 16px;
+  /* overflow: hidden; */
 }
 
-#link-under {
-  border-bottom: 1px dotted black;
-}
-
-li a {
-  color: rgba(0, 0, 0, .75);
-  border-collapse: collapse;
-  display: block;
+/* remove underlines on li's */
+.navbar a {
   text-decoration: none;
-  /* font-weight: bold; */
-  font-size: .9em;
-  padding: 5px 40px 5px 10px;
+  /* width: 100px; */
+  display: block;
+  height: 27px;
+  padding: 4px 6px;
+  color: #FFD400;
 }
 
-li a:hover {
-  border-left: 3px solid #FFD400;
-  color: rgb(235, 235, 235);
-  background-color: rgba(80,80,80, .9);
+/* first link child gets bottom border */
+.navbar li:first-child {
+  border-bottom: 1px solid black;
 }
 
-@media screen and (max-width: 900px) {
-  .head-left, .icon-left {
-    visibility: hidden;
+/* change navbar color on hover */
+.navbar a:hover {
+  background-color: #888;
+  /* color: #D4B000; */
+}
+
+/* clear floats after columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* responsive layout - makes two columns stack when screen is small */
+@media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+    text-align: center;
   }
-}
 
-/*****  body   *****/
+  .contact-info a {
+    position: relative;
+    text-align: center;
+    left: 0px;
+   }
+
+   .brand-img, .brand-url {
+     position: relative;
+     left: 0px;
+    }
+
+    .navbar ul{
+       width: 50%;
+       position: relative;
+       left: 25%;
+      }
+}
