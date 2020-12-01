@@ -9,22 +9,26 @@
       soft blue: #9CFFFA;
       grey: #CEE7E6;
       pink: #94778B;
-      red: #931F1D;
+      rose: hsl(1,67,54);
 */
 * {
   box-sizing: border-box;
 }
 
+body {
+  font-family: Lora, serif;
+}
+
 /* style the top row: headline */
 .headline {
   background-color: #CEE7E6;
-  line-height: 16px;
+  line-height: 13px;
 }
 
 /* style left column: sale info */
 .sale-info {
   color: black;
-  font-size: 0.9em;
+  font-size: 0.8em;
  }
 
 /* create two equal colums that float beside another */
@@ -44,7 +48,7 @@
 
 /* style contact info link */
 .contact-info a {
-  color: #931F1D;
+  color: hsl(1, 67%, 54%);
   position: absolute;
   right: 25px;
   text-decoration: none;
@@ -53,6 +57,7 @@
 /* change color on hover */
 .contact-info a:hover {
   color: white;
+  padding-bottom: 4px;
   border-bottom: 3px solid hsl(0, 100%, 50%);
   /* background-color: #555; */
   /* color: #D4B000; */
@@ -61,15 +66,19 @@
 /* style next row: branding */
 .branding {
   background-color: #94778B;
-  line-height: 56px;
+  line-height: 30px;
 }
 
 /* style left column: brand icon */
+.brand-icon {
+  padding: 0;
+  position: relative;
+}
 
+/* position the image */
 .brand-img {
-  /* height: 1800px; */
-  width: auto;
-  background-color: green;
+  margin-left: 22px;
+  margin-top: 10px;
 }
 
 /* position brand url next to icon image */
@@ -78,8 +87,8 @@
   font-family: 'Turret Road', cursive;
   font-size: 30px;
   position: absolute;
-  top: 13px;
-  left: 145px;
+  top: 33px;
+  left: 115px;
   margin-top: 0;
 }
 
@@ -94,11 +103,12 @@
 .navbar ul {
   position: absolute;
   right: 25px;
+  top: 21px;
   list-style-type: none;
   margin: 0;
   padding: 0px;
   border: 1px solid black;
-  width: 11q5px;
+  width: 110px;
   background-color: #555;
   line-height: 16px;
   /* overflow: hidden; */
@@ -121,8 +131,9 @@
 
 /* change navbar color on hover */
 .navbar a:hover {
-  background-color: #888;
-  /* color: #D4B000; */
+  background-color: #459;
+  color: #94778B;
+  font-weight: bold;
 }
 
 /* clear floats after columns */
@@ -154,5 +165,21 @@
        width: 50%;
        position: relative;
        left: 25%;
+       top: 11px;
+       /* overflow: hidden; */
       }
+
+      .brand-img {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+
+      .brand-url{
+        margin-bottom: 30px;
+      }
+
+      .branding {
+        line-height: 27px;
+      }
+
 }
