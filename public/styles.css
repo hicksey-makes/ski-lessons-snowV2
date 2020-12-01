@@ -6,6 +6,7 @@
 
    /* color palette
    cyber yellow: #FFD400;
+   lemoney yellow: #ffef3b;
       soft blue: #9CFFFA;
       grey: #CEE7E6;
       pink: #94778B;
@@ -58,7 +59,7 @@ body {
 .contact-info a:hover {
   color: white;
   padding-bottom: 4px;
-  border-bottom: 3px solid hsl(0, 100%, 50%);
+  border-bottom: 3px solid hsl(1, 77%, 54%);
   /* background-color: #555; */
   /* color: #D4B000; */
 }
@@ -85,7 +86,7 @@ body {
 .brand-url {
   color: white;
   font-family: 'Turret Road', cursive;
-  font-size: 30px;
+  font-size: 28px;
   position: absolute;
   top: 33px;
   left: 115px;
@@ -108,9 +109,10 @@ body {
   margin: 0;
   padding: 0px;
   border: 1px solid black;
-  width: 110px;
+  width: 108px;
   background-color: #555;
   line-height: 16px;
+  font-size: 0.8em;
   /* overflow: hidden; */
 }
 
@@ -121,7 +123,7 @@ body {
   display: block;
   height: 27px;
   padding: 4px 6px;
-  color: #FFD400;
+  color: #ffef3b;
 }
 
 /* first link child gets bottom border */
