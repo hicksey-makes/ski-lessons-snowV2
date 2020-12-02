@@ -37,7 +37,7 @@ body {
   color: black;
   font-size: 0.8em;
   position: absolute;
-  left: 30px;
+  left: 70px;
  }
 
 /* create two equal colums that float beside another */
@@ -90,7 +90,7 @@ body {
 .brand-img {
   /* margin-left: 22px; */
   /* margin-top: 10px; */
-  margin: 10px 0px 5px 22px;
+  margin: 10px 0px 5px 24px;
 }
 
 /* position brand url next to icon image */
@@ -100,7 +100,7 @@ body {
   font-size: 28px;
   position: absolute;
   top: 33px;
-  left: 115px;
+  left: 113px;
   margin-top: 0;
 }
 
@@ -161,10 +161,14 @@ body {
 /* color footline background */
 .row.footline {
   background-color: #9CFFFA;
+  overflow: auto;
+
 }
 
 .column.social {
   position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .column.social li {
@@ -185,12 +189,16 @@ body {
   color: #555;
   position: relative;
   font-size: 0.9em;
+  overflow: auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .copy-wrap {
   position: absolute;
   right: 70px;
-  top: 32px;
+  top: 15px;
+  overflow: auto;
 }
 
 .column.copyright a {
@@ -203,6 +211,11 @@ body {
   .column {
     width: 100%;
     text-align: center;
+  }
+
+  .sale-info {
+    position: relative;
+    left: 20px;
   }
 
   .contact-info a {
@@ -238,13 +251,14 @@ body {
       }
 
       .column.social ul{
-        position: absolute;
-        float: none;
+        width: 25%;
+        margin: auto;
       }
 
       .column.copyright .copy-wrap {
         position: relative;
         left: 0px;
+        top: 0;
       }
 
 }
