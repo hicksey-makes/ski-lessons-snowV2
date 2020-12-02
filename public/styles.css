@@ -10,7 +10,13 @@
       soft blue: #9CFFFA;
       grey: #CEE7E6;
       pink: #94778B;
+      ultra red: #FF778B;
       rose: hsl(1,67,54);
+      dark blue: #53687e;
+      green pantone: #50A145;
+      dark plum: #291711;
+      sizzling red: #ff3352;
+      smooth yellow: hsla(55, 100%, 81%, 1);
 */
 * {
   box-sizing: border-box;
@@ -23,13 +29,15 @@ body {
 /* style the top row: headline */
 .headline {
   background-color: #9CFFFA;
-  line-height: 13px;
+  line-height: 12px;
 }
 
 /* style left column: sale info */
 .sale-info {
   color: black;
   font-size: 0.8em;
+  position: absolute;
+  left: 30px;
  }
 
 /* create two equal colums that float beside another */
@@ -49,10 +57,11 @@ body {
 
 /* style contact info link */
 .contact-info a {
-  color: hsl(1, 67%, 54%);
+  color: #ff3352;
   position: absolute;
   right: 25px;
   text-decoration: none;
+  text-shadow: 3px 3px 7px #444;
 }
 
 /* change color on hover */
@@ -62,11 +71,12 @@ body {
   border-bottom: 3px solid hsl(1, 77%, 54%);
   /* background-color: #555; */
   /* color: #D4B000; */
+  text-decoration: none;
 }
 
 /* style next row: branding */
 .branding {
-  background-color: #94778B;
+  background-color: #53687e;
   line-height: 30px;
 }
 
@@ -78,8 +88,9 @@ body {
 
 /* position the image */
 .brand-img {
-  margin-left: 22px;
-  margin-top: 10px;
+  /* margin-left: 22px; */
+  /* margin-top: 10px; */
+  margin: 10px 0px 5px 22px;
 }
 
 /* position brand url next to icon image */
@@ -110,7 +121,7 @@ body {
   padding: 0px;
   border: 1px solid black;
   width: 20%;
-  background-color: #555;
+  background-color: hsla(55, 100%, 81%, 1);
   line-height: 16px;
   font-size: 0.8em;
   /* overflow: hidden; */
@@ -123,7 +134,7 @@ body {
   display: block;
   height: 27px;
   padding: 5px 8px;
-  color: #ffef3b;
+  color: black;
 }
 
 /* first link child gets bottom border */
@@ -133,9 +144,10 @@ body {
 
 /* change navbar color on hover */
 .navbar a:hover {
-  background-color: #459;
-  color: #94778B;
+  background-color: #efefef;
+  color: #291711;
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* clear floats after columns */
@@ -150,6 +162,42 @@ body {
 .row.footline {
   background-color: #9CFFFA;
 }
+
+.column.social {
+  position: relative;
+}
+
+.column.social li {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+}
+
+.column.social li a {
+  display: block;
+  padding: 10px;
+  font-size: 1.6em;
+}
+
+.column.copyright {
+  color: #555;
+  position: relative;
+  font-size: 0.9em;
+}
+
+.copy-wrap {
+  position: absolute;
+  right: 70px;
+  top: 32px;
+}
+
+.column.copyright a {
+  color: hsla(55, 100%, 81%, 1);
+  text-decoration: none;
+}
+
 /* responsive layout - makes two columns stack when screen is small */
 @media screen and (max-width: 800px) {
   .column {
@@ -187,6 +235,16 @@ body {
 
       .branding {
         line-height: 27px;
+      }
+
+      .column.social ul{
+        position: absolute;
+        float: none;
+      }
+
+      .column.copyright .copy-wrap {
+        position: relative;
+        left: 0px;
       }
 
 }
