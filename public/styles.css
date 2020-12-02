@@ -22,7 +22,7 @@ body {
 
 /* style the top row: headline */
 .headline {
-  background-color: #CEE7E6;
+  background-color: #9CFFFA;
   line-height: 13px;
 }
 
@@ -145,6 +145,11 @@ body {
   clear: both;
 }
 
+/* footer */
+/* color footline background */
+.row.footline {
+  background-color: #9CFFFA;
+}
 /* responsive layout - makes two columns stack when screen is small */
 @media screen and (max-width: 800px) {
   .column {
