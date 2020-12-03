@@ -6,26 +6,40 @@ import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
 
-function App() {
-  const [myLessons, setMyLessons] = useState("");
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      myLessons: []
+    };
+  }
 
-   useEffect(() => {
+  componentDidMount() {
     fetch('./data.json')
     .then(response => response.json())
-    .then(data => {
-      if (data) {
-        console.log(data);
-        setMyLessons(data);}
-    }).catch(error => console.log(error));
-  }, []);
+    .then(result => {
+      const lessons = result.map(item => {
+        return item;
+      });
+      this.setState({
+        myLessons: lessons
+      });
+    });
+}
 
-  return (
+ render() {
+
+   const listItems = this.state.myLessons.map(item => (
+     <div>{item.boarderName}</div>
+   ));
+
+   return (
     <main class="   " id="  ">
       <div class="container">
         <div class="row">
           <div class="col-md-12  ">
             <div class="container">
-
+              {listItems}
               <AddLessons  />
               <SearchLessons  />
               <ListLessons  />
@@ -36,5 +50,6 @@ function App() {
     </main>
   );
 }
+};
 
 export default App;
