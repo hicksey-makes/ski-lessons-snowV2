@@ -18,31 +18,25 @@ class App extends Component {
     fetch('./data.json')
     .then(response => response.json())
     .then(result => {
-      const lessons = result.map(item => {
+      const lsns = result.map(item => {
         return item;
       });
       this.setState({
-        myLessons: lessons
+        myLessons: lsns
       });
     });
 }
 
  render() {
-
-   const listItems = this.state.myLessons.map(item => (
-     <div>{item.boarderName}</div>
-   ));
-
    return (
     <main class="   " id="  ">
       <div class="container">
         <div class="row">
           <div class="col-md-12  ">
             <div class="container">
-              {listItems}
               <AddLessons  />
               <SearchLessons  />
-              <ListLessons  />
+              <ListLessons lessons={this.state.myLessons} />
             </div>
           </div>
         </div>

@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+.lesson-list {
+  font-size: ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.lesson-list .board-item {
+  border-bottom: ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.lesson-list .board-item:last-child {
+  border-bottom: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.lesson-list .board-name {
+  font-weight: ;
+  color: ;
+  font-size: ;
+  line-height: ;
 }
 
-.App-link {
-  color: #61dafb;
+.lesson-list .lsn-date {
+  font-style: ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lesson-list .lsn-length {
+  line-height: ;
 }
