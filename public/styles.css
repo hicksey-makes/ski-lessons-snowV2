@@ -30,6 +30,7 @@ body {
 .headline {
   background-color: #9CFFFA;
   line-height: 12px;
+  margin-top: 0;
 }
 
 /* style left column: sale info */
@@ -73,6 +74,10 @@ body {
   /* color: #D4B000; */
   text-decoration: none;
 }
+/*
+#nomar {
+  margin-top: 0;
+} */
 
 /* style next row: branding */
 .branding {
@@ -151,7 +156,7 @@ body {
 }
 
 /* clear floats after columns */
-.row::after {
+.rowing::after {
   content: "";
   display: table;
   clear: both;
@@ -159,7 +164,7 @@ body {
 
 /* footer */
 /* color footline background */
-.row.footline {
+.rowing.footline {
   background-color: #9CFFFA;
   overflow: auto;
 

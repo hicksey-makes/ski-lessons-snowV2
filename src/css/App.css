@@ -1,26 +1,37 @@
-.lesson-list {
-  font-size: ;
+.row {
+  margin-top: 15px;
 }
 
-.lesson-list .board-item {
-  border-bottom: ;
+.brd {
+  /* border-bottom: dotted 1px #6c757d; */
+  background: #f8f9fa;
+  padding: 20px 0px;
+  /* margin-left: 6px; */
 }
 
-.lesson-list .board-item:last-child {
-  border-bottom: none;
+.brd {
+  padding-left: 13px;
+  /* margin-left: 0; */
 }
 
-.lesson-list .board-name {
-  font-weight: ;
-  color: ;
-  font-size: ;
-  line-height: ;
+.btn {
+  max-height: 50px;
+  position: absolute;
+  bottom: 17px;
+  width: 30px;
+  right: 13px;
 }
 
-.lesson-list .lsn-date {
-  font-style: ;
+.label-item{
+  color: #6c757d;
+  font-weight: 600;
 }
 
-.lesson-list .lsn-length {
-  line-height: ;
+.lsn-date {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+@media screen only and (max-width: 539px) {
+
 }
