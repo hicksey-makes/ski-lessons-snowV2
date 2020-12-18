@@ -10,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      myLessons: []
+      myLessons: [],
+      lastIndex: 0
     };
   }
 
@@ -19,6 +20,8 @@ class App extends Component {
     .then(response => response.json())
     .then(result => {
       const lsns = result.map(item => {
+        item.lsnId = this.state.lastIndex;
+        this.setState({lastIndex: this.state.lastIndex + 1 });
         return item;
       });
       this.setState({
@@ -29,10 +32,10 @@ class App extends Component {
 
  render() {
    return (
-    <main class="   " id="  ">
+    <main class="" id="  ">
       <div class="container">
         <div class="row">
-          <div class="col-md-12  ">
+          <div class="col-md-12">
             <div class="container">
               <AddLessons  />
               <SearchLessons  />

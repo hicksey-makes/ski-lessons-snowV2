@@ -4,14 +4,9 @@
 
 .brd {
   /* border-bottom: dotted 1px #6c757d; */
-  background: #f8f9fa;
-  padding: 20px 0px;
+  background-color: #b75757;
+  padding: 20px 0px 20px 13px;
   /* margin-left: 6px; */
-}
-
-.brd {
-  padding-left: 13px;
-  /* margin-left: 0; */
 }
 
 .btn {
