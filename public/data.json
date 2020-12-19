@@ -33,5 +33,11 @@
 "lessonLength": "Full Day",
 "lessonDate": "2021-1-14 9:00",
 "lessonCost": "$100"
+},
+{
+"boarderName": "Holly",
+"lessonLength": "Full Day",
+"lessonDate": "2021-1-14 9:00",
+"lessonCost": "$100"
 }
 ]

@@ -20,10 +20,25 @@
 */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Lora', serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 59px;
 }
 
 /* style the top row: headline */
@@ -211,15 +226,10 @@ body {
   text-decoration: none;
 }
 
-.bottom {
+#footer {
   position: relative;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  height: 59px;
+  margin-top: -59px;
 }
 
 /* responsive layout - makes two columns stack when screen is small */
@@ -227,6 +237,7 @@ footer {
   .column {
     width: 100%;
     text-align: center;
+    clear: both;
   }
 
   .sale-info {
