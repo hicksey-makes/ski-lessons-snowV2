@@ -17,7 +17,6 @@ class ListLessons extends Component {
                 <span class="lsn-date">
                 <Moment
                   date={item.lessonDate}
-                  
                   formate="MMM-D h:mma"
                 />
                 </span>
@@ -37,7 +36,7 @@ class ListLessons extends Component {
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
-                <button class="btn btn-sm btn-secondary"><FaTimes  /></button>
+                <button class="btn btn-sm btn-secondary" onClick={() => this.props.deleteLesson(item)}><FaTimes  /></button>
               </div>
             </div>
 

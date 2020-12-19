@@ -211,6 +211,17 @@ body {
   text-decoration: none;
 }
 
+.bottom {
+  position: relative;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
 /* responsive layout - makes two columns stack when screen is small */
 @media screen and (max-width: 800px) {
   .column {

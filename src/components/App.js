@@ -6,6 +6,8 @@ import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
 
+import {without} from 'lodash';
+
 class App extends Component {
   constructor() {
     super();
@@ -13,6 +15,16 @@ class App extends Component {
       myLessons: [],
       lastIndex: 0
     };
+    this.deleteLesson = this.deleteLesson.bind(this);
+  }
+
+  deleteLesson(lsn) {
+    let tempLsns = this.state.myLessons;
+    tempLsns = without(tempLsns, lsn);
+
+    this.setState({
+      myLessons: tempLsns
+    });
   }
 
   componentDidMount() {
@@ -25,10 +37,13 @@ class App extends Component {
         return item;
       });
       this.setState({
+        myAppointments: [],
         myLessons: lsns
       });
     });
 }
+
+
 
  render() {
    return (
@@ -39,7 +54,7 @@ class App extends Component {
             <div class="container">
               <AddLessons  />
               <SearchLessons  />
-              <ListLessons lessons={this.state.myLessons} />
+              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson}  />
             </div>
           </div>
         </div>
