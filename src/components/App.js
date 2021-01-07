@@ -52,9 +52,9 @@ class App extends Component {
         <div class="row">
           <div class="col-md-12">
             <div class="container">
-              <AddLessons  />
               <SearchLessons  />
               <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson}  />
+              <AddLessons  />
             </div>
           </div>
         </div>
