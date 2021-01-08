@@ -40,13 +40,13 @@ class AddLessons extends Component {
                 <textarea className="form-control" rows="5" cols="50" name="lsnNotes" id="lsnNotes" placeholder="Lesson Notes" />
               </div>
             </div>
-            <div className="form-group form-row mb-0">
-              <div className="offset-md-2 col-md-10">
-                <button type="submit" className="btn btn-success d-block mr-auto">
-                Book
+            <div className="form-group form-row">
+              <div className="col-md-12">
+                <button className="btn btn-warning ml-auto d-block" type="submit">Submit
                 </button>
               </div>
             </div>
+
           </form>
         </div>
       </div>

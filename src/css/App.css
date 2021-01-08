@@ -14,14 +14,6 @@
   /* margin-left: 6px; */
 }
 
-.btn {
-  max-height: 50px;
-  position: absolute;
-  bottom: 17px;
-  width: 30px;
-  right: 13px;
-}
-
 .label-item{
   color: #6c757d;
   font-weight: 600;
