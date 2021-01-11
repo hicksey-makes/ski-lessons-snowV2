@@ -24,6 +24,10 @@
   font-weight: lighter;
 }
 
+.add-lesson .card-body {
+  display: none;
+}
+
 @media screen only and (max-width: 539px) {
 
 }

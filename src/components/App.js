@@ -13,9 +13,11 @@ class App extends Component {
     super();
     this.state = {
       myLessons: [],
+      formDisplay: false,
       lastIndex: 0
     };
     this.deleteLesson = this.deleteLesson.bind(this);
+    this.toggleAdd = this.toggleAdd.bind(this);
   }
 
   deleteLesson(lsn) {
@@ -25,6 +27,12 @@ class App extends Component {
     this.setState({
       myLessons: tempLsns
     });
+  }
+
+  toggleAdd() {
+    this.setState({
+      formDisplay: !this.state.formDisplay
+    })
   }
 
   componentDidMount() {
@@ -53,8 +61,8 @@ class App extends Component {
           <div class="col-md-12">
             <div class="container">
               <SearchLessons  />
-              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson}  />
-              <AddLessons  />
+              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} />
+              <AddLessons formDisplay={this.state.formDisplay} />
             </div>
           </div>
         </div>

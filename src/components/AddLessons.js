@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class AddLessons extends Component {
   render() {
     return (
-      <div className="card mt-3">
+      <div className={
+        'card textcenter mt-3 ' +
+        (this.props.formDisplay ? '': 'add-lesson')
+      }>
         <div className="card-header bg-secondary text-white text-center">
           Book Lesson
         </div>

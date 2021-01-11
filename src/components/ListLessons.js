@@ -33,7 +33,7 @@ class ListLessons extends Component {
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
-                <button class="btn btn-sm btn-secondary mr-3 ml-md-auto d-block" onClick={() => this.props.deleteLesson(item)}><FaRegCalendarCheck  /></button>
+                <button class="btn btn-sm btn-secondary mr-3 ml-md-auto d-block" onClick={() => {this.props.deleteLesson(item); this.props.toggleAdd()}}><FaRegCalendarCheck  /></button>
               </div>
             </div>
 
