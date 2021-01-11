@@ -21,7 +21,7 @@ class ListLessons extends Component {
                 />
                 </span>
               </div>
-              <div class="col-3 col-md-3 brd">
+              <div class="col-4 col-md-3 brd">
                 <span class="label-item">
                 Rider:
                 </span>
@@ -29,10 +29,7 @@ class ListLessons extends Component {
                 {item.boarderName}
                 </span>
               </div>
-              <div class="col-2 col-md-2 brd lsn-length">
-                {item.lessonLength}
-              </div>
-              <div class="col-2 col-md-1 brd lsn-price">
+              <div class="col-3 col-md-3 brd lsn-price">
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
