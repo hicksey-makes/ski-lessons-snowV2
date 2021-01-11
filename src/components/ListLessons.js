@@ -8,7 +8,9 @@ class ListLessons extends Component {
       <div>{item.boarderName}</div>
     ));
 
-    return (
+    return ( <>
+      <div className="bg-secondary text-white text-center py-2">Availability:
+      </div>
       <div className={
         'lesson-list item-list mb-3 ' +
         (this.props.formDisplay ? 'remove-lsn-list' : '')
@@ -43,7 +45,7 @@ class ListLessons extends Component {
           </div>
         ))}
       </div>
-    );
+    </>);
   }
 }
 

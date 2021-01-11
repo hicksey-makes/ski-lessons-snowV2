@@ -8,7 +8,7 @@ class AddLessons extends Component {
         (this.props.formDisplay ? '': 'add-lesson')
       }>
         <div className="card-header bg-secondary text-white text-center">
-          Book Lesson
+          Book Lesson:
         </div>
         <div className="card-body">
           <form className="">
