@@ -22,7 +22,7 @@ class ListLessons extends Component {
                 </span>
               </div>
               <div class="col-4 col-md-3 brd">
-                <span class="label-item">
+                <span class="label-item mr-2">
                 Rider:
                 </span>
                 <span class="board-name">
