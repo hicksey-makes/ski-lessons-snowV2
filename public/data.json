@@ -1,43 +1,36 @@
 [{
 "boarderName": "Jeremy",
-"lessonLength": "Half Day",
 "lessonDate": "2021-1-4 9:30",
-"lessonCost": "$50"
+"lessonCost": "$100/2.5 hr"
 },
 {
 "boarderName": "Clide",
-"lessonLength": "Full Day",
 "lessonDate": "2021-1-5 9:30",
-"lessonCost": "$100"
+"lessonCost": "$100/2.5 hr"
 },
 {
 "boarderName": "Frank",
-"lessonLength": "Half Day",
 "lessonDate": "2021-01-06 1:00",
-"lessonCost": "$50"
+"lessonCost": "$100/2.5 hr"
 },
 {
 "boarderName": "Chauncey",
-"lessonLength": "Half Day",
 "lessonDate": "2021-1-4 1:00",
-"lessonCost": "$50"
+"lessonCost": "$100/2.5 hr"
 },
 {
 "boarderName": "Jacob",
-"lessonLength": "Full Day",
 "lessonDate": "2021-1-14 9:00",
-"lessonCost": "$100"
+"lessonCost": "$100/2.5 hr"
 },
 {
 "boarderName": "Tobi",
-"lessonLength": "Full Day",
 "lessonDate": "2021-1-14 9:00",
-"lessonCost": "$100"
+"lessonCost": "$100/2.5 hr"
 },
 {
 "boarderName": "Holly",
-"lessonLength": "Full Day",
 "lessonDate": "2021-1-14 9:00",
-"lessonCost": "$100"
+"lessonCost": "$100/2.5 hr"
 }
 ]
