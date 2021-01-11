@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaRegCalendarCheck } from 'react-icons/fa';
 import Moment from 'react-moment';
 
 class ListLessons extends Component {
@@ -36,7 +36,7 @@ class ListLessons extends Component {
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
-                <button class="btn btn-sm btn-secondary mr-3 ml-md-auto d-block" onClick={() => this.props.deleteLesson(item)}><FaTimes  /></button>
+                <button class="btn btn-sm btn-secondary mr-3 ml-md-auto d-block" onClick={() => this.props.deleteLesson(item)}><FaRegCalendarCheck  /></button>
               </div>
             </div>
 
