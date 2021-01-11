@@ -9,7 +9,10 @@ class ListLessons extends Component {
     ));
 
     return (
-      <div className="lesson-list item-list mb-3">
+      <div className={
+        'lesson-list item-list mb-3 ' +
+        (this.props.formDisplay ? 'remove-lsn-list' : '')
+      }>
         {this.props.lessons.map(item => (
           <div class="container board-item" key={item.lsnId}>
             <div class="row">

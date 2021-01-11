@@ -61,7 +61,7 @@ class App extends Component {
           <div class="col-md-12">
             <div class="container">
               <SearchLessons  />
-              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} />
+              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay}/>
               <AddLessons formDisplay={this.state.formDisplay} />
             </div>
           </div>
