@@ -10,7 +10,7 @@ class ListLessons extends Component {
 
     return ( <>
 
-      <div className="bg-secondary text-white text-center py-2" onClick={this.props.toggleAdd}>
+      <div className="bg-secondary text-white text-center py-3 rounded" onClick={this.props.toggleAdd}>
         <FaPlus  />
         <div className="d-inline ml-2">Availability:</div>
       </div>

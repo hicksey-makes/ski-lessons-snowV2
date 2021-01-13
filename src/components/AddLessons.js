@@ -8,7 +8,7 @@ class AddLessons extends Component {
         'card textcenter mt-3 ' +
         (this.props.formDisplay ? '' : 'add-lesson')
       }>
-        <div className="card-header bg-secondary text-white text-center" onClick={this.props.toggleAdd}>
+        <div className="card-header bg-secondary text-white text-center py-3" onClick={this.props.toggleAdd}>
           <FaPlus  />
           <div className="d-inline ml-2">Book Lesson:</div>
         </div>
