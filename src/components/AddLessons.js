@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import { FaPlus } from 'react-icons/fa';
 
 class AddLessons extends Component {
   render() {
     return (
       <div className={
         'card textcenter mt-3 ' +
-        (this.props.formDisplay ? '': 'add-lesson')
+        (this.props.formDisplay ? '' : 'add-lesson')
       }>
-        <div className="card-header bg-secondary text-white text-center">
-          Book Lesson:
+        <div className="card-header bg-secondary text-white text-center" onClick={this.props.toggleAdd}>
+          <FaPlus  />
+          <div className="d-inline ml-2">Book Lesson:</div>
         </div>
         <div className="card-body">
           <form className="">

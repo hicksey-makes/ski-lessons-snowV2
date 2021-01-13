@@ -35,6 +35,7 @@ class App extends Component {
     })
   }
 
+
   componentDidMount() {
     fetch('./data.json')
     .then(response => response.json())
@@ -62,7 +63,7 @@ class App extends Component {
             <div class="container">
               <SearchLessons  />
               <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay}/>
-              <AddLessons formDisplay={this.state.formDisplay} />
+              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd}/>
             </div>
           </div>
         </div>
