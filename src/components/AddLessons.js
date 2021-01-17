@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FaPlus } from 'react-icons/fa';
+import Moment from 'react-moment';
 
 class AddLessons extends Component {
   render() {
@@ -31,8 +32,11 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnDate">Date:</label>
-              <div className="col-md-4">
-                <input className="form-control" type="date" name="lsnDate" id="lsnDate" />
+              <div className="col-md-4 mt-md-2">
+              <Moment
+                date={this.props.lessonTime}
+                format="MMM DD  hh:mm a, ddd"
+              />
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnTime">Time:</label>
               <div className="col-md-4">
@@ -47,7 +51,7 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <div className="col-md-12">
-                <button className="btn btn-warning ml-md-auto mr-md-0 mx-auto d-block" type="submit">Submit
+                <button className="btn btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
                 </button>
               </div>
             </div>

@@ -13,11 +13,13 @@ class App extends Component {
     super();
     this.state = {
       myLessons: [],
+      lessonTime: "",
       formDisplay: false,
       lastIndex: 0
     };
     this.deleteLesson = this.deleteLesson.bind(this);
     this.toggleAdd = this.toggleAdd.bind(this);
+    this.grabTime = this.grabTime.bind(this);
   }
 
   deleteLesson(lsn) {
@@ -35,7 +37,6 @@ class App extends Component {
     })
   }
 
-
   componentDidMount() {
     fetch('./data.json')
     .then(response => response.json())
@@ -52,7 +53,13 @@ class App extends Component {
     });
 }
 
+  grabTime(lsn) {
+    let tempTime = lsn.lessonDate;
 
+    this.setState({
+      lessonTime: tempTime
+    })
+  }
 
  render() {
    return (
@@ -62,8 +69,8 @@ class App extends Component {
           <div class="col-md-12">
             <div class="container">
               <SearchLessons  />
-              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay}/>
-              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd}/>
+              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.grabTime}/>
+              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime}/>
             </div>
           </div>
         </div>

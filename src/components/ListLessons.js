@@ -25,23 +25,23 @@ class ListLessons extends Component {
                 <span class="lsn-date">
                 <Moment
                   date={item.lessonDate}
-                  formate="MMM-D h:mma"
+                  format="MM-DD  hh:mm a"
                 />
                 </span>
               </div>
               <div class="col-4 col-md-3 brd">
                 <span class="label-item mr-2">
-                Rider:
+                Instructor:
                 </span>
                 <span class="board-name">
-                {item.boarderName}
+                {item.instructorName}
                 </span>
               </div>
               <div class="col-3 col-md-3 brd lsn-price">
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
-                <button class="btn btn-sm btn-secondary mr-3 ml-md-auto d-block" onClick={() => {this.props.deleteLesson(item); this.props.toggleAdd()}}><FaRegCalendarCheck  /></button>
+                <button class="btn btn-sm btn-secondary mr-3 ml-md-auto d-block" onClick={() => {this.props.deleteLesson(item); this.props.toggleAdd(); this.props.grabTime(item)}}><FaRegCalendarCheck  /></button>
               </div>
             </div>
 
