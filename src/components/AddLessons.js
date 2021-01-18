@@ -21,14 +21,25 @@ class AddLessons extends Component {
                 <input className="form-control" type="text" name="riderName" placeholder="Rider's Name" />
               </div>
             </div>
-            <div className="form-group form-row">
-              <label className="col-md-2 mt-2 ml-auto text-md-right" htmlFor="lsnLength">Lesson Length:</label>
-              <div className="col-md-2">
-                <select className="form-control custom-select" id="lsnLength" name="riderName" placeholder="Rider's Name">
-                  <option>Full Day</option>
-                  <option>Half Day</option>
-                </select>
+            <div className="form-group form-row mb-md-4">
+              <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Lesson Length:</label>
+              <div className="dropdown col-md-3 dropright">
+                <button type="button" className="dropdown-toggle btn" href="#" id="lsnLength" data-toggle="dropdown">select</button>
+                <div className="dropdown-menu">
+                  <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5hr)</button>
+                  <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Half Day" onClick={event => this.props.setPrice(event)}>Half Day (2.5hr)</button>
+                </div>
               </div>
+              <label className="col-md-2 mt-2 ml-auto text-md-right">Price:</label>
+              <div className="col-md-2 mt-md-2">
+              {(this.props.lessonLength === 'Half Day' ? '$100': '$200')}
+              </div>
+              {/*<div className="col-md-2 mt-md-2">
+                $100
+              </div>
+              <div className="col-md-2 mt-md-2">
+                $200
+              </div> */}
             </div>
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnDate">Date:</label>
