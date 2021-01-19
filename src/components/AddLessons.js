@@ -26,8 +26,8 @@ class AddLessons extends Component {
               <div className="dropdown col-md-3 dropright">
                 <button type="button" className="dropdown-toggle btn" href="#" id="lsnLength" data-toggle="dropdown">select</button>
                 <div className="dropdown-menu">
-                  <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5hr)</button>
-                  <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Half Day" onClick={event => this.props.setPrice(event)}>Half Day (2.5hr)</button>
+                  <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5 hr)</button>
+                  <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Half Day" onClick={event => this.props.setPrice(event)}>Half Day (2.5 hr)</button>
                 </div>
               </div>
               <label className="col-md-2 mt-2 ml-auto text-md-right">Price:</label>

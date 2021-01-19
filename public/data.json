@@ -1,52 +1,61 @@
 [{
 "instructorName": "Tim",
-"lessonDate": "2021-1-4 8:30",
+"lessonDate": "2021-1-4",
+"lessonTime": "8:30",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-4 11:00",
+"lessonDate": "2021-1-4",
+"lessonTime": "11:00",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-5 8:30",
+"lessonDate": "2021-1-5",
+"lessonTime": "8:30",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-01-06 11:00",
-"lessonCost": "$100/2.5 hr"
-},
-
-{
-"instructorName": "Tim",
-"lessonDate": "2021-1-10 8:30",
+"lessonDate": "2021-01-06",
+"lessonTime": "11:00",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-10 11:00",
+"lessonDate": "2021-1-10",
+"lessonTime": "8:30",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-11 8:30",
+"lessonDate": "2021-1-10",
+"lessonTime": "11:00",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-11 11:00",
+"lessonDate": "2021-1-11",
+"lessonTime": "8:30",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-17 8:30",
+"lessonDate": "2021-1-11",
+"lessonTime": " 11:00",
 "lessonCost": "$100/2.5 hr"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2021-1-17 11:00",
+"lessonDate": "2021-1-17",
+"lessonTime": "8:30",
+"lessonCost": "$100/2.5 hr"
+},
+{
+"instructorName": "Tim",
+"lessonDate": "2021-1-17",
+"lessonTime": " 11:00",
 "lessonCost": "$100/2.5 hr"
 }
 ]
