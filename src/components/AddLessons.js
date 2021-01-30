@@ -11,7 +11,7 @@ class AddLessons extends Component {
       }>
         <div className="card-header bg-secondary text-white text-center py-3" onClick={this.props.toggleAdd}>
           <FaPlus  />
-          <div className="d-inline ml-2">Book Lesson:</div>
+          <h5 className="d-inline ml-2 text-monospace">Book:</h5>
         </div>
         <div className="card-body">
           <form className="">
@@ -31,8 +31,10 @@ class AddLessons extends Component {
                 </div>
               </div>
               <label className="col-md-2 mt-2 ml-auto text-md-right">Price:</label>
-              <div className="col-md-2 mt-md-2">
+              <div className="col-md-2 mt-md-1 text-warning">
+              <h4 className="font-weight-light">
               {(this.props.lessonLength === 'Half Day' ? '$100': '$200')}
+              </h4>
               </div>
               {/*<div className="col-md-2 mt-md-2">
                 $100
@@ -43,7 +45,7 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnDate">Date:</label>
-              <div className="col-md-4 mt-md-2 ">
+              <div className="col-md-4 mt-md-1 ">
               <mark className="p-md-1 text-danger font-weight-bold">
               <Moment
                 date={this.props.lessonDate}
