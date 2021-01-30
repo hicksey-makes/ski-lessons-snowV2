@@ -22,9 +22,9 @@ class AddLessons extends Component {
               </div>
             </div>
             <div className="form-group form-row mb-md-4">
-              <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Lesson Length:</label>
+              <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength"></label>
               <div className="dropdown col-md-3 dropright">
-                <button type="button" className="dropdown-toggle btn" href="#" id="lsnLength" data-toggle="dropdown">select</button>
+                <button type="button" className="dropdown-toggle btn btn-info" href="#" id="lsnLength" data-toggle="dropdown">Lesson Length</button>
                 <div className="dropdown-menu">
                   <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5 hr)</button>
                   <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Half Day" onClick={event => this.props.setPrice(event)}>Half Day (2.5 hr)</button>
@@ -43,15 +43,22 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnDate">Date:</label>
-              <div className="col-md-4 mt-md-2">
+              <div className="col-md-4 mt-md-2 ">
+              <mark className="p-md-1 text-danger font-weight-bold">
               <Moment
-                date={this.props.lessonTime}
-                format="MMM DD  hh:mm a, ddd"
+                date={this.props.lessonDate}
+                format="ddd MMM DD"
               />
+              </mark>
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnTime">Time:</label>
-              <div className="col-md-4">
-                <input className="form-control" type="time" name="lsnTime" id="lsnTime" />
+              <div className="col-md-4 mt-md-2">
+              <mark className="p-md-1 text-danger font-weight-bold">
+              <Moment
+                date={this.props.lessonTime}
+                format="hh:mm a"
+              />
+              </mark>
               </div>
             </div>
             <div className="form-group form-row">
@@ -62,7 +69,7 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <div className="col-md-12">
-                <button className="btn btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
+                <button className="btn btn-primary btn-dark ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
                 </button>
               </div>
             </div>

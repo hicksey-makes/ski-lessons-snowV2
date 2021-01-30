@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       myLessons: [],
       lessonTime: "",
+      lessonDate: "",
       lessonLength: "Full Day",
       formDisplay: false,
       lastIndex: 0
@@ -63,10 +64,11 @@ class App extends Component {
 }
 
   grabTime(lsn) {
-    let tempTime = lsn.lessonDate;
-
+    let tempTime = lsn.lsnTime;
+    let tempDate = lsn.lessonDate;
     this.setState({
-      lessonTime: tempTime
+      lessonTime: tempTime,
+      lessonDate: tempDate
     })
   }
 
@@ -79,7 +81,7 @@ class App extends Component {
             <div class="container">
               <SearchLessons  />
               <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.grabTime}/>
-              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonLength={this.state.lessonLength} setPrice={this.setPrice}/>
+              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} setPrice={this.setPrice}/>
             </div>
           </div>
         </div>
