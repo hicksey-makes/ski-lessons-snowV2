@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaRegCalendarCheck, FaPlus } from 'react-icons/fa';
+import { FaRegCalendarCheck, FaPlus, FaMinus } from 'react-icons/fa';
 import Moment from 'react-moment';
 
 class ListLessons extends Component {
@@ -11,7 +11,12 @@ class ListLessons extends Component {
     return ( <>
 
       <div className="bg-secondary text-white text-center py-3 rounded" onClick={this.props.toggleAdd}>
+        <span className={(this.props.formDisplay ? '' : 'show-hide')}>
         <FaPlus  />
+        </span>
+        <span className={(this.props.formDisplay ? 'show-hide' : '')}>
+        <FaMinus  />
+        </span>
         <h5 className="d-inline ml-2 text-monospace">Availability:</h5>
       </div>
       <div className={

@@ -28,6 +28,10 @@
   display: none;
 }
 
+.show-hide {
+  display: none;
+}
+
 .remove-lsn-list {
   display: none;
 }

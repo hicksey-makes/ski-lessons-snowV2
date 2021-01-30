@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus, FaMinus } from 'react-icons/fa';
 import Moment from 'react-moment';
 
 class AddLessons extends Component {
@@ -10,7 +10,12 @@ class AddLessons extends Component {
         (this.props.formDisplay ? '' : 'add-lesson')
       }>
         <div className="card-header bg-secondary text-white text-center py-3" onClick={this.props.toggleAdd}>
+          <span className={(this.props.formDisplay ? 'show-hide' : '')}>
           <FaPlus  />
+          </span>
+          <span className={(this.props.formDisplay ? '' : 'show-hide')}>
+          <FaMinus  />
+          </span>
           <h5 className="d-inline ml-2 text-monospace">Book:</h5>
         </div>
         <div className="card-body">
@@ -31,8 +36,8 @@ class AddLessons extends Component {
                 </div>
               </div>
               <label className="col-md-2 mt-2 ml-auto text-md-right">Price:</label>
-              <div className="col-md-2 mt-md-1 text-warning">
-              <h4 className="font-weight-light">
+              <div className="col-md-2  mt-md-1 text-warning">
+              <h4 className="">
               {(this.props.lessonLength === 'Half Day' ? '$100': '$200')}
               </h4>
               </div>
