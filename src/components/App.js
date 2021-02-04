@@ -16,6 +16,8 @@ class App extends Component {
       lessonTime: "",
       lessonDate: "",
       lessonLength: "Full Day",
+      orderBy: 'lessonDate',
+      orderDir: 'asc',
       formDisplay: false,
       lastIndex: 0
     };
