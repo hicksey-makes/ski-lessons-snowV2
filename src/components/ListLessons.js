@@ -50,7 +50,7 @@ class ListLessons extends Component {
                 {item.instructorName}
                 </span>
               </div>
-              <div class="col-3 col-md-3 label-item brd lsn-price">
+              <div class="col-3 col-md-3 label-item brd lsn-price text-info">
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
