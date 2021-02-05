@@ -15,6 +15,7 @@ class App extends Component {
       myLessons: [],
       lessonTime: "",
       lessonDate: "",
+      instructorName: "",
       lessonLength: "Full Day",
       orderBy: 'instructorName',
       orderDir: 'asc',
@@ -23,7 +24,7 @@ class App extends Component {
     };
     this.deleteLesson = this.deleteLesson.bind(this);
     this.toggleAdd = this.toggleAdd.bind(this);
-    this.grabTime = this.grabTime.bind(this);
+    this.passSelections = this.passSelections.bind(this);
     this.setPrice = this.setPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
   }
@@ -74,13 +75,16 @@ class App extends Component {
     });
 }
 
-  grabTime(lsn) {
+  passSelections(lsn) {
     let tempTime = lsn.lsnTime;
     let tempDate = lsn.lessonDate;
+    let tempInstructor = lsn.instructorName;
+
     this.setState({
       lessonTime: tempTime,
-      lessonDate: tempDate
-    })
+      lessonDate: tempDate,
+      instructorName: tempInstructor
+    });
   }
 
  render() {
@@ -111,8 +115,8 @@ class App extends Component {
           <div class="col-md-12">
             <div class="container">
               <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
-              <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.grabTime}/>
-              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} setPrice={this.setPrice}/>
+              <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
+              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
             </div>
           </div>
         </div>

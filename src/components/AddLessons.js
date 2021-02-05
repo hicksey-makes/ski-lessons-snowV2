@@ -27,7 +27,11 @@ class AddLessons extends Component {
               </div>
             </div>
             <div className="form-group form-row mb-md-4">
-              <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength"></label>
+              <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
+              <div className="col-md-2 mt-2">
+                {this.props.instructorName}
+              </div>
+
               <div className="dropdown col-md-3 dropright">
                 <button type="button" className="dropdown-toggle btn btn-info" href="#" id="lsnLength" data-toggle="dropdown">Lesson Length</button>
                 <div className="dropdown-menu">
@@ -38,15 +42,9 @@ class AddLessons extends Component {
               <label className="col-md-2 mt-2 ml-auto text-md-right">Price:</label>
               <div className="col-md-2  mt-md-2 text-dark">
               <h5 className="font-weight-light">
-              {(this.props.lessonLength === 'Half Day' ? '$100': '$200')}
+              {(this.props.lessonLength === 'Half Day' ? '$100': '$175')}
               </h5>
               </div>
-              {/*<div className="col-md-2 mt-md-2">
-                $100
-              </div>
-              <div className="col-md-2 mt-md-2">
-                $200
-              </div> */}
             </div>
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnDate">Date:</label>
