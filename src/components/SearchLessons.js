@@ -4,41 +4,42 @@ class SearchLessons extends Component {
   render() {
 
     return (
-      <form action="/action_page.php">
-        <div className="form-group">
-          <div className="input-group">
-            <input type="text" class="form-control" />
-            <div className="input-group-append">
-              <button className="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">Sort by: <span className="caret"/>
-              </button>
-              <div className="dropdown-menu">
-                <button className={
-                  'dropdown-item ' +
-                  (this.props.orderBy === 'lessonDate' ? 'active' : '')} href="#">
-                  Lesson Date
+
+        <div className="row justify-content-center">
+          <div className="col-md-9">
+            <div className="input-group">
+              <input type="text" className="form-control" />
+              <div className="input-group-append">
+                <button className="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">Sort by: <span className="caret"/>
                 </button>
-                <button className={
-                  'dropdown-item ' +
-                  (this.props.orderBy === 'instructorName' ? 'active' : '')} href="#">
-                  Instructor
-                </button>
-                <div className="dropdown-divider">
+                <div className="dropdown-menu">
+                  <button className={
+                    'dropdown-item ' +
+                    (this.props.orderBy === 'lessonDate' ? 'active' : '')} href="#" onClick={(e) => this.props.changeOrder('lessonDate', this.props.orderDir)}>
+                    Lesson Date
+                  </button>
+                  <button className={
+                    'dropdown-item ' +
+                    (this.props.orderBy === 'instructorName' ? 'active' : '')} href="#" onClick={(e) => this.props.changeOrder('instructorName', this.props.orderDir)}>
+                    Instructor
+                  </button>
+                  <div className="dropdown-divider">
+                  </div>
+                  <button className={
+                    'dropdown-item ' +
+                    (this.props.orderDir === 'asc' ? 'active' : '')} href="#" onClick={e => this.props.changeOrder(this.props.orderBy, 'asc')}>
+                    Asc
+                  </button>
+                  <button className={
+                    'dropdown-item ' +
+                    (this.props.orderDir === 'des' ? 'active' : '')} href="#" onClick={e => this.props.changeOrder(this.props.orderBy, 'des')}>
+                    Dec
+                  </button>
                 </div>
-                <button className={
-                  'dropdown-item ' +
-                  (this.props.orderDir === 'asc' ? 'active' : '')} href="#">
-                  Asc
-                </button>
-                <button className={
-                  'dropdown-item ' +
-                  (this.props.orderDir === 'des' ? 'active' : '')} href="#">
-                  Dec
-                </button>
               </div>
             </div>
           </div>
         </div>
-      </form>
     )
   }
 }

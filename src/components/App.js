@@ -25,6 +25,7 @@ class App extends Component {
     this.toggleAdd = this.toggleAdd.bind(this);
     this.grabTime = this.grabTime.bind(this);
     this.setPrice = this.setPrice.bind(this);
+    this.changeOrder = this.changeOrder.bind(this);
   }
 
   deleteLesson(lsn) {
@@ -47,6 +48,13 @@ class App extends Component {
     this.setState({
       lessonLength: event.target.value
     });
+  }
+
+  changeOrder(quality, direction) {
+      this.setState({
+        orderBy: quality,
+        orderDir: direction
+      });
   }
 
   componentDidMount() {
@@ -102,7 +110,7 @@ class App extends Component {
         <div class="row">
           <div class="col-md-12">
             <div class="container">
-              <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} />
+              <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
               <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.grabTime}/>
               <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} setPrice={this.setPrice}/>
             </div>
