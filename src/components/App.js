@@ -115,6 +115,8 @@ class App extends Component {
             <div class="container">
               <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
               <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
+              <h6><strong>Key</strong> h.d.: half day.</h6>
+
               <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
             </div>
           </div>
