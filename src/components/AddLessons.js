@@ -28,12 +28,12 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row mb-md-4 mb-1">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
-              <h5 className="col-md-4 mt-0 mt-md-2  font-weight-light">
+              <h5 className="col-md-4 mt-0 mt-md-2  font-weight-light font-italic">
                 {this.props.instructorName}
               </h5>
 
               <div className="dropdown col-md-1 dropleft mb-2 mt-4 mt-md-1">
-                <button type="button" className="dropdown-toggle btn btn-info" href="#" id="lsnLength" data-toggle="dropdown">Lesson Length</button>
+                <button type="button" className="dropdown-toggle btn btn-warning" href="#" id="lsnLength" data-toggle="dropdown">Lesson Length</button>
                 <div className="dropdown-menu">
                   <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5 hr)</button>
                   <button type="button" className="dropdown-item btn" href="#" id="lsnLength" value="Half Day" onClick={event => this.props.setPrice(event)}>Half Day (2.5 hr)</button>
@@ -41,7 +41,7 @@ class AddLessons extends Component {
               </div>
               <label className="col-md-2 mt-3 mt-md-2 ml-auto text-md-right">Price:</label>
               <div className="col-md-2  mt-md-2 text-dark">
-              <h5 className="font-weight-light ">
+              <h5 className="font-weight-light font-italic">
               {(this.props.lessonLength === 'Half Day' ? '$100': '$175')}
               </h5>
               </div>
