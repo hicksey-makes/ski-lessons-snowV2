@@ -24,10 +24,10 @@ class ListLessons extends Component {
         (this.props.formDisplay ? 'remove-lsn-list' : '')
       }>
         {this.props.lessons.map(item => (
-          <div class="container board-item" key={item.lsnId}>
-            <div class="row bg-dark">
-              <div class="col-2 col-md-2 brd">
-                <span class="lsn-date text-white">
+          <div className="container board-item" key={item.lsnId}>
+            <div className="row bg-dark">
+              <div className="col-2 col-md-2 brd">
+                <span className="lsn-date text-white">
 
                 <Moment
                   date={item.lessonDate}
@@ -35,27 +35,27 @@ class ListLessons extends Component {
                 />
                 </span>
               </div>
-              <div class="col-2 col-md-2 brd">
-                <span class="lsn-date text-white">
+              <div className="col-2 col-md-2 brd">
+                <span className="lsn-date text-white">
                 <Moment
                   date={item.lsnTime}
                   format="hh:mm a"
                 />
                 </span>
               </div>
-              <div class="col-4 col-md-3 brd">
-                <span class="label-item mr-2 text-break">
+              <div className="col-4 col-md-3 brd">
+                <span className="label-item mr-2 text-break">
                 Instructor:
                 </span>
-                <span class="board-name text-white">
+                <span className="board-name text-white">
                 {item.instructorName}
                 </span>
               </div>
-              <div class="col-2 col-md-3 label-item brd lsn-price text-info text-break">
+              <div className="col-2 col-md-3 label-item brd lsn-price text-info text-break">
                 {item.lessonCost}
               </div>
-              <div class="col-2 col-md-2 brd">
-                <button class="btn btn-sm btn-success mr-3 ml-md-auto d-block" onClick={() => {this.props.deleteLesson(item); this.props.toggleAdd(); this.props.grabTime(item)}}><FaRegCalendarCheck  /></button>
+              <div className="col-2 col-md-2 brd">
+                <button className="btn btn-sm btn-success mr-3 ml-md-auto d-block" onClick={() => {this.props.deleteLesson(item); this.props.toggleAdd(); this.props.grabTime(item)}}><FaRegCalendarCheck  /></button>
               </div>
             </div>
 

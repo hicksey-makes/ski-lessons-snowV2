@@ -108,14 +108,14 @@ class App extends Component {
   });
 
    return (
-    <main class="" id="  ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="container">
+    <main className="" id="  ">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12">
+            <div className="container">
               <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
               <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
-              <h6><strong>Key</strong> h.d.: half day.</h6>
+              <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 
               <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
             </div>
