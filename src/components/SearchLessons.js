@@ -6,7 +6,7 @@ class SearchLessons extends Component {
     return (
 
         <div className="row justify-content-center">
-          <div className="col-md-9">
+          <div className="col-md-12">
             <div className="input-group">
               <input type="text" className="form-control" />
               <div className="input-group-append">
