@@ -35,6 +35,8 @@
 .remove-lsn-list {
   display: none;
 }
-@media screen only and (max-width: 539px) {
-
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
 }
