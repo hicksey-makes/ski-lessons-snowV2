@@ -17,7 +17,7 @@ class ListLessons extends Component {
         <span className={(this.props.formDisplay ? 'show-hide' : '')}>
         <FaMinus  />
         </span>
-        <h5 className="d-inline ml-2 text-monospace">Availability:</h5>
+        <h6 className="d-inline ml-2 text-monospace">Availability:</h6>
       </div>
       <div className={
         'lesson-list item-list mb-3 ' +
@@ -28,7 +28,7 @@ class ListLessons extends Component {
             <div class="row bg-dark">
               <div class="col-1 col-md-2 brd">
                 <span class="lsn-date text-white">
-                
+
                 <Moment
                   date={item.lessonDate}
                   format="MM-DD"

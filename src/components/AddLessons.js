@@ -16,7 +16,7 @@ class AddLessons extends Component {
           <span className={(this.props.formDisplay ? '' : 'show-hide')}>
           <FaMinus  />
           </span>
-          <h5 className="d-inline ml-2 text-monospace">Book:</h5>
+          <h6 className="d-inline ml-2 text-monospace">Book:</h6>
         </div>
         <div className="card-body">
           <form className="">
