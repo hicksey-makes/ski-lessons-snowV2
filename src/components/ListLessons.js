@@ -28,6 +28,7 @@ class ListLessons extends Component {
             <div class="row bg-dark">
               <div class="col-1 col-md-2 brd">
                 <span class="lsn-date text-white">
+                
                 <Moment
                   date={item.lessonDate}
                   format="MM-DD"
@@ -36,6 +37,7 @@ class ListLessons extends Component {
               </div>
               <div class="col-2 col-md-2 brd">
                 <span class="lsn-date text-white">
+                <div>{item.lessonTime}</div>
                 <Moment
                   date={item.lsnTime}
                   format="hh:mm a"

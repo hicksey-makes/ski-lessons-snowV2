@@ -5,6 +5,12 @@
 "lessonCost": "$100/2.5 hr"
 },
 {
+"instructorName": "Sam",
+"lessonDate": "2021-1-4",
+"lsnTime": "2021-1-4 8:30",
+"lessonCost": "$100/2.5 hr"
+},
+{
 "instructorName": "Tim",
 "lessonDate": "2021-1-4",
 "lsnTime": "2021-1-4 11:00",
@@ -29,13 +35,13 @@
 "lessonCost": "$100/2.5 hr"
 },
 {
-"instructorName": "Tim",
+"instructorName": "Kyle",
 "lessonDate": "2021-1-10",
 "lsnTime": "2021-1-10 11:00",
 "lessonCost": "$100/2.5 hr"
 },
 {
-"instructorName": "Tim",
+"instructorName": "Kyle",
 "lessonDate": "2021-1-11",
 "lsnTime": "2021-1-11 8:30",
 "lessonCost": "$100/2.5 hr"
@@ -47,7 +53,25 @@
 "lessonCost": "$100/2.5 hr"
 },
 {
+"instructorName": "Sam",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 11:00",
+"lessonCost": "$100/2.5 hr"
+},
+{
+"instructorName": "Sam",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 8:30",
+"lessonCost": "$100/2.5 hr"
+},
+{
 "instructorName": "Tim",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 8:30",
+"lessonCost": "$100/2.5 hr"
+},
+{
+"instructorName": "Kyle",
 "lessonDate": "2021-1-17",
 "lsnTime": "2021-1-17 8:30",
 "lessonCost": "$100/2.5 hr"

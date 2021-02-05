@@ -16,7 +16,7 @@ class App extends Component {
       lessonTime: "",
       lessonDate: "",
       lessonLength: "Full Day",
-      orderBy: 'lessonDate',
+      orderBy: 'instructorName',
       orderDir: 'asc',
       formDisplay: false,
       lastIndex: 0
@@ -56,11 +56,12 @@ class App extends Component {
       const lsns = result.map(item => {
         item.lsnId = this.state.lastIndex;
         this.setState({lastIndex: this.state.lastIndex + 1 });
+        item.lessonDate = Date.parse(item.lessonDate);
         return item;
       });
       this.setState({
         myAppointments: [],
-        myLessons: lsns
+        myLessons: lsns,
       });
     });
 }
@@ -75,14 +76,34 @@ class App extends Component {
   }
 
  render() {
+
+   let order;
+   let filteredLsns = this.state.myLessons;
+
+   if(this.state.orderDir === 'asc') {
+     order = 1;
+   } else {
+     order = -1;
+   }
+
+  filteredLsns.sort((a,b) => {
+    if (a[this.state.orderBy] <
+        b[this.state.orderBy]
+    ) {
+      return -1 * order;
+    } else {
+      return 1 * order;
+    }
+  });
+
    return (
     <main class="" id="  ">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="container">
-              <SearchLessons  />
-              <ListLessons lessons={this.state.myLessons} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.grabTime}/>
+              <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} />
+              <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.grabTime}/>
               <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} setPrice={this.setPrice}/>
             </div>
           </div>
