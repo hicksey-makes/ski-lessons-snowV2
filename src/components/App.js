@@ -68,7 +68,6 @@ class App extends Component {
         return item;
       });
       this.setState({
-        myAppointments: [],
         myLessons: lsns,
       });
     });
