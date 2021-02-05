@@ -26,7 +26,7 @@ class ListLessons extends Component {
         {this.props.lessons.map(item => (
           <div class="container board-item" key={item.lsnId}>
             <div class="row bg-dark">
-              <div class="col-1 col-md-2 brd">
+              <div class="col-2 col-md-2 brd">
                 <span class="lsn-date text-white">
 
                 <Moment
@@ -37,7 +37,6 @@ class ListLessons extends Component {
               </div>
               <div class="col-2 col-md-2 brd">
                 <span class="lsn-date text-white">
-                <div>{item.lessonTime}</div>
                 <Moment
                   date={item.lsnTime}
                   format="hh:mm a"
@@ -45,14 +44,14 @@ class ListLessons extends Component {
                 </span>
               </div>
               <div class="col-4 col-md-3 brd">
-                <span class="label-item mr-2">
+                <span class="label-item mr-2 text-break">
                 Instructor:
                 </span>
                 <span class="board-name text-white">
                 {item.instructorName}
                 </span>
               </div>
-              <div class="col-3 col-md-3 label-item brd lsn-price text-info">
+              <div class="col-2 col-md-3 label-item brd lsn-price text-info text-break">
                 {item.lessonCost}
               </div>
               <div class="col-2 col-md-2 brd">
