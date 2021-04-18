@@ -1,43 +1,85 @@
 [{
-"boarderName": "Jeremy",
-"lessonLength": "Half Day",
-"lessonDate": "2021-1-4 9:30",
-"lessonCost": "$50"
+"instructorName": "Tim",
+"lessonDate": "2021-1-4",
+"lsnTime": "2021-1-4 8:30",
+"lessonCost": "$100/h.d."
 },
 {
-"boarderName": "Clide",
-"lessonLength": "Full Day",
-"lessonDate": "2021-1-5 9:30",
-"lessonCost": "$100"
+"instructorName": "Sam",
+"lessonDate": "2021-1-4",
+"lsnTime": "2021-1-4 8:30",
+"lessonCost": "$100/h.d."
 },
 {
-"boarderName": "Frank",
-"lessonLength": "Half Day",
-"lessonDate": "2021-01-06 1:00",
-"lessonCost": "$50"
+"instructorName": "Tim",
+"lessonDate": "2021-1-4",
+"lsnTime": "2021-1-4 11:00",
+"lessonCost": "$100/h.d."
 },
 {
-"boarderName": "Chauncey",
-"lessonLength": "Half Day",
-"lessonDate": "2021-1-4 1:00",
-"lessonCost": "$50"
+"instructorName": "Tim",
+"lessonDate": "2021-1-5",
+"lsnTime": "2021-1-5 8:30",
+"lessonCost": "$100/h.d."
 },
 {
-"boarderName": "Jacob",
-"lessonLength": "Full Day",
-"lessonDate": "2021-1-14 9:00",
-"lessonCost": "$100"
+"instructorName": "Tim",
+"lessonDate": "2021-01-06",
+"lsnTime": "2021-01-06 11:00",
+"lessonCost": "$100/h.d."
 },
 {
-"boarderName": "Tobi",
-"lessonLength": "Full Day",
-"lessonDate": "2021-1-14 9:00",
-"lessonCost": "$100"
+"instructorName": "Tim",
+"lessonDate": "2021-1-10",
+"lsnTime": "2021-1-10 8:30",
+"lessonCost": "$100/h.d."
 },
 {
-"boarderName": "Holly",
-"lessonLength": "Full Day",
-"lessonDate": "2021-1-14 9:00",
-"lessonCost": "$100"
+"instructorName": "Kyle",
+"lessonDate": "2021-1-10",
+"lsnTime": "2021-1-10 11:00",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Kyle",
+"lessonDate": "2021-1-11",
+"lsnTime": "2021-1-11 8:30",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Tim",
+"lessonDate": "2021-1-11",
+"lsnTime": "2021-1-11 11:00",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Sam",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 11:00",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Sam",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 8:30",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Tim",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 8:30",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Kyle",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 8:30",
+"lessonCost": "$100/h.d."
+},
+{
+"instructorName": "Tim",
+"lessonDate": "2021-1-17",
+"lsnTime": "2021-1-17 11:00",
+"lessonCost": "$100/h.d."
 }
 ]

@@ -1,4 +1,4 @@
-/* dark purple: #291720
+/* dark purple: #291720;
    dark nav: rgb(35, 35, 35);
    light nav: rgba(229, 229, 229, 0.25);
    telephone: rgb(218, 69, 89);
@@ -73,11 +73,17 @@ html, body {
 
 /* style contact info link */
 .contact-info a {
-  color: #ff3352;
+  color: #53687e;
   position: absolute;
   right: 25px;
   text-decoration: none;
   text-shadow: 4px 3px 5px #53687e;
+}
+
+.center {
+  text-align: center;
+  font-weight: bold;
+  color: #291711;
 }
 
 /* change color on hover */
@@ -154,7 +160,7 @@ html, body {
   display: block;
   height: 27px;
   padding: 5px 8px;
-  color: black;
+  color: #ACABA0;
 }
 
 /* first link child gets bottom border */

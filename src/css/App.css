@@ -9,7 +9,7 @@
 
 .brd {
   /* border-bottom: dotted 1px #6c757d; */
-  background-color: #b75757;
+  /* background-color: #b75757; */
   padding: 20px 0px 20px 13px;
   /* margin-left: 6px; */
 }
@@ -24,6 +24,20 @@
   font-weight: lighter;
 }
 
-@media screen only and (max-width: 539px) {
+.add-lesson .card-body {
+  display: none;
+}
 
+.show-hide {
+  display: none;
+}
+
+.remove-lsn-list {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
 }
