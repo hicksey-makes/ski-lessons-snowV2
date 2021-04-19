@@ -19,6 +19,7 @@ class App extends Component {
       lessonLength: "Full Day",
       orderBy: 'instructorName',
       orderDir: 'asc',
+      queryText: "",
       formDisplay: false,
       lastIndex: 0
     };
@@ -27,6 +28,7 @@ class App extends Component {
     this.passSelections = this.passSelections.bind(this);
     this.setPrice = this.setPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
+    this.searchLsns = this.searchLsns.bind(this);
   }
 
   deleteLesson(lsn) {
@@ -72,7 +74,13 @@ class App extends Component {
         myLessons: lsns,
       });
     });
-}
+  }
+
+  searchLsns(query) {
+    this.setState({
+      queryText: query
+    });
+  }
 
   passSelections(lsn) {
     let tempTime = lsn.lsnTime;
@@ -97,7 +105,7 @@ class App extends Component {
      order = -1;
    }
 
-  filteredLsns.sort((a,b) => {
+  filteredLsns = filteredLsns.sort((a,b) => {
     if (a[this.state.orderBy] <
         b[this.state.orderBy]
     ) {
@@ -105,6 +113,18 @@ class App extends Component {
     } else {
       return 1 * order;
     }
+  }).filter(eachItem => {
+    return (
+      eachItem['instructorName']
+      .toLowerCase()
+      .includes(this.state.queryText.toLowerCase()) ||
+      eachItem['lsnTime']
+      .toLowerCase()
+      .includes(this.state.queryText.toLowerCase()) ||
+      eachItem['lessonCost']
+      .toLowerCase()
+      .includes(this.state.queryText.toLowerCase())
+    )
   });
 
    return (
@@ -113,7 +133,7 @@ class App extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="container">
-              <SearchLessons orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
+              <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
               <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
               <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 

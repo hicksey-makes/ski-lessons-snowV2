@@ -8,7 +8,7 @@ class SearchLessons extends Component {
         <div className="row justify-content-center">
           <div className="col-md-12">
             <div className="input-group">
-              <input type="text" className="form-control" />
+              <input onChange={e => this.props.searchLsns(e.target.value)}type="text" className="form-control" />
               <div className="input-group-append">
                 <button className="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">Sort by: <span className="caret"/>
                 </button>
