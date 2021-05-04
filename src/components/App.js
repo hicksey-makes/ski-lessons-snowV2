@@ -25,6 +25,7 @@ class App extends Component {
     };
     this.deleteLesson = this.deleteLesson.bind(this);
     this.toggleAdd = this.toggleAdd.bind(this);
+    this.hideForm = this.hideForm.bind(this);
     this.passSelections = this.passSelections.bind(this);
     this.setPrice = this.setPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
@@ -40,10 +41,19 @@ class App extends Component {
     });
   }
 
+
   toggleAdd() {
     this.setState({
       formDisplay: !this.state.formDisplay
     })
+  }
+
+  hideForm() {
+    if (this.state.formDisplay === true) {
+      this.setState({
+        formDisplay: false
+      })
+    }
   }
 
   setPrice(event) {
@@ -133,7 +143,7 @@ class App extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="container">
-              <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} />
+              <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm}/>
               <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
               <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 
