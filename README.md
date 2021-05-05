@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Ski Lessons App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An app to book a ski\snowboard lesson with preferred instructor (built using Bootstrap and Create-React-App).
+
+# Implementation
+* Served by the Netlify serverless platform (www.netlify.com).
+* Built with github repo.
+# Steps Involved
 
 ## Available Scripts
 
