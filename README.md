@@ -17,7 +17,7 @@ An app to book a ski\snowboard lesson with preferred instructor (built using Boo
 * Render the App component in index.js.
 * State variables used to track/update lesson preferences. 
 
-# Next Steps
+## Next Steps
 * Create about page for the three instructors using React Router.
 * Integrate stripe checkout functionality.
 
