@@ -1,6 +1,6 @@
 # Ski Lessons App
 
-**An app to book a ski\snowboard lesson with preferred instructor.**
+**A one page-React application to book a snowboard lesson with preferred instructor.**
 
 ## Implementation
 * Single page application: one index.html file, whereby Javascript rewrites the content based on the url.
