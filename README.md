@@ -1,6 +1,6 @@
 # Ski Lessons App
 
-**An app to book a ski\snowboard lesson with preferred instructor (built using Bootstrap and Create React App).**
+**An app to book a ski\snowboard lesson with preferred instructor.**
 
 ## Implementation
 * Single page application: one index.html file, whereby Javascript rewrites the content based on the url.
