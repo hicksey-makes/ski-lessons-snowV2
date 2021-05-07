@@ -1,12 +1,12 @@
 # Ski Lessons App
 
-An app to book a ski\snowboard lesson with preferred instructor (built using Bootstrap and Create-React-App).
+**An app to book a ski\snowboard lesson with preferred instructor (built using Bootstrap and Create-React-App).**
 
 ## Implementation
 * Single page application: one index.html file, whereby javascript rewrites the content based on the url.
 * Create-react-app sets up the build system (webpack) and handles configuration.
 * Create-react-app handles development vs production versions.
-* Served by the Netlify serverless platform (www.netlify.com).
+* Served by the Netlify serverless platform *(www.netlify.com)*.
 
 ## Steps Involved
 * Use node.js to install create-react-app
