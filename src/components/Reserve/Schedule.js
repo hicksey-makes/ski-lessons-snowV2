@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {useState, useEffect} from 'react';
-import '../../css/App.css';
+import '../../css/Schedule.css';
 import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
-import '../..styles.css';
+
 import {without} from 'lodash';
 
 class Schedule extends Component {
