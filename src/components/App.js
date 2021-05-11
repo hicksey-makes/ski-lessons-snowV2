@@ -9,7 +9,7 @@ export default function App() {
     <BrowserRouter>
       <div className="jumbotron jumbotron-fluid pt-0 pb-0">
         <div className="container ml-0 pl-0">
-            <img src="https://wallpapercave.com/wp/pmSJfNk.jpg"className="mx-auto d-block" width="1500px" height="900px" alt="Snow falling" />
+            <img src="https://wallpapercave.com/wp/pmSJfNk.jpg"className="mx-auto d-block img-fluid" width="1600px" height="900px" alt="Snow falling" />
         </div>
       </div>
 
