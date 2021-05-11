@@ -7,10 +7,8 @@ import '../css/App.css';
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="jumbotron jumbotron-fluid pt-0 pb-0">
-        <div className="container ml-0 pl-0">
-            <img src="https://wallpapercave.com/wp/pmSJfNk.jpg"className="mx-auto d-block img-fluid" width="1600px" height="900px" alt="Snow falling" />
-        </div>
+      <div className="">
+          <img src="https://wallpapercave.com/wp/pmSJfNk.jpg" className="mw-100 mh-100" alt="Snow falling" />
       </div>
 
         <main>
