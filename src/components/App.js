@@ -6,17 +6,17 @@ import '../css/App.css';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="">
-          <img src="https://wallpapercave.com/wp/pmSJfNk.jpg" className="mw-100 mh-100" alt="Snow falling" />
-      </div>
 
-        <main>
+    <BrowserRouter>
+    <main>
           <Switch>
-            <Route exact path="/">
-            <Link className="btn btn-info btn-lg" role="button" to="/about/">About Instructors</Link>
-            <Link className="btn btn-info btn-lg" role="button" to="/schedule/">Schedule Now</Link>
+            <Route className="backdrop" exact path="/">
+            <div className="img-snow">
+              <Link className="btn btn-info btn-lg" role="button" to="/about/">About Instructors</Link>
+              <Link className="btn btn-info btn-lg" role="button" to="/schedule/">Schedule Now</Link>
+            </div>
             </Route>
+
             <Route path="/about/">
               <About  />
             </Route>
@@ -24,7 +24,7 @@ export default function App() {
               <Schedule  />
             </Route>
           </Switch>
-        </main>
+      </main>
     </BrowserRouter>
   )
 }
