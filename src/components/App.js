@@ -6,13 +6,19 @@ import '../css/App.css';
 
 export default function App() {
   return (
+
     <BrowserRouter>
-        <main>
+    <main>
           <Switch>
-            <Route exact path="/">
-            <Link to="/about/">About Instructors</Link>
-            <Link to="/schedule/">Schedule Now</Link>
+            <Route className="backdrop" exact path="/">
+            <div className="img-snow">
+              <div className="d-flex justify-content-center grow">
+                  <Link className="btn btn-info btn-lg first mr-3 shrink" role="button" to="/about/">About Instructors</Link>
+                  <Link className="btn btn-info btn-lg next ml-3 shrink" role="button" to="/schedule/">See Schedule</Link>
+              </div>
+            </div>
             </Route>
+
             <Route path="/about/">
               <About  />
             </Route>
@@ -20,7 +26,7 @@ export default function App() {
               <Schedule  />
             </Route>
           </Switch>
-        </main>
+      </main>
     </BrowserRouter>
   )
 }

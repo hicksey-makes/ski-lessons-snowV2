@@ -45,11 +45,13 @@ class Schedule extends Component {
       formDisplay: !this.state.formDisplay
     })
   }
+
   hideForm() {
     this.setState({
       formDisplay: false
     })
   }
+  
   setPrice(event) {
     console.log(event.target.value);
     this.setState({

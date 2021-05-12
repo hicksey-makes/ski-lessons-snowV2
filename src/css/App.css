@@ -1,0 +1,14 @@
+.img-snow {
+  background-image: url("https://wallpapercave.com/wp/pmSJfNk.jpg");
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  height: 659px;
+  max-width: 1600px;
+}
+.grow {
+  height: 658px;
+}
+.shrink {
+  align-self: center;
+  /* opacity: 0.9; */
+}
