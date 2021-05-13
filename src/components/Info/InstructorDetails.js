@@ -18,6 +18,7 @@ export default function InstructorDetails() {
     <div>
       <Link to="/about/">Back</Link>
       {instructor && (
+        <div className="container">
         <div className="card" style={{width:400 + 'px'}}>
           <img className="card-img-top" src={instructor.image} alt="" />
           <div className="card-body">
@@ -25,6 +26,7 @@ export default function InstructorDetails() {
             <p className="card-text">Style: {instructor.description}</p>
             <p className="card-text">Expertise: {instructor.skill}</p>
           </div>
+        </div>
         </div>
       )}
     </div>
