@@ -19,7 +19,7 @@ export default function InstructorDetails() {
       <Link to="/about/" className="btn-primary btn ml-4" style={{width:80 + "px"}}>Back</Link>
       {instructor && (
         <div className="container">
-        <div className="card bg-dark text-white mb-5 ml-5 mt-1" style={{width:300 + 'px'}}>
+        <div className="card shadow border-warning bg-dark text-white mb-5 ml-5 mt-1" style={{width:300 + 'px'}}>
           <img className="card-img-top" src={instructor.image} alt="" />
           <div className="card-body mt-n2">
             <h5 className="card-title display-3 mb-3 text-center">{instructor.name}</h5>
