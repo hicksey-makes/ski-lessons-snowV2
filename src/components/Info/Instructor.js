@@ -21,7 +21,7 @@ export default function Instructor() {
       <ul>
         {instructors.map((instructor) => (
           <li>
-            <Link className="btn btn-secondary btn-lg mb-3 ml-5" style={{width:100 + "px"}} key={instructor.id} to={`instructors/${instructor.id}`}>
+            <Link className="btn btn-secondary mb-3 ml-4" style={{width:80 + "px"}} key={instructor.id} to={`instructors/${instructor.id}`}>
               {instructor.name}
             </Link>
           </li>

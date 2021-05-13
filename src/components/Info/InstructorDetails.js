@@ -16,10 +16,10 @@ export default function InstructorDetails() {
 
   return (
     <div>
-      <Link to="/about/" className="btn-primary btn btn-lg ml-5" style={{width:100 + "px"}}>Back</Link>
+      <Link to="/about/" className="btn-primary btn ml-4" style={{width:80 + "px"}}>Back</Link>
       {instructor && (
         <div className="container">
-        <div className="card mb-5" style={{width:450 + 'px'}}>
+        <div className="card mb-5 ml-5 mt-3" style={{width:450 + 'px'}}>
           <img className="card-img-top" src={instructor.image} alt="" />
           <div className="card-body">
             <h3 className="card-title display-2 mb-4 text-center">{instructor.name}</h3>
