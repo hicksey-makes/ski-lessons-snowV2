@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 export default function About() {
   return (<>
-    <Link to="/">Home</Link>
+    <Link className="btn btn-info btn-lg mb-3 mt-3 ml-5" style={{width:100 + "px"}} to="/">Home</Link>
     <BrowserRouter>
       <Switch>
         <Route exact path="/about">
