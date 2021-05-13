@@ -17,16 +17,18 @@ export default function Instructor() {
   console.log(instructors);
 
   return (
-    <div>
-      <ul>
+    <div className="container">
+    <div className="btn-group btn-group-justified" style={{width:100 + "%"}}>
+
         {instructors.map((instructor) => (
-          <li>
-            <Link className="btn btn-secondary mb-3 ml-4" style={{width:80 + "px"}} key={instructor.id} to={`instructors/${instructor.id}`}>
+
+            <Link className="btn btn-secondary "  key={instructor.id} to={`instructors/${instructor.id}`}>
               {instructor.name}
             </Link>
-          </li>
+
         ))}
-      </ul>
+
+    </div>
     </div>
   );
 }
