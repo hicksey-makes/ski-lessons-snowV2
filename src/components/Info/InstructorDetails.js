@@ -19,7 +19,7 @@ export default function InstructorDetails() {
       <Link to="/about/">Back</Link>
       {instructor && (
         <div className="container">
-        <div className="card" style={{width:600 + 'px'}}>
+        <div className="card" style={{width:450 + 'px'}}>
           <img className="card-img-top" src={instructor.image} alt="" />
           <div className="card-body">
             <h3 className="card-title display-2 mb-4 text-center">{instructor.name}</h3>

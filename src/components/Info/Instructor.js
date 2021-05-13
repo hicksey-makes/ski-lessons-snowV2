@@ -21,7 +21,7 @@ export default function Instructor() {
       <ul>
         {instructors.map((instructor) => (
           <li>
-            <Link key={instructor.id} to={`instructors/${instructor.id}`}>
+            <Link type="button" key={instructor.id} to={`instructors/${instructor.id}`}>
               {instructor.name}
             </Link>
           </li>
