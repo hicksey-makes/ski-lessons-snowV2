@@ -25,10 +25,10 @@ export default function Instructor() {
             </Link>
         ))}
       </div>
-      <div className="bg-info text-center text-light">
-        <h3 className="margin">Find the instructor</h3>
+      <div className="bg-info text-center text-light mb-n2">
+        <h3 className="margin pt-4 pb-1">Find the instructor</h3>
         <img  src="../images/snowboard_icon_colorpow.png" style={{width:450 + "px"}} alt="snowboarder icon"/>
-        <h3>Right for your desires and abilities.</h3>
+        <h3 className="pb-4 pt-1">to match your desires and abilities.</h3>
       </div>
     </div>
   );
