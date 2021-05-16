@@ -24,3 +24,8 @@
   object-fit: cover;
   object-position: 100% 5%;
 }
+
+.highlight {
+  background-color: rgba(250, 235, 109, .6);
+  padding: 5px 0;
+}
