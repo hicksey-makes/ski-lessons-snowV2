@@ -19,3 +19,8 @@
   object-position: 90% 100%;
   opacity: 0.8;
 }
+
+.object-f {
+  object-fit: cover;
+  object-position: 100% 5%;
+}
