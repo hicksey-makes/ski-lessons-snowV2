@@ -12,3 +12,10 @@
   align-self: center;
   /* opacity: 0.9; */
 }
+
+.img-rounded {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 90% 100%;
+  opacity: 0.8;
+}

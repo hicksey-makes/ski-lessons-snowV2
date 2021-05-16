@@ -17,16 +17,19 @@ export default function Instructor() {
   console.log(instructors);
 
   return (
-    <div>
-      <ul>
+    <div className="container-fluid">
+      <div className="btn-group btn-group-justified" style={{width:100 + "%"}}>
         {instructors.map((instructor) => (
-          <li>
-            <Link className="btn btn-secondary btn-lg mb-3 ml-5" style={{width:100 + "px"}} key={instructor.id} to={`instructors/${instructor.id}`}>
+            <Link className="btn btn-secondary "  key={instructor.id} to={`instructors/${instructor.id}`}>
               {instructor.name}
             </Link>
-          </li>
         ))}
-      </ul>
+      </div>
+      <div className="bg-dark text-center text-light mb-n2">
+        <h3 className="margin pt-4 pb-2">Find the instructor</h3>
+        <img className="img-rounded p-1" src="../images/powder_freshies_a.stock.jpeg" style={{width:450 + "px", height:450 + "px"}} alt="snowboarder icon"/>
+        <h3 className="pb-4 pt-2">for your desires and abilities.</h3>
+      </div>
     </div>
   );
 }

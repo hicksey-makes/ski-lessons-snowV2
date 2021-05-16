@@ -13,8 +13,8 @@ export default function App() {
             <Route className="backdrop" exact path="/">
             <div className="img-snow">
               <div className="d-flex justify-content-center grow">
-                  <Link className="btn btn-info btn-lg first mr-3 shrink" role="button" to="/about/">About Instructors</Link>
-                  <Link className="btn btn-info btn-lg next ml-3 shrink" role="button" to="/schedule/">See Schedule</Link>
+                  <Link className="btn btn-info first mr-md-3 mr-2 mr-lg-4 shrink" role="button" to="/about/">About Instructors</Link>
+                  <Link className="btn btn-info next ml-md-3 ml-2 ml-lg-4 shrink" role="button" to="/schedule/">See Schedule</Link>
               </div>
             </div>
             </Route>
