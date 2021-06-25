@@ -4,8 +4,9 @@ import '../../css/Schedule.css';
 import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
-
 import {without} from 'lodash';
+import {Link} from 'react-router-dom';
+
 
 class Schedule extends Component {
   constructor() {
@@ -51,7 +52,7 @@ class Schedule extends Component {
       formDisplay: false
     })
   }
-  
+
   setPrice(event) {
     console.log(event.target.value);
     this.setState({
@@ -133,23 +134,24 @@ class Schedule extends Component {
     )
   });
 
-   return (
-    <main className="" id="  ">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12">
-            <div className="container">
-              <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
-              <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
-              <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
+   return (<>
+     <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
+      <main className="" id="  ">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="container">
+                <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
+                <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
+                <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 
-              <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
+                <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-  );
+      </main>
+  </>);
  }
 };
 
