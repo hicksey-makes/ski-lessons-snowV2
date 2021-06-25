@@ -1,6 +1,6 @@
 # Ski Lessons App
 
-**A one-page-React application (built with Create React App) to browse instructors and book and purchase a snowboarding lesson.**
+**A one-page-React application (built with Create React App) to browse instructors then book and purchase a snowboarding lesson.**
 
 ## Implementation
 * Single page application: one index.html file, whereby Javascript rewrites the content based on the url.
