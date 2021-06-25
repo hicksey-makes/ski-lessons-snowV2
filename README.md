@@ -12,14 +12,14 @@
 * Use node.js to install create-react-app
 * Use git for version control.
 * Use a webserver provided by webpack throughout development. 
-* Use reactDOM.render() to render React's virtual DOM to the HTML's.
+* Use reactDOM.render() to render React's virtual DOM to the browser's.
 * Build components and import them to the app component. 
 * Render the App component in index.js.
-* State variables used to track/update lesson preferences. 
-
+* Use state variables and effects to track/update lesson preferences. 
+* Utilize react-router-dom library to create about pages for the instructors.
+* 
 ## Next Steps
-* Create about page for the three instructors using React Router.
-* Integrate checkout functionality.
+* Integrate Stripe checkout functionality.
 
 ## Learn More
 
