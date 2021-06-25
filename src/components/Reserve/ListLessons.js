@@ -51,12 +51,12 @@ class ListLessons extends Component {
                 {item.instructorName}
                 </span>
               </div>
-              <div className="col-2 col-md-3 label-item brd lsn-price text-info text-break">
+              <div className="col-3 col-md-3 label-item brd lsn-price text-info text-break">
 
                 {item.lessonCost}
 
               </div>
-              <div className="col-2 col-md-2 brd">
+              <div className="col-1 col-md-2 brd">
                 <button className="btn btn-sm btn-success pr-3 pl-3 mr-1 ml-1 mr-md-1 pr-md-4 pl-md-4 ml-md-auto d-block" onClick={() => {this.props.deleteLesson(item); this.props.toggleAdd(); this.props.grabTime(item)}}><FaRegCalendarCheck  /></button>
               </div>
             </div>
