@@ -147,7 +147,9 @@ class Schedule extends Component {
 
    return (<>
      <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
-     <Link classname="btn blendin mb-1 mt-3 mr-4" style={{width: 80 + "px"}} to="/cart/">Cart</Link>
+     <div className="d-block ml-auto mt-n5" style={{width: 150 + "px"}}>
+        <Link className="btn btn-warning text-white mt-1" style={{width: 80 + "px"}} to="/cart/">Cart</Link>
+     </div>
       <main className="" id="  ">
         <div className="container">
           <div className="row">

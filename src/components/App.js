@@ -14,7 +14,7 @@ export default function App() {
             <Route className="backdrop" exact path="/">
             <div className="img-snow">
             <div className="d-block ml-auto" style={{width: 150 + "px"}}>
-              <Link className="btn btn-warning mt-2 px-4 text-white" role="button" to="/cart/">Cart</Link>
+              <Link className="btn btn-warning mt-3 px-4 text-white" role="button" to="/cart/">Cart</Link>
             </div>
 
               <div className="d-flex justify-content-center grow">
