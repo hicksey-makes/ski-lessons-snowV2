@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {useState, useEffect} from 'react';
 import '../../css/Schedule.css';
 import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
@@ -21,7 +20,8 @@ class Schedule extends Component {
       orderDir: 'asc',
       queryText: "",
       formDisplay: false,
-      lastIndex: 0
+      lastIndex: 0,
+      cart: []
     };
     this.deleteLesson = this.deleteLesson.bind(this);
     this.toggleAdd = this.toggleAdd.bind(this);
@@ -30,7 +30,18 @@ class Schedule extends Component {
     this.setPrice = this.setPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
     this.searchLsns = this.searchLsns.bind(this);
+    this.handleProductAdd = this.handleProductAdd.bind(this);
+    this.handleProductDelete = this.handleProductDelete.bind(this);
   }
+
+  handleProductAdd(newProduct) {
+
+  }
+
+  handleProductDelete(id) {
+
+  }
+
 
   deleteLesson(lsn) {
     let tempLsns = this.state.myLessons;
@@ -136,6 +147,7 @@ class Schedule extends Component {
 
    return (<>
      <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
+     <Link classname="btn blendin mb-1 mt-3 mr-4" style={{width: 80 + "px"}} to="/cart/">Cart</Link>
       <main className="" id="  ">
         <div className="container">
           <div className="row">
@@ -144,8 +156,7 @@ class Schedule extends Component {
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
                 <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} grabTime={this.passSelections}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
-
-                <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
+                <AddLessons onProductAdd={this.handleProductAdd} onProductDelete={this.handleProductDelete} cart={this.state.cart} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
               </div>
             </div>
           </div>

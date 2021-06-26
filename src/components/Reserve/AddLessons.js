@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Moment from 'react-moment';
+import {Link} from 'react-router-dom';
 
 class AddLessons extends Component {
   render() {
@@ -74,8 +75,8 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <div className="col-md-12">
-                <button className="btn btn-primary btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
-                </button>
+                <Link to="/cart/" className="btn btn-primary btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
+                </Link>
               </div>
             </div>
 
