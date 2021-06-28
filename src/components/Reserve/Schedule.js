@@ -94,6 +94,7 @@ class Schedule extends Component {
     });
   }
 
+
   searchLsns(query) {
     this.setState({
       queryText: query
@@ -116,7 +117,7 @@ class Schedule extends Component {
 
    let order;
    let filteredLsns = this.state.myLessons;
-
+   console.log(filteredLsns);
    if(this.state.orderDir === 'asc') {
      order = 1;
    } else {
