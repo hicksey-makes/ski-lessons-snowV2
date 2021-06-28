@@ -157,6 +157,7 @@ class Schedule extends Component {
             <div className="col-md-12">
               <div className="container">
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
+                
                 <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
                 <AddLessons onProductAdd={this.handleProductAdd} onProductDelete={this.handleProductDelete} cart={this.state.cart} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>

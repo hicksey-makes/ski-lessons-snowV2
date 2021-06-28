@@ -22,6 +22,19 @@ class ListLessons extends Component {
         'lesson-list item-list mb-3 ' +
         (this.props.formDisplay ? 'remove-lsn-list' : '')
       }>
+      <div className="container">
+      <table className="table table-bordered mt-2 mb-n3 w-85 ml-n4">
+        <thead className="">
+          <tr className="table-active">
+            <th className="">Date</th>
+            <th className="">Time</th>
+            <th className="" style={{width: 15 + "%"}}>Instructor</th>
+            <th className="">Type</th>
+            <th className="">Price</th>
+          </tr>
+        </thead>
+      </table>
+      </div>
         {this.props.lessons.map(item => {
           return <ListLesson  key={item.lsnId} lsns={item} toggleAdd={this.props.toggleAdd} reserveLsn={this.props.reserveLsn}  />
         })}
