@@ -25,15 +25,18 @@ class ListLesson extends Component {
               />
               </span>
             </div>
-            <div className="col-4 col-md-3 brd">
+            <div className="col-2 col-md-2 brd">
               {/*  <span className="label-item mr-2 text-break">
               Instructor:
               </span>*/}
-              <span className="board-name text-white">
+              <span className="board-name text-primary">
               {this.props.lsns.instructorName}
               </span>
             </div>
-            <div className="col-3 col-md-3 label-item brd lsn-price text-info text-break">
+            <div className="col-2 col-md-2 text-white brd">
+              {this.props.lsns.lsnType}
+            </div>
+            <div className="col-2 col-md-2 label-item brd lsn-price text-info text-break">
               {this.props.lsns.lessonCost}
             </div>
             <div className="col-1 col-md-2 brd">
