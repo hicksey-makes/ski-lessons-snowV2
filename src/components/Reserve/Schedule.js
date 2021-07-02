@@ -143,9 +143,9 @@ class Schedule extends Component {
               <div className="container">
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
-                <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson}/>
+                <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
-                <AddLessons onProductAdd={this.handleProductAdd} onProductDelete={this.handleProductDelete} cart={this.state.cart} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice}/>
+                <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} onProductAdd={this.props.onProductAdd} cart={this.props.cart}/>
               </div>
             </div>
           </div>
