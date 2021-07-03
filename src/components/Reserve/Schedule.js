@@ -19,7 +19,8 @@ class Schedule extends Component {
       orderDir: 'asc',
       queryText: "",
       formDisplay: false,
-      lastIndex: 0
+      lastIndex: 0,
+      selectedLsn: {}
     };
     this.deleteLesson = this.deleteLesson.bind(this);
     this.toggleAdd = this.toggleAdd.bind(this);
@@ -28,6 +29,7 @@ class Schedule extends Component {
     this.setPrice = this.setPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
     this.searchLsns = this.searchLsns.bind(this);
+    this.handleLessonSelect = this.handleLessonSelect.bind(this);
   }
 
   deleteLesson(lsn) {
@@ -87,6 +89,11 @@ class Schedule extends Component {
     });
   }
 
+  handleLessonSelect(lsn) {
+    this.setState({
+      selectedLsn: lsn
+    });
+  }
   reserveLesson(lsn) {
     let tempTime = lsn.lsnTime;
     let tempDate = lsn.lessonDate;
@@ -143,9 +150,9 @@ class Schedule extends Component {
               <div className="container">
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
-                <ListLessons lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+                <ListLessons onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
-                <AddLessons formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} onProductAdd={this.props.onProductAdd} cart={this.props.cart}/>
+                <AddLessons onProductAdd={this.props.onProductAdd} selectedLsn={this.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} cart={this.props.cart}/>
               </div>
             </div>
           </div>

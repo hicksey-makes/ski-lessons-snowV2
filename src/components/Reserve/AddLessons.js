@@ -76,8 +76,8 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <div className="col-md-12">
-                <Link to="/cart/" className="btn btn-primary btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
-                </Link>
+                <button className="btn btn-primary btn-primary ml-md-auto mr-md-0 mx-auto d-block" onClick={() => {this.props.toggleAdd(); this.props.onProductAdd(this.props.selectedLsn)}} type="submit">Reserve
+                </button>
               </div>
             </div>
 
