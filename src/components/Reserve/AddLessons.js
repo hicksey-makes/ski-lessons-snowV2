@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Moment from 'react-moment';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class AddLessons extends Component {
   render() {
-    
+    console.log(this.props.selectedLsn);
     return (
       <div className={
         'card textcenter mt-3 ' +

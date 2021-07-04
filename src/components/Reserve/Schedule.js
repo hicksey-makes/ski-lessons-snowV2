@@ -32,41 +32,6 @@ class Schedule extends Component {
     this.handleLessonSelect = this.handleLessonSelect.bind(this);
   }
 
-  deleteLesson(lsn) {
-    let tempLsns = this.state.myLessons;
-    tempLsns = without(tempLsns, lsn);
-
-    this.setState({
-      myLessons: tempLsns
-    });
-  }
-
-  toggleAdd() {
-    this.setState({
-      formDisplay: !this.state.formDisplay
-    })
-  }
-
-  hideForm() {
-    this.setState({
-      formDisplay: false
-    })
-  }
-
-  setPrice(event) {
-    console.log(event.target.value);
-    this.setState({
-      lessonLength: event.target.value
-    });
-  }
-
-  changeOrder(quality, direction) {
-      this.setState({
-        orderBy: quality,
-        orderDir: direction
-      });
-  }
-
   componentDidMount() {
     fetch('../data.json')
     .then(response => response.json())
@@ -83,18 +48,44 @@ class Schedule extends Component {
     });
   }
 
-
-
   searchLsns(query) {
     this.setState({
       queryText: query
     });
   }
 
+  changeOrder(quality, direction) {
+      this.setState({
+        orderBy: quality,
+        orderDir: direction
+      });
+  }
+
+  hideForm() {
+    this.setState({
+      formDisplay: false
+    })
+  }
+
   handleLessonSelect(lsn) {
     this.setState({
       selectedLsn: lsn
     });
+  }
+
+  deleteLesson(lsn) {
+    let tempLsns = this.state.myLessons;
+    tempLsns = without(tempLsns, lsn);
+
+    this.setState({
+      myLessons: tempLsns
+    });
+  }
+
+  toggleAdd() {
+    this.setState({
+      formDisplay: !this.state.formDisplay
+    })
   }
 
   reserveLesson(lsn) {
@@ -109,8 +100,15 @@ class Schedule extends Component {
     });
   }
 
+  setPrice(event) {
+    console.log(event.target.value);
+    this.setState({
+      lessonLength: event.target.value
+    });
+  }
+
  render() {
-console.log(this.state.selectedLsn);
+
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -158,7 +156,7 @@ console.log(this.state.selectedLsn);
 
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 
-                <AddLessons onProductAdd={this.props.onProductAdd} selectedLsn={this.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} cart={this.props.cart}/>
+                <AddLessons onProductAdd={this.props.onProductAdd} selectedLsn={this.state.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} cart={this.props.cart}/>
               </div>
             </div>
           </div>
