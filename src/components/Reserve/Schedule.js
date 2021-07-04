@@ -83,6 +83,8 @@ class Schedule extends Component {
     });
   }
 
+
+
   searchLsns(query) {
     this.setState({
       queryText: query
@@ -94,6 +96,7 @@ class Schedule extends Component {
       selectedLsn: lsn
     });
   }
+
   reserveLesson(lsn) {
     let tempTime = lsn.lsnTime;
     let tempDate = lsn.lessonDate;
@@ -107,6 +110,7 @@ class Schedule extends Component {
   }
 
  render() {
+console.log(this.state.selectedLsn);
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -151,7 +155,9 @@ class Schedule extends Component {
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
                 <ListLessons onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} deleteLesson={this.deleteLesson} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
+
                 <AddLessons onProductAdd={this.props.onProductAdd} selectedLsn={this.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} cart={this.props.cart}/>
               </div>
             </div>
