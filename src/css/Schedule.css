@@ -21,13 +21,14 @@
   background-color: white;
   border-radius: 50%;
   padding: 3px;
+  width: 37%;
 }
 
 .lesson-quantity {
   border-radius: 50%;
   color: white;
   font-size: 13px;
-  width: 21px;
+
   height: 21px;
   display: grid;
   place-items: center;
@@ -54,29 +55,42 @@
   display: none;
 }
 
+@media only screen and (min-width: 977px) {
+  .column {
+  width: 13%;
+  }
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 960px;
   }
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 700px) {
   .lesson-quantity-container {
     position: absolute;
     right: 8px;
     top: 50px;
     border-radius: 50%;
+    width: 37%;
   }
-  .column {
-    width: 17%;
+  @media only screen and (min-width: 781px) {
+    .container {
+      max-width: 100px;
+    }
   }
-  .lesson-quantity {
-    width: auto;
+  @media screen and (max-width: 750px) {
+    .lesson-quantity {
+      width: 21px;
+    }
   }
-}
+  @media screen and (min-width: 950px) {
+    .lesson-quantity {
+      width: 21px;
+    }
+  }
 
-@media only screen and (max-width: 762px) {
-  .column {
-    width: 100%;
-  }
+
+
 }
