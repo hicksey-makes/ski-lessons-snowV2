@@ -59,3 +59,23 @@
     max-width: 960px;
   }
 }
+
+@media only screen and (max-width: 765px) {
+  .lesson-quantity-container {
+    position: absolute;
+    right: 8px;
+    top: 50px;
+    border-radius: 50%;
+  }
+  .column {
+    width: 17%;
+  }
+  .lesson-quantity {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 762px) {
+  .column {
+    width: 100%;
+  }
+}
