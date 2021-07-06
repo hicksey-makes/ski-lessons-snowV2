@@ -55,7 +55,7 @@
   display: none;
 }
 
-@media only screen and (min-width: 764px) {
+@media only screen and (min-width: 768px) {
   #sphere {
   width: 13%;
   }
@@ -80,11 +80,7 @@
       max-width: 100px;
     }
   }
-  @media screen and (max-width: 750px) {
-    .lesson-quantity {
-      width: 21px;
-    }
-  }
+  
   @media screen and (min-width: 950px) {
     .lesson-quantity {
       width: 21px;
