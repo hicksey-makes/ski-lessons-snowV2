@@ -14,6 +14,7 @@ class Schedule extends Component {
       lessonTime: "",
       lessonDate: "",
       instructorName: "",
+      lessonType: "",
       lessonLength: "Full Day",
       orderBy: 'instructorName',
       orderDir: 'asc',
@@ -92,11 +93,13 @@ class Schedule extends Component {
     let tempTime = lsn.lsnTime;
     let tempDate = lsn.lessonDate;
     let tempInstructor = lsn.instructorName;
+    let tempType = lsn.lsnType;
 
     this.setState({
       lessonTime: tempTime,
       lessonDate: tempDate,
-      instructorName: tempInstructor
+      instructorName: tempInstructor,
+      lessonType: tempType
     });
   }
 
