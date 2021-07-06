@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 class AddLessons extends Component {
   render() {
-    console.log(this.props.selectedLsn);
+    console.log(this.props.lessonType);
     return (
       <div className={
         'card textcenter mt-3 ' +
@@ -47,6 +47,12 @@ class AddLessons extends Component {
               {(this.props.lessonLength === 'Half Day' ? '$100': '$175')}
               </h5>
               </div>
+            </div>
+            <div className="form-group form-row">
+              <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnType">Type:</label>
+            <h5 className="col-md-4 mt-0 mt-md-2 font-weight-light font-italic text-primary">
+              {this.props.lessonType}
+            </h5>
             </div>
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnDate">Date:</label>
