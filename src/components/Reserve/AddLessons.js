@@ -24,16 +24,15 @@ class AddLessons extends Component {
           <form className="">
             <div className="form-group form-row">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="riderName">Rider Name:</label>
-              <div className="col-md-10 mt-2 mt-md-0">
+            <div className="col-md-5 mt-2 mt-md-0">
                 <input className="form-control" type="text" name="riderName" placeholder="Rider's Name" />
               </div>
-            </div>
-            <div className="form-group form-row mb-md-4 mb-1">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
-              <h5 className="col-md-4 mt-0 mt-md-2  font-weight-light font-italic text-primary">
+            <h5 className="col-md-3 mt-0 mt-md-2  font-weight-light font-italic text-primary">
                 {this.props.instructorName}
               </h5>
-
+            </div>
+            <div className="form-group form-row mb-md-4 mb-1">
               <div className="dropdown col-md-1 dropleft mb-2 mt-4 mt-md-1">
                 <button type="button" className="dropdown-toggle btn btn-warning" href="#" id="lsnLength" data-toggle="dropdown">Lesson Length</button>
                 <div className="dropdown-menu">
