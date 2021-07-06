@@ -33,7 +33,7 @@ class ListLesson extends Component {
               <span className="board-name text-primary">
               {this.props.lsns.instructorName}
               </span>
-              <div className="column lesson-quantity-container ">
+              <div className="lesson-quantity-container " id="sphere">
                 <div className="lesson-quantity bg-info">
                   0
                 </div>
