@@ -1,0 +1,5 @@
+{/*const updatedCart = cart.filter(product => {
+  return product.id !== id;
+});
+setCart(updatedCart);
+*/}

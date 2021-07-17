@@ -5,7 +5,14 @@ import { FaRegCalendarCheck } from 'react-icons/fa';
 class ListLesson extends Component {
 
   render() {
-
+    console.log(this.props.cart);
+    let quantity = 0;
+    const existingLesson = this.props.cart.find(lesson => lesson.id === this.props.lsns.id);
+    if (existingLesson) {
+      quantity = existingLesson.quantity;
+    } else {
+      quantity = 0;
+    }
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
           <div className="row bg-dark">
@@ -33,11 +40,14 @@ class ListLesson extends Component {
               <span className="board-name text-primary">
               {this.props.lsns.instructorName}
               </span>
-              <div className="lesson-quantity-container " id="sphere">
-                <div className="lesson-quantity bg-info">
-                  0
+              {quantity > 0 &&
+                <div className="lesson-quantity-container " id="sphere">
+                  <div className="lesson-quantity bg-info">
+                    {quantity}
+                  </div>
                 </div>
-              </div>
+              }
+
             </div>
             <div className="col-2 col-md-2 text-white brd">
               {this.props.lsns.lsnType}

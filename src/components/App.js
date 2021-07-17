@@ -3,16 +3,14 @@ import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Schedule from './Reserve/Schedule';
 import About from './Info/About';
 import '../css/App.css';
-import Cart from './cart.js';
+import Cart from './Reserve/cart.js';
 
 export default function App() {
   const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
+  
 
-  function handleProductAdd(newProduct) {
+  function handleLessonAdd(newProduct) {
     const existingProduct = cart.find(product => {
       return product.id === newProduct.id;
     });
@@ -31,7 +29,7 @@ export default function App() {
     }
   }
 
-  function handleProductDelete(id) {
+  function handleLessonDelete(id) {
     const updatedCart = cart.filter(product => {
       return product.id !== id;
     });
@@ -44,9 +42,9 @@ export default function App() {
           <Switch>
             <Route className="backdrop" exact path="/">
             <div className="img-snow">
-            <div className="d-block ml-auto" style={{width: 150 + "px"}}>
+            {/*<div className="d-block ml-auto" style={{width: 150 + "px"}}>
               <Link className="btn btn-warning mt-3 px-4 text-white" role="button" to="/cart/">Cart</Link>
-            </div>
+            </div>*/}
               <div className="d-flex justify-content-center grow">
                   <Link className="btn btn-info first mr-md-3 mr-2 mr-lg-4 shrink" role="button" to="/about/">About Instructors</Link>
                   <Link className="btn btn-info next ml-md-3 ml-2 ml-lg-4 shrink" role="button" to="/schedule/">See Schedule</Link>
@@ -57,10 +55,10 @@ export default function App() {
               <Cart  cart={cart}  />
             </Route>
             <Route path="/about/">
-              <About  cart={cart}  />
+              <About />
             </Route>
             <Route exact path="/schedule/">
-              <Schedule  cart={cart}  onProductAdd={handleProductAdd} onProductDelete={handleProductDelete} />
+              <Schedule  cart={cart}  onLessonAdd={handleLessonAdd} onLessonDelete={handleLessonDelete} />
             </Route>
           </Switch>
       </main>

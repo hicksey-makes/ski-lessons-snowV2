@@ -100,7 +100,7 @@ class Schedule extends Component {
   }
 
  render() {
-
+   
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -148,7 +148,7 @@ class Schedule extends Component {
 
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 
-                <AddLessons onProductAdd={this.props.onProductAdd} selectedLsn={this.state.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonType={this.state.lessonType} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} cart={this.props.cart}/>
+                <AddLessons onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonTime={this.state.lessonTime} lessonType={this.state.lessonType} lessonDate={this.state.lessonDate} lessonLength={this.state.lessonLength} instructorName={this.state.instructorName} setPrice={this.setPrice} cart={this.props.cart}/>
               </div>
             </div>
           </div>
