@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 
 class AddLessons extends Component {
   render() {
-    console.log(this.props.lessonType);
+    console.log(this.props.selectedLsn);
     return (
+
       <div className={
         'card textcenter mt-3 ' +
         (this.props.formDisplay ? '' : 'add-lesson')
