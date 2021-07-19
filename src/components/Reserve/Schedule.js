@@ -25,7 +25,7 @@ class Schedule extends Component {
     };
     this.toggleAdd = this.toggleAdd.bind(this);
     this.hideForm = this.hideForm.bind(this);
-    this.reserveLesson = this.reserveLesson.bind(this);
+    
     this.setPrice = this.setPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
     this.searchLsns = this.searchLsns.bind(this);
@@ -79,19 +79,7 @@ class Schedule extends Component {
     })
   }
 
-  reserveLesson(lsn) {
-    let tempTime = lsn.lsnTime;
-    let tempDate = lsn.lessonDate;
-    let tempInstructor = lsn.instructorName;
-    let tempType = lsn.lsnType;
 
-    this.setState({
-      lessonTime: tempTime,
-      lessonDate: tempDate,
-      instructorName: tempInstructor,
-      lessonType: tempType
-    });
-  }
 
   setPrice(event) {
     this.setState({
@@ -144,7 +132,7 @@ class Schedule extends Component {
               <div className="container">
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
-                <ListLessons onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} reserveLsn={this.reserveLesson} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+                <ListLessons onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
 
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
 

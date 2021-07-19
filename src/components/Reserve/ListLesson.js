@@ -5,7 +5,7 @@ import { FaRegCalendarCheck } from 'react-icons/fa';
 class ListLesson extends Component {
 
   render() {
-    
+
     let quantity = 0;
     const existingLesson = this.props.cart.find(lesson => lesson.lsnId === this.props.lsns.lsnId);
     if (existingLesson) {
@@ -56,7 +56,7 @@ class ListLesson extends Component {
               {this.props.lsns.lessonCost}
             </div>
             <div className="col-1 col-md-1 brd">
-              <button className="btn btn-sm btn-success pr-3 pl-3 mr-1 ml-1 mr-md-n4 pr-md-2 pl-md-2 ml-md-auto d-block" onClick={() => {this.props.toggleAdd(); this.props.reserveLsn(this.props.lsns); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
+              <button className="btn btn-sm btn-success pr-3 pl-3 mr-1 ml-1 mr-md-n4 pr-md-2 pl-md-2 ml-md-auto d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
             </div>
           </div>
         </div>
