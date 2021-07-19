@@ -30,7 +30,7 @@ class ListLessons extends Component {
                 <th className="col-2 col-md-2">Time</th>
                 <th className="col-3 col-md-3">Instructor</th>
                 <th className="col-2 col-md-2">Type</th>
-                <th className="col-3 col-md-2">Price</th>
+                <th className="col-3 col-md-2">Price($)</th>
               </tr>
             </thead>
           </table>
