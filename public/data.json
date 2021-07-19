@@ -2,7 +2,7 @@
 "instructorName": "Tim",
 "lessonDate": "2021-1-4",
 "lsnTime": "2021-1-4 8:30",
-"lessonCost": "$100/h.d.",
+"lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 1
 },
@@ -10,7 +10,7 @@
 "instructorName": "Sam",
 "lessonDate": "2021-1-4",
 "lsnTime": "2021-1-4 8:30",
-"lessonCost": "$75/h.d.",
+"lessonCost": 75,
 "lsnType": "Terrain Park",
 "id": 2
 },
@@ -18,7 +18,7 @@
 "instructorName": "Tim",
 "lessonDate": "2021-1-4",
 "lsnTime": "2021-1-4 11:00",
-"lessonCost": "$100/h.d.",
+"lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 1
 },
@@ -26,7 +26,7 @@
 "instructorName": "Tim",
 "lessonDate": "2021-1-5",
 "lsnTime": "2021-1-5 8:30",
-"lessonCost": "$150/h.d.",
+"lessonCost": 150,
 "lsnType": "Freeride",
 "id": 3
 },
@@ -34,7 +34,7 @@
 "instructorName": "Tim",
 "lessonDate": "2021-01-06",
 "lsnTime": "2021-01-06 11:00",
-"lessonCost": "$100/h.d.",
+"lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 1
 },
@@ -42,7 +42,7 @@
 "instructorName": "Tim",
 "lessonDate": "2021-1-10",
 "lsnTime": "2021-1-10 8:30",
-"lessonCost": "$100/h.d.",
+"lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 1
 },
@@ -50,7 +50,7 @@
 "instructorName": "Kyle",
 "lessonDate": "2021-1-10",
 "lsnTime": "2021-1-10 11:00",
-"lessonCost": "$75/h.d.",
+"lessonCost": 75,
 "lsnType": "Terrain Park",
 "id": 4
 },
@@ -58,7 +58,7 @@
 "instructorName": "Kyle",
 "lessonDate": "2021-1-11",
 "lsnTime": "2021-1-11 8:30",
-"lessonCost": "$75/h.d.",
+"lessonCost": 75,
 "lsnType": "Terrain Park",
 "id": 4
 },
@@ -66,7 +66,7 @@
 "instructorName": "Tim",
 "lessonDate": "2021-1-11",
 "lsnTime": "2021-1-11 11:00",
-"lessonCost": "$150/h.d.",
+"lessonCost": 150,
 "lsnType": "Freeride",
 "id": 3
 },
@@ -74,7 +74,7 @@
 "instructorName": "Sam",
 "lessonDate": "2021-1-17",
 "lsnTime": "2021-1-17 11:00",
-"lessonCost": "$100/h.d.",
+"lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 5
 }

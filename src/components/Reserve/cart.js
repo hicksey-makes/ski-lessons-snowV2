@@ -5,7 +5,7 @@ export default function Cart(props) {
   const totalCart = cart.reduce((total, product) => {
     return total + product.price * product.quantity;
   },0);
-
+  console.log(cart);
   return (<>
     <h1>Your Cart</h1>
     {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}

@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 
 class AddLessons extends Component {
   render() {
+    console.log(this.props.selectedLsn);
     return (
 
       <div className={
@@ -29,13 +30,13 @@ class AddLessons extends Component {
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
               <h5 className="col-md-3 mt-0 mt-md-2  font-weight-light font-italic text-primary">
-                {this.props.instructorName}
+                {this.props.selectedLsn.instructorName}
               </h5>
             </div>
             <div className="form-group form-row mb-md-5 mb-1">
               <label className="col-md-2 mt-0 mt-md-2 text-md-right" htmlFor="lsnType">Type:</label>
               <h5 className="col-md-4 mt-0 mt-md-2 font-weight-light font-italic text-primary">
-                {this.props.lessonType}
+                {this.props.selectedLsn.lsnType}
               </h5>
               <div className="dropdown col-md-1 dropleft mb-2 mt-4 mt-md-1">
                 <button type="button" className="dropdown-toggle btn btn-warning" href="#" id="lsnLength" data-toggle="dropdown">Lesson Length</button>
@@ -56,7 +57,7 @@ class AddLessons extends Component {
             <div className="col-md-4 mt-md-0 ">
               <mark className="p-md-1 text-danger font-weight-bold">
               <Moment
-                date={this.props.lessonDate}
+                date={this.props.selectedLsn.lessonDate}
                 format="ddd MMM DD"
               />
               </mark>
@@ -65,7 +66,7 @@ class AddLessons extends Component {
             <div className="col-md-4 mt-md-0">
               <mark className="p-md-1 text-danger font-weight-bold">
               <Moment
-                date={this.props.lessonTime}
+                date={this.props.selectedLsn.lsnTime}
                 format="hh:mm a"
               />
               </mark>
