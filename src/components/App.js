@@ -8,16 +8,16 @@ import Cart from './Reserve/cart.js';
 export default function App() {
   const [cart, setCart] = useState([]);
 
-  
+
 
   function handleLessonAdd(newProduct) {
     const existingProduct = cart.find(product => {
-      return product.id === newProduct.id;
+      return product.lsnId === newProduct.lsnId;
     });
 
     if (existingProduct) {
       const updatedCart = cart.map(product => {
-        if (product.id === newProduct.id) {
+        if (product.lsnId === newProduct.lsnId) {
             return {...product, quantity: product.quantity + 1};
         }
         return product;
