@@ -90,7 +90,7 @@ class Schedule extends Component {
   }
 
  render() {
-   console.log(this.props.cart);
+
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);

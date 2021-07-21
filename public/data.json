@@ -20,7 +20,8 @@
 "lsnTime": "2021-1-4 11:00",
 "lessonCost": 100,
 "lsnType": "All Mtn",
-"id": 1
+"id": 1,
+"img": "./images/snowboard_icon_colorpow125-125.png"
 },
 {
 "instructorName": "Tim",
