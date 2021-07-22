@@ -5,7 +5,9 @@ export default function Cart(props) {
   const totalCart = cart.reduce((total, product) => {
     return total + product.lessonCost * product.quantity;
   },0);
+
   console.log(cart);
+
   return (<>
     <h1>Your Cart</h1>
     {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}
@@ -32,11 +34,10 @@ export default function Cart(props) {
           <td>{product.lessonCost}</td>
           <td>{product.quantity}</td>
           <td>
-            <strong>$ {product.quantity * product.lessonCost}</strong>
+            <strong>$ {product.lessonCost * product.quantity}</strong>
           </td>
         </tr>)
       })}
-
       </tbody>
       <tfoot>
         <tr>

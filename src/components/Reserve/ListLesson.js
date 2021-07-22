@@ -7,12 +7,18 @@ class ListLesson extends Component {
   render() {
 
     let quantity = 0;
-    const existingLesson = this.props.cart.find(lesson => lesson.lsnId === this.props.lsns.lsnId);
+    const existingLesson = this.props.cart.find(lesson => {
+
+      return lesson.lsnId === this.props.lsns.lsnId;
+    });
+
+    console.log(existingLesson);
     if (existingLesson) {
       quantity = existingLesson.quantity;
     } else {
       quantity = 0;
     }
+
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
           <div className="row bg-dark">

@@ -12,7 +12,7 @@ class Schedule extends Component {
     this.state = {
       myLessons: [],
       riderName: "",
-      lessonLength: "Full Day",
+      lessonLength: "",
       orderBy: 'instructorName',
       orderDir: 'asc',
       queryText: "",
@@ -77,9 +77,12 @@ class Schedule extends Component {
   }
 
   setPrice(event) {
-    this.setState({
-      lessonLength: event.target.value
-    });
+    if (event.target.value === "Full Day") {
+      let newLesson = {...this.state.selectedLsn, lessonCost: this.state.selectedLsn.lessonCost * 1.75};
+      this.setState({
+        selectedLsn: newLesson
+      });
+    }
   }
 
   handleRiderAdd(event) {
@@ -90,7 +93,7 @@ class Schedule extends Component {
   }
 
  render() {
-
+   console.log(this.state.selectedLsn);
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
