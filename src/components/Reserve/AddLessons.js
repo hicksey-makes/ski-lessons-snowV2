@@ -47,7 +47,7 @@ class AddLessons extends Component {
               <label className="col-md-2 mt-3 mt-md-2 ml-auto text-md-right">Price:</label>
               <div className="col-md-2  mt-md-2 text-dark">
               <h5 className="font-weight-light font-italic text-primary">
-              $ {(this.props.lessonLength === 'Half Day' ? this.props.selectedLsn.lessonCost : this.props.selectedLsn.lessonCost * 1.75)}
+              $ {this.props.selectedLsn.lessonCost}
               </h5>
               </div>
             </div>

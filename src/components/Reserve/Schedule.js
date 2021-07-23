@@ -142,7 +142,7 @@ class Schedule extends Component {
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
                 <ListLessons onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
-                <AddLessons onRiderAdd={this.handleRiderAdd} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} lessons={filteredLsns} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setPrice={this.setPrice} cart={this.props.cart}/>
+                <AddLessons onRiderAdd={this.handleRiderAdd} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setPrice={this.setPrice} cart={this.props.cart}/>
               </div>
             </div>
           </div>
