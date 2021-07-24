@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 export default function Cart(props) {
   const { cart } = props;
@@ -14,11 +15,11 @@ export default function Cart(props) {
     {cart.length > 0 && <table className="table table-cart table-striped">
       <thead>
         <tr>
-          <th width="20%" className="th-product">Lesson</th>
           <th width="20%" className="th-product">Instructor</th>
-          <th width="20%" className="th-product">Rider</th>
-          <th width="15%">Unit price</th>
-          <th width="10%">Quanity</th>
+          <th width="20%" className="th-product">Type</th>
+          <th width="20%" className="th-product">Date</th>
+          <th width="15%">Price</th>
+          <th width="10%">Qty</th>
           <th width="15%">Total</th>
         </tr>
       </thead>
@@ -26,11 +27,17 @@ export default function Cart(props) {
       {cart.map(product => {
         return (<tr>
           <td>
-            <img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>
-            {product.lsnType}
+            {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
+            {product.instructorName}
           </td>
-          <td>{product.instructorName}</td>
-          <td>{product.riderName}</td>
+          <td>{product.lsnType}</td>
+        <td><pre><Moment
+          date={product.lessonDate}
+          format="MM-DD"
+        />  <Moment
+          date={product.lsnTime}
+          format="hh:mm a"
+        /></pre></td>
           <td>{product.lessonCost}</td>
           <td>{product.quantity}</td>
           <td>
