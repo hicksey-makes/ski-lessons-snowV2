@@ -81,21 +81,20 @@ class Schedule extends Component {
     this.setState({
       lessonLength: event.target.value
     });
-    if (event.target.value === "Full Day") {
-      let newLesson = {...this.state.selectedLsn, lessonCost: this.state.selectedLsn.lessonCost * 1.75};
-      this.setState({
-        selectedLsn: newLesson
-      });
-    }
+    let newLesson = {...this.state.selectedLsn, lessonCost: this.state.selectedLsn.lessonCost * 1.75};
+    this.setState({
+      selectedLsn: newLesson
+    });
   }
 
   setPrice2(event) {
-    if (this.state.lessonLength === "Full Day") {
-      let newLesson = {...this.state.selectedLsn, lessonCost: this.state.selectedLsn.lessonCost/1.75};
-      this.setState({
-        selectedLsn: newLesson
-      });
-    }
+    this.setState({
+      lessonLength: event.target.value
+    });
+    let newLesson = {...this.state.selectedLsn, lessonCost: this.state.selectedLsn.lessonCost/1.75};
+    this.setState({
+      selectedLsn: newLesson
+    });
   }
 
   handleRiderAdd(event) {
@@ -153,7 +152,7 @@ class Schedule extends Component {
             <div className="col-md-12">
               <div className="container">
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
-                <ListLessons onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+                <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
                 <AddLessons onRiderAdd={this.handleRiderAdd} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setPrice={this.setPrice} setPrice2={this.setPrice2} cart={this.props.cart}/>
               </div>

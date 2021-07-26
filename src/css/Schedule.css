@@ -55,6 +55,10 @@
   display: none;
 }
 
+.add-btn {
+  box-shadow: 4px 4px 16px rgba(0,0,0,0.2);
+}
+
 @media only screen and (min-width: 768px) {
   #sphere {
   width: 30px;
