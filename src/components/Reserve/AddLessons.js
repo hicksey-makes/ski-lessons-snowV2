@@ -33,15 +33,17 @@ class AddLessons extends Component {
               </h5>
             </div>
             <div className="form-group form-row mb-md-5 mb-1">
-              <label className="col-md-1 ml-4 mt-0 mt-md-2 text-md-right" htmlFor="lsnType">Type:</label>
+              <label className="col-md-1 ml-md-4 mt-0 mt-md-2 text-md-right" htmlFor="lsnType">Type:</label>
               <h5 className="col-md-3 mt-0 mt-md-2 font-weight-light font-italic text-primary">
                 {this.props.selectedLsn.lsnType}
               </h5>
-
-                <button type="button" className="btn btn-warning add-btn col-md-2 mb-2 mt-5 mt-md-1" disabled={this.props.lessonLength === "Full Day"} active={this.props.lessonLength === "Full Day"} href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5 hr)</button>
-                <button type="button" className="btn btn-warning add-btn col-md-2 mb-2 mt-5 mt-md-1 ml-1" disabled={this.props.lessonLength === "Half Day"} active={this.props.lessonLength === "Half Day"} href="#" id="lsnLength" value="Half Day" onClick={(event) => this.props.setPrice2(event)}>Half Day (2.5 hr)</button>
-
-              <label className="col-md-1 mt-3 mt-md-2 ml-4 text-md-right">Price:</label>
+                <div className="col-6 col-md-2 mb-2 mt-4 mt-md-1 ml-1">
+                  <button type="button" className="btn btn-warning add-btn " disabled={this.props.lessonLength === "Full Day"} active={this.props.lessonLength === "Full Day"} href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day (5 hr)</button>
+                </div>
+                <div className=" col-6 col-md-2 mb-2 mt-md-1 ml-1">
+                  <button type="button" className="btn btn-warning add-btn" disabled={this.props.lessonLength === "Half Day"} active={this.props.lessonLength === "Half Day"} href="#" id="lsnLength" value="Half Day" onClick={(event) => this.props.setPrice2(event)}>Half Day (2.5 hr)</button>
+                </div>
+              <label className="col-md-1 mt-3 mt-md-2 ml-md-4 text-md-right">Price:</label>
               <div className="col-md-2  mt-md-2 text-dark">
               <h5 className="font-weight-light font-italic text-primary">
               $ {this.props.selectedLsn.lessonCost}
@@ -49,16 +51,16 @@ class AddLessons extends Component {
               </div>
             </div>
             <div className="form-group form-row mb-md-5">
-              <label className="col-md-2 mt-2 mt-md-0 text-md-right" htmlFor="lsnDate">Date:</label>
-            <div className="col-md-4 mt-md-0 ">
+            <label className="col-md-1 ml-md-4 mt-2 mt-md-0 text-md-right" htmlFor="lsnDate">Date:</label>
+            <div className="col-md-3 mt-md-0 ">
               <mark className="p-md-1 text-danger font-weight-bold">
               <Moment
                 date={this.props.selectedLsn.lessonDate}
                 format="ddd MMM DD"
               />
               </mark>
-              </div>
-              <label className="col-md-2 mt-3 mt-md-0 text-md-right" htmlFor="lsnTime">Time:</label>
+            </div>
+            <label className="col-md-2 mt-3 mt-md-0 text-md-right " htmlFor="lsnTime">Time:</label>
             <div className="col-md-4 mt-md-0">
               <mark className="p-md-1 text-danger font-weight-bold">
               <Moment
@@ -69,7 +71,7 @@ class AddLessons extends Component {
               </div>
             </div>
             <div className="form-group form-row ">
-              <label className="col-md-2 mt-2 mt-md-0 ml-5 mb-3" htmlFor="lsnNotes">Lesson Notes:</label>
+              <label className="col-md-2 mt-2 mt-md-0 ml-md-5 mb-3" htmlFor="lsnNotes">Lesson Notes:</label>
               <div className="col-md-8 mb-2 mb-md-0">
                 <textarea className="form-control" rows="5" cols="50" name="lsnNotes" id="lsnNotes" placeholder="Lesson Notes" />
               </div>
