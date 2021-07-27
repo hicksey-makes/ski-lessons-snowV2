@@ -53,16 +53,15 @@ class ListLesson extends Component {
                   </div>
                 </div>
               }
-
             </div>
-            <div className="col-2 col-md-2 text-white brd">
+            <div className="col-3 col-md-2 text-white brd">
               {this.props.lsns.lsnType}
             </div>
             <div className="col-2 col-md-1 label-item brd lsn-price text-info text-break">
               {this.props.lsns.lessonCost}
             </div>
             <div className="col-1 col-md-1 brd">
-              <button className="btn btn-sm btn-success pr-3 pl-3 mr-1 ml-1 mr-md-n4 pr-md-2 pl-md-2 ml-md-auto d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
+              <button className="btn btn-sm btn-success px-2 mr-2 ml-n2 mr-md-n4 ml-md-auto px-lg-3 mr-lg-n2 d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
             </div>
           </div>
         </div>
