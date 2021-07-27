@@ -23,5 +23,5 @@ export default function About() {
         </Route>
       </Switch>
     </BrowserRouter>
-  </>);
+    </>);
 }
