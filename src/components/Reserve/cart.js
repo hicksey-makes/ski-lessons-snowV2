@@ -12,29 +12,32 @@ export default function Cart(props) {
   return (<>
     <h1>Your Cart</h1>
     {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}
-    {cart.length > 0 && <table className="table table-cart table-striped">
+    {cart.length > 0 &&
+
+
+      <table className="table table-cart table-striped">
       <thead>
         <tr>
-          <th width="20%" className="th-product">Instructor</th>
-          <th width="20%" className="th-product">Type</th>
-          <th width="20%" className="th-product">Date</th>
-          <th width="15%">Price</th>
-          <th width="10%">Qty</th>
-          <th width="15%">Total</th>
+          <th width="20%" className="th-product text-primary">Instructor</th>
+          <th width="20%" className="th-product text-primary">Type</th>
+          <th width="20%" className="th-product text-primary">Date</th>
+          <th width="15%" className="text-primary">Price</th>
+          <th width="10%" className="text-primary">Qty</th>
+          <th width="15%" className="text-info">Total</th>
         </tr>
       </thead>
       <tbody>
       {cart.map(product => {
         return (<tr>
-          <td>
+          <td className="font-weight-bold">
             {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
             {product.instructorName}
           </td>
           <td>{product.lsnType}</td>
-        <td><pre><Moment
+        <td className="font-italic" style={{fontSize:'17px'}}><pre><Moment
           date={product.lessonDate}
           format="MM-DD"
-        />  <Moment
+        /> <Moment
           date={product.lsnTime}
           format="hh:mm a"
         /></pre></td>
