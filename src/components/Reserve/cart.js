@@ -10,12 +10,12 @@ export default function Cart(props) {
   console.log(cart);
 
   return (<>
-    <h1>Your Cart</h1>
+    <h1 className="text-center">Your Cart</h1>
     {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
       <div className="container-fluid">
         <table className="table table-cart table-striped align-head">
-        <thead>
+        <thead className="table-bordered">
           <tr className="row sm-aside">
             <th width="20%" className="col-sm-2 th-product text-primary">Instructor</th>
             <th width="20%" className="col-sm-2 th-product text-primary">Type</th>
@@ -27,7 +27,7 @@ export default function Cart(props) {
         </thead>
         <tbody>
         {cart.map(product => {
-          return (<tr className="row">
+          return (<tr className="row mt-0">
             <td className="font-weight-bold col-sm-2">
               {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
               {product.instructorName}
