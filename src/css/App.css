@@ -44,3 +44,13 @@
 .mint-spice {
   color: rgb(174, 224, 229);
 }
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-abs {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+}

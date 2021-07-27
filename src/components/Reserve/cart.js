@@ -1,5 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
   const { cart } = props;
@@ -10,6 +11,7 @@ export default function Cart(props) {
   console.log(cart);
 
   return (<>
+    <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
     <h1 className="text-center">Your Cart</h1>
     {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
