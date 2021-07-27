@@ -42,7 +42,7 @@ export default function Cart(props) {
           /></pre></td>
         <td className="col-sm-2">{product.lessonCost}</td>
             <td className="col-sm-1">{product.quantity}</td>
-            <td className="col-sm-2">
+            <td className="col-sm-2 text-info">
               <strong>$ {product.lessonCost * product.quantity}</strong>
             </td>
           </tr>)
@@ -50,9 +50,9 @@ export default function Cart(props) {
         </tbody>
         <tfoot>
           <tr className="row">
-            <th className="col-sm-7"></th>
-            <th className="cart-highlight col-sm-2 ml-sm-2">Total</th>
-            <th className="cart-highlight col-sm-2">${totalCart}</th>
+            <th className="col-sm-8 mr-sm-n2"></th>
+            <th className="cart-highlight col-sm-1 mx-sm-2 ml-sm-2">Total</th>
+            <th className="cart-highlight col-sm-2" style={{fontSize: "18px"}}>${totalCart}</th>
           </tr>
         </tfoot>
         </table>
