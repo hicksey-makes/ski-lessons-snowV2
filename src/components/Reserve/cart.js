@@ -13,49 +13,51 @@ export default function Cart(props) {
     <h1>Your Cart</h1>
     {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
+      <div className="container-fluid">
+        <table className="table table-cart table-striped align-head">
+        <thead>
+          <tr className="row sm-aside">
+            <th width="20%" className="col-sm-2 th-product text-primary">Instructor</th>
+            <th width="20%" className="col-sm-2 th-product text-primary">Type</th>
+            <th width="20%" className="col-sm-3 th-product text-primary">Date</th>
+            <th width="15%" className="col-sm-2 text-primary">Price</th>
+            <th width="10%" className="col-sm-1 text-primary">Qty</th>
+            <th width="15%" className="col-sm-2 text-info">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        {cart.map(product => {
+          return (<tr className="row">
+            <td className="font-weight-bold col-sm-2">
+              {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
+              {product.instructorName}
+            </td>
+            <td className="col-sm-2">{product.lsnType}</td>
+          <td className="font-italic col-sm-3" style={{fontSize:'17px'}}><pre><Moment
+            date={product.lessonDate}
+            format="MM-DD"
+          /> <Moment
+            date={product.lsnTime}
+            format="hh:mm a"
+          /></pre></td>
+        <td className="col-sm-2">{product.lessonCost}</td>
+            <td className="col-sm-1">{product.quantity}</td>
+            <td className="col-sm-2">
+              <strong>$ {product.lessonCost * product.quantity}</strong>
+            </td>
+          </tr>)
+        })}
+        </tbody>
+        <tfoot>
+          <tr className="row">
+            <th className="col-sm-7"></th>
+            <th className="cart-highlight col-sm-2 ml-sm-2">Total</th>
+            <th className="cart-highlight col-sm-2">${totalCart}</th>
+          </tr>
+        </tfoot>
+        </table>
+      </div>
 
-
-      <table className="table table-cart table-striped">
-      <thead>
-        <tr>
-          <th width="20%" className="th-product text-primary">Instructor</th>
-          <th width="20%" className="th-product text-primary">Type</th>
-          <th width="20%" className="th-product text-primary">Date</th>
-          <th width="15%" className="text-primary">Price</th>
-          <th width="10%" className="text-primary">Qty</th>
-          <th width="15%" className="text-info">Total</th>
-        </tr>
-      </thead>
-      <tbody>
-      {cart.map(product => {
-        return (<tr>
-          <td className="font-weight-bold">
-            {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
-            {product.instructorName}
-          </td>
-          <td>{product.lsnType}</td>
-        <td className="font-italic" style={{fontSize:'17px'}}><pre><Moment
-          date={product.lessonDate}
-          format="MM-DD"
-        /> <Moment
-          date={product.lsnTime}
-          format="hh:mm a"
-        /></pre></td>
-          <td>{product.lessonCost}</td>
-          <td>{product.quantity}</td>
-          <td>
-            <strong>$ {product.lessonCost * product.quantity}</strong>
-          </td>
-        </tr>)
-      })}
-      </tbody>
-      <tfoot>
-        <tr>
-          <th colSpan="2"></th>
-          <th className="cart-highlight">Total</th>
-          <th className="cart-highlight">${totalCart}</th>
-        </tr>
-      </tfoot>
-</table>}
+      }
 </>)
 }
