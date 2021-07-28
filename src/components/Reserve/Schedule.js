@@ -83,7 +83,8 @@ class Schedule extends Component {
     });
     let newLesson = {...this.state.selectedLsn, lessonCost: this.state.selectedLsn.lessonCost * 1.75};
     this.setState({
-      selectedLsn: newLesson
+      selectedLsn: newLesson,
+      lessonLength: "Half Day"
     });
   }
 
@@ -105,7 +106,7 @@ class Schedule extends Component {
   }
 
  render() {
-   console.log(this.state.selectedLsn);
+   console.log(this.state.lessonLength);
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
