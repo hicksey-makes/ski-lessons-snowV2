@@ -13,17 +13,17 @@ export default function Cart(props) {
   return (<>
     <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
     <h1 className="text-center">Your Cart</h1>
-    {cart.length === 0 && <p>You have not added any product to your cart yet.</p>}
+    {cart.length === 0 && <p className="text-center">You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
       <div className="container-fluid">
         <table className="table table-cart table-striped align-head">
         <thead className="table-bordered">
-          <tr className="row sm-aside">
-            <th width="20%" className="col-sm-2 th-product text-primary">Instructor</th>
-            <th width="20%" className="col-sm-2 th-product text-primary">Type</th>
-            <th width="20%" className="col-sm-3 th-product text-primary">Date</th>
-            <th width="15%" className="col-sm-2 text-primary">Price</th>
-            <th width="10%" className="col-sm-1 text-primary">Qty</th>
+          <tr className="row sm-aside bg-secondary">
+            <th width="20%" className="col-sm-2 th-product text-warning">Instructor</th>
+            <th width="20%" className="col-sm-2 th-product text-warning">Type</th>
+            <th width="20%" className="col-sm-3 th-product text-warning">Date</th>
+            <th width="15%" className="col-sm-2 text-warning">Price</th>
+            <th width="10%" className="col-sm-1 text-warning">Qty</th>
             <th width="15%" className="col-sm-2 text-info">Total</th>
           </tr>
         </thead>
