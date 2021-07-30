@@ -65,7 +65,7 @@ class Schedule extends Component {
   hideForm() {
     this.setState({
       formDisplay: false
-    })
+    });
   }
 
   handleLessonSelect(lsn) {
