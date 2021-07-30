@@ -76,8 +76,11 @@ class Schedule extends Component {
 
   toggleAdd() {
     this.setState({
-      formDisplay: !this.state.formDisplay
-    })
+      formDisplay: !this.state.formDisplay,
+      lessonLength: 'Half Day',
+      riderName: "",
+      lessonNotes: ""
+    });
   }
 
   setFullPrice(event) {
