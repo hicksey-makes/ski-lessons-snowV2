@@ -25,7 +25,7 @@ class AddLessons extends Component {
             <div className="form-group form-row mb-md-5">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="riderName">Rider Name:</label>
               <div className="col-md-5 mt-2 mt-md-0 mb-2">
-                <input onChange={event => this.props.onRiderAdd(event)} className="form-control" type="text" name="riderName" placeholder="Rider's Name" />
+                <input onChange={event => this.props.onRiderAdd(event)} className="form-control" type="text" value={this.props.riderName} name="riderName" placeholder="Rider's Name" />
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
               <h5 className="col-md-3 mt-0 mt-md-2  font-weight-light font-italic text-primary">
@@ -73,7 +73,7 @@ class AddLessons extends Component {
             <div className="form-group form-row ">
               <label className="col-md-2 mt-2 mt-md-0 ml-md-5 mb-3" htmlFor="lsnNotes">Lesson Notes:</label>
               <div className="col-md-8 mb-2 mb-md-0">
-                <textarea className="form-control" rows="5" cols="50" name="lsnNotes" id="lsnNotes" placeholder="Lesson Notes" />
+                <textarea className="form-control" rows="5" cols="50" name="lsnNotes" id="lsnNotes" placeholder="Lesson Notes" value={this.props.lessonNotes} onChange={event => this.props.onNotesChange(event)}/>
               </div>
             </div>
             <div className="form-group form-row">

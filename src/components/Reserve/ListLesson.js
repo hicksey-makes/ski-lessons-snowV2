@@ -12,7 +12,6 @@ class ListLesson extends Component {
       return lesson.lsnId === this.props.lsns.lsnId;
     });
 
-    console.log(existingLesson);
     if (existingLesson) {
       quantity = existingLesson.quantity;
     } else {
