@@ -5,6 +5,7 @@ import Moment from 'react-moment';
 
 class AddLessons extends Component {
   render() {
+    console.log(this.props.selectedLsn);
     return (
 
       <div className={
@@ -78,7 +79,7 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <div className="col-md-12">
-                <button className="btn btn-primary btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit" onClick={() => {this.props.toggleAdd(); this.props.onLessonAdd(this.props.selectedLsn);}}>Reserve
+                <button className="btn btn-primary btn-primary ml-md-auto mr-md-0 mx-auto d-block" type="submit" onClick={() => {this.props.toggleAdd(); this.props.onLessonAdd(this.props.selectedLsn); this.props.onLessonReserve(this.props.selectedLsn);}}>Reserve
                 </button>
               </div>
             </div>

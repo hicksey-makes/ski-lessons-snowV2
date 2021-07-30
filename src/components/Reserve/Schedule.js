@@ -19,7 +19,8 @@ class Schedule extends Component {
       queryText: "",
       formDisplay: false,
       lastIndex: 0,
-      selectedLsn: {}
+      selectedLsn: {},
+      reserved: []
     };
     this.toggleAdd = this.toggleAdd.bind(this);
     this.hideForm = this.hideForm.bind(this);
@@ -129,7 +130,6 @@ class Schedule extends Component {
   }
 
  render() {
-   console.log(this.state.selectedLsn);
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -174,9 +174,9 @@ class Schedule extends Component {
             <div className="col-md-12">
               <div className="container">
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
-                <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+                <ListLessons reserved={this.props.reserved} lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
-                <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} cart={this.props.cart}/>
+                <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} cart={this.props.cart} onLessonReserve={this.props.onLessonReserve} />
               </div>
             </div>
           </div>

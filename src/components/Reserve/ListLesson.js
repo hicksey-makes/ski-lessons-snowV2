@@ -5,10 +5,8 @@ import { FaRegCalendarCheck } from 'react-icons/fa';
 class ListLesson extends Component {
 
   render() {
-
     let quantity = 0;
-    const existingLesson = this.props.cart.find(lesson => {
-
+    const existingLesson = this.props.reserved.find(lesson => {
       return lesson.lsnId === this.props.lsns.lsnId;
     });
 

@@ -36,7 +36,7 @@ class ListLessons extends Component {
           </table>
       </div>
         {this.props.lessons.map(item => {
-          return <ListLesson  key={item.lsnId} lsns={item} toggleAdd={this.props.toggleAdd} reserveLsn={this.props.reserveLsn} onLessonSelect={this.props.onLessonSelect} lessonLength={this.props.lessonLength} cart={this.props.cart} onProductDelete={this.props.onProductDelete} />
+          return <ListLesson  key={item.lsnId} lsns={item} reserved={this.props.reserved} toggleAdd={this.props.toggleAdd} reserveLsn={this.props.reserveLsn} onLessonSelect={this.props.onLessonSelect} lessonLength={this.props.lessonLength} cart={this.props.cart} onProductDelete={this.props.onProductDelete} />
         })}
       </div>
     </>);
