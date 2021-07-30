@@ -155,9 +155,7 @@ class Schedule extends Component {
       eachItem['lsnTime']
       .toLowerCase()
       .includes(this.state.queryText.toLowerCase()) ||
-      eachItem['lessonCost']
-      .toLowerCase()
-      .includes(this.state.queryText.toLowerCase())
+      eachItem['lessonCost'] == this.state.queryText
     )
   });
   let quantity = 0;
