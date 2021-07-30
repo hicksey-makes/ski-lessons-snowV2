@@ -80,7 +80,7 @@ export default function App() {
               <Cart  cart={cart}  />
             </Route>
             <Route path="/about/">
-              <About />
+              <About cart={cart} />
             </Route>
             <Route exact path="/schedule/">
               <Schedule  cart={cart}  reserved={reserved} onLessonAdd={handleLessonAdd} onLessonDelete={handleLessonDelete} onLessonReserve={handleLessonReserve}/>
