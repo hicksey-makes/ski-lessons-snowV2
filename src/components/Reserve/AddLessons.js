@@ -38,10 +38,10 @@ class AddLessons extends Component {
                 {this.props.selectedLsn.lsnType}
               </h5>
                 <div className="col-6 col-md-2 mb-2 mt-4 mt-md-1 ml-md-0 ml-1">
-                  <button type="button" className="btn btn-warning add-btn ml-md-2 ml-lg-5" disabled={this.props.lessonLength === "Full Day"} active={this.props.lessonLength === "Full Day"} href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setPrice(event)}>Full Day</button>
+                  <button type="button" className="btn btn-warning add-btn ml-md-2 ml-lg-5" disabled={this.props.lessonLength === "Full Day"} active={this.props.lessonLength === "Full Day"} href="#" id="lsnLength" value="Full Day" onClick={event => this.props.setFullPrice(event)}>Full Day</button>
                 </div>
                 <div className="col-8 col-md-3 mb-2 mt-md-1 ml-1">
-                  <button type="button" className="btn btn-warning add-btn" disabled={this.props.lessonLength === "Half Day"} active={this.props.lessonLength === "Half Day"} href="#" id="lsnLength" value="Half Day" onClick={(event) => this.props.setPrice2(event)}>Half Day (2.5 hr)</button>
+                  <button type="button" className="btn btn-warning add-btn" disabled={this.props.lessonLength === "Half Day"} active={this.props.lessonLength === "Half Day"} href="#" id="lsnLength" value="Half Day" onClick={(event) => this.props.setHalfPrice(event)}>Half Day (2.5 hr)</button>
                 </div>
               <label className="ml-md-2 col-md-1 mt-3 mt-md-2 text-md-right">Price:</label>
               <div className=" col-md-2  mt-md-2 text-dark">
