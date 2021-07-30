@@ -29,6 +29,7 @@ class Schedule extends Component {
     this.searchLsns = this.searchLsns.bind(this);
     this.handleLessonSelect = this.handleLessonSelect.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.resetLessonLength = this.resetLessonLength.bind(this);
   }
 
   componentDidMount() {
@@ -86,11 +87,10 @@ class Schedule extends Component {
     this.setState({
       selectedLsn: newLesson
     });
-    if (this.state.lessonLength === "Full Day") {
-      this.setState({
-        lessonLength: 'Half Day'
-      });
-    }
+  }
+
+  resetLessonLength() {
+
   }
 
   setHalfPrice(event) {
@@ -112,6 +112,9 @@ class Schedule extends Component {
 
   handleFormSubmit(event) {
     event.preventDefault();
+    this.setState({
+      lessonLength: 'Half Day'
+    });
   }
 
  render() {
@@ -164,7 +167,7 @@ class Schedule extends Component {
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
                 <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
                 <h6 className="text-right"><strong>Key</strong> h.d.: half day.</h6>
-                <AddLessons onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} cart={this.props.cart}/>
+                <AddLessons resetLessonLength={this.resetLessonLength} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} cart={this.props.cart}/>
               </div>
             </div>
           </div>
