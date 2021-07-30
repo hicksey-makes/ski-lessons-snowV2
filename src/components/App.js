@@ -53,6 +53,10 @@ export default function App() {
       setReserved([...reserved, newerProduct]);
     }
   }
+  let quantity = 0;
+  cart.forEach(lesson => {
+    return quantity += lesson.quantity;
+  })
 
   return (
     <BrowserRouter>
@@ -64,7 +68,7 @@ export default function App() {
               <Link className="btn btn-warning mt-3 px-4 text-white" role="button" to="/cart/">Cart</Link>
             </div>*/}
             <div className="d-flex justify-content-center mr-md-5">
-               <Link className="btn btn-warning text-dark mt-3 ml-md-auto" role="button" style={{width: 80 + "px"}} to="/cart/">Cart()</Link>
+               <Link className="btn btn-warning text-dark mt-3 ml-md-auto" role="button" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
             </div>
               <div className="d-flex justify-content-center grow">
                   <Link className="btn btn-info first mr-md-3 mr-2 mr-lg-4 shrink" role="button" to="/about/">About Instructors</Link>
