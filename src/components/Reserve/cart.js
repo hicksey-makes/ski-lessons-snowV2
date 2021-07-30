@@ -11,7 +11,16 @@ export default function Cart(props) {
   console.log(cart);
 
   return (<>
-    <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
+
+
+      <div className="pos-rel">
+        <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
+        <div className="mt-n5 pos-abs" style={{width: 150 + "px"}}>
+          <Link className="btn btn-warning mb-3 mt-3" style={{width: 90 + "px"}} to="/schedule">Schedule</Link>
+        </div>
+      </div>
+
+
     <h1 className="text-center">Your Cart</h1>
     {cart.length === 0 && <p className="text-center">You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
