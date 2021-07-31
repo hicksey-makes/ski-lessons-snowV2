@@ -1,8 +1,9 @@
 .img-snow {
-  background-image: url("https://wallpapercave.com/wp/pmSJfNk.jpg");
+  background-image: url("../snow_dust_bg.jpg");
   background-repeat: no-repeat;
-  opacity: 0.8;
-  height: 659px;
+  background-position: center center;
+  opacity: 0.9;
+  height: 1024px;
   max-width: 1600px;
 }
 .grow {
