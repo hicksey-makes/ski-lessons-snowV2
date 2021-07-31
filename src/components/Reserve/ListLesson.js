@@ -36,10 +36,6 @@ class ListLesson extends Component {
               </span>
             </div>
             <div className="col-2 col-md-3 brd">
-              {/*  <span className="label-item mr-2 text-break">
-              Instructor:
-              </span>*/}
-
               <span className="board-name text-primary">
               {this.props.lsns.instructorName}
               </span>

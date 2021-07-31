@@ -16,7 +16,6 @@ export default function Cart(props) {
         <Link className="btn btn-warning mb-3 mt-3 btn-shadow" style={{width: 90 + "px"}} to="/schedule">Schedule</Link>
       </div>
     </div>
-
     <h1 className="text-center">Your Cart</h1>
     {cart.length === 0 && <p className="text-center">You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&

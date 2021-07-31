@@ -4,10 +4,6 @@ import ListLesson from './ListLesson.js';
 
 class ListLessons extends Component {
   render() {
-    const listItems = this.props.lessons.map(item => (
-      <div>{item.boarderName}</div>
-    ));
-
     return ( <>
       <div className="bg-secondary text-white text-center py-3 rounded" onClick={this.props.toggleAdd}>
         <span className={(this.props.formDisplay ? '' : 'show-hide')}>
@@ -24,7 +20,7 @@ class ListLessons extends Component {
       }>
       <div className="container">
           <table className="table table-bordered mt-2 mb-n3">
-            <thead className="">
+            <thead>
               <tr className="table-active row">
                 <th className="col-2 col-md-2">Date</th>
                 <th className="col-2 col-md-2">Time</th>
