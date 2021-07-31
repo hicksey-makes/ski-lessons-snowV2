@@ -61,3 +61,7 @@
   right: 0px;
   top: 50px;
 }
+
+.no-coll {
+  border-collapse: inherit;
+}

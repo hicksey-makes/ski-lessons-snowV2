@@ -7,7 +7,6 @@ export default function Cart(props) {
   const totalCart = cart.reduce((total, product) => {
     return total + product.lessonCost * product.quantity;
   },0);
-
   console.log(cart);
 
   return (<>
@@ -22,7 +21,7 @@ export default function Cart(props) {
     {cart.length === 0 && <p className="text-center">You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
       <div className="container-fluid">
-        <table className="table table-cart table-striped align-head">
+        <table className="table table-cart table-striped align-head no-coll">
         <thead className="table-bordered">
           <tr className="row sm-aside bg-secondary">
             <th width="20%" className="col-sm-2 th-product text-warning">Instructor</th>

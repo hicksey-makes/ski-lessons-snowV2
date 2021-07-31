@@ -24,7 +24,7 @@ class AddLessons extends Component {
             <div className="form-group form-row mb-md-5">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="riderName">Rider Name:</label>
               <div className="col-md-5 mt-2 mt-md-0 mb-2">
-                <input onChange={event => this.props.onRiderAdd(event)} className="form-control" type="text" id="riderName" value={this.props.riderName} name="riderName" placeholder="Rider's Name" />
+                <input type="text" className="form-control" name="riderName" id="riderName" value={this.props.riderName} onChange={event => this.props.onRiderAdd(event)} placeholder="Rider's Name" />
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
               <h5 className="col-md-3 mt-0 mt-md-2  font-weight-light font-italic text-primary">
@@ -72,7 +72,7 @@ class AddLessons extends Component {
             <div className="form-group form-row ">
               <label className="col-md-2 mt-2 mt-md-0 ml-md-5 mb-3" htmlFor="lsnNotes">Lesson Notes:</label>
               <div className="col-md-8 mb-2 mb-md-0">
-                <textarea className="form-control" rows="5" cols="50" name="lsnNotes" id="lsnNotes" placeholder="Lesson Notes" value={this.props.lessonNotes} onChange={event => this.props.onNotesChange(event)}/>
+                <textarea name="lsnNotes" className="form-control" id="lsnNotes" value={this.props.lessonNotes} onChange={event => this.props.onNotesChange(event)} rows="5" cols="50" placeholder="Lesson Notes" />
               </div>
             </div>
             <div className="form-group form-row">
