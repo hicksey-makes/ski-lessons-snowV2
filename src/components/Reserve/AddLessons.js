@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Moment from 'react-moment';
 
-
 class AddLessons extends Component {
   render() {
     console.log(this.props.selectedLsn);
     return (
-
       <div className={
         'card textcenter mt-3 ' +
         (this.props.formDisplay ? '' : 'add-lesson')
@@ -26,7 +24,7 @@ class AddLessons extends Component {
             <div className="form-group form-row mb-md-5">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="riderName">Rider Name:</label>
               <div className="col-md-5 mt-2 mt-md-0 mb-2">
-                <input onChange={event => this.props.onRiderAdd(event)} className="form-control" type="text" value={this.props.riderName} name="riderName" placeholder="Rider's Name" />
+                <input onChange={event => this.props.onRiderAdd(event)} className="form-control" type="text" id="riderName" value={this.props.riderName} name="riderName" placeholder="Rider's Name" />
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
               <h5 className="col-md-3 mt-0 mt-md-2  font-weight-light font-italic text-primary">
