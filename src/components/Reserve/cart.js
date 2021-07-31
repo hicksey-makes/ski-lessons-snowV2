@@ -16,7 +16,7 @@ export default function Cart(props) {
       <div className="pos-rel">
         <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
         <div className="mt-n5 pos-abs" style={{width: 150 + "px"}}>
-          <Link className="btn btn-warning mb-3 mt-3" style={{width: 90 + "px"}} to="/schedule">Schedule</Link>
+          <Link className="btn btn-warning mb-3 mt-3 btn-shadow" style={{width: 90 + "px"}} to="/schedule">Schedule</Link>
         </div>
       </div>
 

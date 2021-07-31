@@ -9,9 +9,15 @@
 .grow {
   height: 1100px;
 }
+
 .shrink {
   align-self: center;
-  /* opacity: 0.9; */
+  opacity: 0.8;
+
+}
+
+.btn-shadow{
+  box-shadow: 12px 12px 40px rgba(0,0,0,0.2), 12px 12px 40px rgba(0,0,0,0.19);
 }
 
 .img-rounded {
