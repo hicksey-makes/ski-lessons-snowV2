@@ -3,11 +3,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   opacity: 0.9;
-  height: 1024px;
+  max-height: 1604px;
   max-width: 1600px;
 }
 .grow {
-  height: 658px;
+  height: 1100px;
 }
 .shrink {
   align-self: center;
