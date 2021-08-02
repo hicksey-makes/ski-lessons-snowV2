@@ -1,13 +1,14 @@
 import React from 'react';
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom';
+import { FaRegCalendarMinus } from 'react-icons/fa';
 
 export default function Cart(props) {
-  const { cart } = props;
+  const { cart, onLessonDelete } = props;
   const totalCart = cart.reduce((total, product) => {
     return total + product.lessonCost * product.quantity;
   },0);
-  console.log(cart);
+
 
   return (<>
     <div className="pos-rel">
@@ -45,7 +46,9 @@ export default function Cart(props) {
           /> <Moment
             date={product.lsnTime}
             format="hh:mm a"
-          /></pre></td>
+          /></pre>
+        <button className="btn btn-sm btn-danger" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
+          </td>
         <td className="col-sm-2">{product.lessonCost}</td>
             <td className="col-sm-1">{product.quantity}</td>
             <td className="col-sm-2 text-info">

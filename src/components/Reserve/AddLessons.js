@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 
 class AddLessons extends Component {
   render() {
-    console.log(this.props.selectedLsn);
+    
     return (
       <div className={
         'card textcenter mt-3 ' +

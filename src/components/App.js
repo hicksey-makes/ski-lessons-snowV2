@@ -28,10 +28,14 @@ export default function App() {
     }
   }
 
-  function handleLessonDelete(id) {
-    const updatedCart = cart.filter(product => {
-      return product.id !== id;
+  function handleLessonDelete(existingProduct) {
+    const prodToDelete = cart.find(product => {
+      return product.lsnId === existingProduct.lsnId && product.lessonCost === existingProduct.lessonCost;
     });
+    const updatedCart = cart.filter(product => {
+      return (product !== prodToDelete);
+    });
+    console.log(updatedCart);
     setCart(updatedCart);
   }
 
@@ -53,6 +57,14 @@ export default function App() {
       setReserved([...reserved, newerProduct]);
     }
   }
+
+  function handleReservedDelete(id) {
+    const newReserved = reserved.filter(product => {
+      return product.id !== id;
+    });
+    setReserved(newReserved);
+  }
+
   let quantity = 0;
   cart.forEach(lesson => {
     return quantity += lesson.quantity;
@@ -77,7 +89,7 @@ export default function App() {
             </div>
             </Route>
             <Route path="/cart/">
-              <Cart  cart={cart}  />
+              <Cart  onLessonDelete={handleLessonDelete} cart={cart}  />
             </Route>
             <Route path="/about/">
               <About cart={cart} />
