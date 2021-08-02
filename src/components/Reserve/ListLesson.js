@@ -1,12 +1,19 @@
 import React, {Component} from 'react';
 import Moment from 'react-moment';
-import { FaRegCalendarCheck } from 'react-icons/fa';
+import { FaRegCalendarCheck, FaRegCalendarMinus } from 'react-icons/fa';
 
 class ListLesson extends Component {
 
   render() {
     let quantity = 0;
-    const existingLesson = this.props.reserved.find(lesson => {
+
+    console.log(this.props.cart);
+    const totQty = this.props.cart.map(product => {
+      if (product.lsnId === this.props.lsns.lsnId) {
+        quantity += product.quantity;
+      }
+    });
+    {/*const existingLesson = this.props.reserved.find(lesson => {
       return lesson.lsnId === this.props.lsns.lsnId;
     });
 
@@ -14,7 +21,7 @@ class ListLesson extends Component {
       quantity = existingLesson.quantity;
     } else {
       quantity = 0;
-    }
+    }*/}
 
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
@@ -55,7 +62,8 @@ class ListLesson extends Component {
             </div>
             <div className="col-1 col-md-1 brd">
               <button className="btn btn-sm btn-success px-2 mr-2 ml-n2 mr-md-n4 ml-md-auto px-lg-3 mr-lg-n2 d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
-            </div>
+              <button className="btn btn-sm btn-danger" ><FaRegCalendarMinus /></button>
+          </div>
           </div>
         </div>
     )
