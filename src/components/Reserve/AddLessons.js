@@ -4,7 +4,7 @@ import Moment from 'react-moment';
 
 class AddLessons extends Component {
   render() {
-    
+
     return (
       <div className={
         'card textcenter mt-3 ' +
@@ -45,7 +45,7 @@ class AddLessons extends Component {
               <label className="ml-md-2 col-md-1 mt-3 mt-md-2 text-md-right">Price:</label>
               <div className=" col-md-2  mt-md-2 text-dark">
               <h5 className="font-weight-light font-italic text-primary">
-              $ {this.props.selectedLsn.lessonCost}
+              $ {Math.round(this.props.selectedLsn.lessonCost)}
               </h5>
               </div>
             </div>

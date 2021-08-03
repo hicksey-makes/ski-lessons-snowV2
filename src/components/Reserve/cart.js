@@ -6,9 +6,8 @@ import { FaRegCalendarMinus } from 'react-icons/fa';
 export default function Cart(props) {
   const { cart, onLessonDelete } = props;
   const totalCart = cart.reduce((total, product) => {
-    return total + product.lessonCost * product.quantity;
+    return Math.round(total + product.lessonCost * product.quantity);
   },0);
-
 
   return (<>
     <div className="pos-rel">
@@ -47,13 +46,12 @@ export default function Cart(props) {
             date={product.lsnTime}
             format="hh:mm a"
           /></pre>
-
           </td>
-        <td className="col-sm-2">{product.lessonCost}</td>
+        <td className="col-sm-2">{Math.round(product.lessonCost)}</td>
             <td className="col-sm-1">{product.quantity}</td>
             <td className="col-sm-2 text-info">
               <div className="pos-rel">
-                <strong>$ {product.lessonCost * product.quantity}</strong>
+                <strong>$ {Math.round(product.lessonCost * product.quantity)}</strong>
                   <button className="btn btn-sm btn-danger ml-4 pb-2 right-align" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
                 </div>
             </td>
