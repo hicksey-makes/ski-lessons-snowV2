@@ -21,8 +21,8 @@ class ListLessons extends Component {
       <table className="table table-bordered mt-2 mb-n3">
             <thead>
               <tr className="table-active row">
-                <th className="col-2 col-md-1">Date</th>
-                <th className="col-2 col-md-2">Time</th>
+                <th className="col-2 col-md-1 text-center">Date</th>
+                <th className="col-2 col-md-2 text-center">Time</th>
                 <th className="col-3 col-md-3">Instructor</th>
                 <th className="col-2 col-md-3">Type</th>
                 <th className="col-3 col-md-3">Price($)</th>

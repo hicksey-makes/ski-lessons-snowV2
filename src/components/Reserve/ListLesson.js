@@ -48,7 +48,7 @@ class ListLesson extends Component {
             <div className="col-2 col-md-3 text-white brd">
               {this.props.lsns.lsnType}
             </div>
-            <div className="col-2 col-md-1 label-item brd lsn-price text-info text-break">
+            <div className="col-2 col-md-1 label-item brd lsn-price text-info text-break text-center">
               {this.props.lsns.lessonCost}
             </div>
             <div className="col-1 col-md-1 brd">
