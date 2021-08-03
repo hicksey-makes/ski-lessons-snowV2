@@ -52,7 +52,7 @@ class ListLesson extends Component {
               {this.props.lsns.lessonCost}
             </div>
             <div className="col-1 col-md-2 brd">
-              <button className="btn btn-sm btn-success px-2 mr-2 ml-n2 ml-md-auto px-lg-3 d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
+              <button className="btn btn-sm btn-success px-0 px-sm-2 mr-2 ml-n2 ml-md-auto px-lg-3 d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
             </div>
           </div>
         </div>
