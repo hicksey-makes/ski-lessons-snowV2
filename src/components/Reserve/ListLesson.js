@@ -1,27 +1,18 @@
 import React, {Component} from 'react';
 import Moment from 'react-moment';
-import { FaRegCalendarCheck, FaRegCalendarMinus } from 'react-icons/fa';
+import { FaRegCalendarCheck } from 'react-icons/fa';
 
 class ListLesson extends Component {
 
   render() {
     let quantity = 0;
-
     console.log(this.props.cart);
-    const totQty = this.props.cart.map(product => {
+    this.props.cart.map(product => {
       if (product.lsnId === this.props.lsns.lsnId) {
         quantity += product.quantity;
       }
+      return quantity;
     });
-    {/*const existingLesson = this.props.reserved.find(lesson => {
-      return lesson.lsnId === this.props.lsns.lsnId;
-    });
-
-    if (existingLesson) {
-      quantity = existingLesson.quantity;
-    } else {
-      quantity = 0;
-    }*/}
 
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
