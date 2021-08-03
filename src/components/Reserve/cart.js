@@ -47,12 +47,15 @@ export default function Cart(props) {
             date={product.lsnTime}
             format="hh:mm a"
           /></pre>
-        <button className="btn btn-sm btn-danger" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
+
           </td>
         <td className="col-sm-2">{product.lessonCost}</td>
             <td className="col-sm-1">{product.quantity}</td>
             <td className="col-sm-2 text-info">
-              <strong>$ {product.lessonCost * product.quantity}</strong>
+              <div className="pos-rel">
+                <strong>$ {product.lessonCost * product.quantity}</strong>
+                  <button className="btn btn-sm btn-danger ml-4 pb-2 right-align" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
+                </div>
             </td>
           </tr>)
         })}

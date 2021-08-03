@@ -62,7 +62,6 @@ class ListLesson extends Component {
             </div>
             <div className="col-1 col-md-1 brd">
               <button className="btn btn-sm btn-success px-2 mr-2 ml-n2 mr-md-n4 ml-md-auto px-lg-3 mr-lg-n2 d-block" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck  /></button>
-              
           </div>
           </div>
         </div>
