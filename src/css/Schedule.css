@@ -88,8 +88,8 @@
 @media only screen and (max-width: 767px) {
   .lesson-quantity-container {
     position: absolute;
-    right: 8px;
-    top: 50px;
+    left: 50px;
+    top: 20px;
     border-radius: 50%;
     width: 37%;
   }
