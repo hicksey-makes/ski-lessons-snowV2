@@ -215,7 +215,6 @@ html, body {
   color: #555;
   position: relative;
   font-size: 0.9em;
-  overflow: auto;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -230,6 +229,7 @@ html, body {
 .column.copyright a {
   color: hsla(55, 100%, 81%, 1);
   text-decoration: none;
+  font-size: 1.5em;
 }
 
 #footer {

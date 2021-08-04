@@ -27,5 +27,5 @@ export default function About({cart}) {
         </Route>
       </Switch>
     </BrowserRouter>
-    </>);
+  </>);
 }

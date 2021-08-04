@@ -19,16 +19,16 @@ export default function InstructorDetails() {
       <Link to="/about/" className="btn-light btn-outer btn-sm btn ml-4" style={{width:80 + "px"}}>Back</Link>
       {instructor && (
         <div className="container">
-        <div className="card shadow border-warning bg-dark text-white mb-5 ml-5 mt-n3" style={{width:300 + 'px'}}>
-          <img className="card-img-top object-f" src={instructor.image} style={{height:240 + "px"}} alt="" />
-          <div className="card-body mt-n2 mb-2">
-            <h5 className="card-title display-3 mb-3 text-center">{instructor.name}</h5>
-            <h5 className="card-text mb-2 text-center">Style: <small>{instructor.description}.</small></h5>
-            <h5 className="card-text mb-2 text-center">Expertise: <small>{instructor.skill}.</small></h5>
-            <h5 className="card-text mb-2 text-center">Years Riding: <small>{instructor.years}.</small></h5>
-            <h5 className="card-text text-center">Other Interests: <small>{instructor.other}.</small></h5>
+          <div className="card shadow border-warning bg-dark text-white mb-5 ml-5 mt-n3" style={{width:300 + 'px'}}>
+            <img className="card-img-top object-f" src={instructor.image} style={{height:240 + "px"}} alt="" />
+            <div className="card-body mt-n2 mb-2">
+              <h5 className="card-title display-3 mb-3 text-center">{instructor.name}</h5>
+              <h5 className="card-text mb-2 text-center">Style: <small>{instructor.description}.</small></h5>
+              <h5 className="card-text mb-2 text-center">Expertise: <small>{instructor.skill}.</small></h5>
+              <h5 className="card-text mb-2 text-center">Years Riding: <small>{instructor.years}.</small></h5>
+              <h5 className="card-text text-center">Other Interests: <small>{instructor.other}.</small></h5>
+            </div>
           </div>
-        </div>
         </div>
       )}
     </div>
