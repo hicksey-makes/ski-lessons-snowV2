@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Schedule from './Reserve/Schedule';
 import About from './Info/About';
-import '../css/App.css';
 import Cart from './Reserve/cart.js';
+import '../css/App.css';
+
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -12,7 +13,6 @@ export default function App() {
     const existingProduct = cart.find(product => {
       return product.lsnId === newProduct.lsnId && product.lessonCost === newProduct.lessonCost;
     });
-
     if (existingProduct) {
       const updatedCart = cart.map(product => {
         if (product.lsnId === newProduct.lsnId && product.lessonCost === newProduct.lessonCost) {
@@ -48,18 +48,15 @@ export default function App() {
       <main>
           <Switch>
             <Route className="backdrop" exact path="/">
-            <div className="img-snow">
-            {/*<div className="d-block ml-auto" style={{width: 150 + "px"}}>
-              <Link className="btn btn-warning mt-3 px-4 text-white" role="button" to="/cart/">Cart</Link>
-            </div>*/}
-            <div className="d-flex justify-content-center mr-md-5">
-               <Link className="btn btn-warning text-dark mt-3 mr-md-3 ml-md-auto btn-shadow" role="button" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
-            </div>
-              <div className="d-flex justify-content-center grow">
-                  <Link className="btn btn-info mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/">About Instructors</Link>
-                  <Link className="btn btn-info ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/">See Schedule</Link>
+              <div className="img-snow">
+                  <div className="d-flex justify-content-center mr-md-5">
+                    <Link className="btn btn-warning text-dark mt-3 mr-md-3 ml-md-auto btn-shadow" role="button" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
+                  </div>
+                  <div className="d-flex justify-content-center grow">
+                    <Link className="btn btn-info mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/">About Instructors</Link>
+                    <Link className="btn btn-info ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/">See Schedule</Link>
+                  </div>
               </div>
-            </div>
             </Route>
             <Route path="/cart/">
               <Cart  onLessonDelete={handleLessonDelete} cart={cart}  />
@@ -68,7 +65,7 @@ export default function App() {
               <About cart={cart} />
             </Route>
             <Route exact path="/schedule/">
-              <Schedule  cart={cart}  onLessonAdd={handleLessonAdd} onLessonDelete={handleLessonDelete} />
+              <Schedule  cart={cart}  onLessonAdd={handleLessonAdd} />
             </Route>
           </Switch>
       </main>

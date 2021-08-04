@@ -176,7 +176,7 @@ class Schedule extends Component {
 
                 <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
 
-                <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} cart={this.props.cart} onLessonReserve={this.props.onLessonReserve} />
+                <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} />
               </div>
             </div>
           </div>
