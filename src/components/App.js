@@ -7,7 +7,6 @@ import Cart from './Reserve/cart.js';
 
 export default function App() {
   const [cart, setCart] = useState([]);
-  const [reserved, setReserved] = useState([]);
 
   function handleLessonAdd(newProduct) {
     const existingProduct = cart.find(product => {
@@ -37,32 +36,6 @@ export default function App() {
     });
     console.log(updatedCart);
     setCart(updatedCart);
-  }
-
-  function handleLessonReserve(newProduct) {
-    const existingProduct = reserved.find(product => {
-      return product.lsnId === newProduct.lsnId;
-    });
-
-    if (existingProduct) {
-      const newReserved = reserved.map(product => {
-        if (product.lsnId === newProduct.lsnId) {
-            return {...product, quantity: product.quantity + 1};
-        }
-        return product;
-        });
-      setReserved(newReserved);
-    } else {
-      const newerProduct = {...newProduct, quantity: 1};
-      setReserved([...reserved, newerProduct]);
-    }
-  }
-
-  function handleReservedDelete(id) {
-    const newReserved = reserved.filter(product => {
-      return product.id !== id;
-    });
-    setReserved(newReserved);
   }
 
   let quantity = 0;
@@ -95,7 +68,7 @@ export default function App() {
               <About cart={cart} />
             </Route>
             <Route exact path="/schedule/">
-              <Schedule  cart={cart}  reserved={reserved} onLessonAdd={handleLessonAdd} onLessonDelete={handleLessonDelete} onLessonReserve={handleLessonReserve}/>
+              <Schedule  cart={cart}  onLessonAdd={handleLessonAdd} onLessonDelete={handleLessonDelete} />
             </Route>
           </Switch>
       </main>

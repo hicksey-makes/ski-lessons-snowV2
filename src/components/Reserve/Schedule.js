@@ -3,7 +3,6 @@ import '../../css/Schedule.css';
 import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
-import { without } from 'lodash';
 import {Link} from 'react-router-dom';
 
 class Schedule extends Component {
@@ -19,8 +18,7 @@ class Schedule extends Component {
       queryText: "",
       formDisplay: false,
       lastIndex: 0,
-      selectedLsn: {},
-      reserved: []
+      selectedLsn: {}
     };
     this.toggleAdd = this.toggleAdd.bind(this);
     this.hideForm = this.hideForm.bind(this);
@@ -175,7 +173,9 @@ class Schedule extends Component {
               <div className="container">
                 <p className="hint text-center text-monospace mt-1 small text-dark mb-n2">search by date: YYYY-M-D H:M; instructor; price</p>
                 <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
-                <ListLessons reserved={this.props.reserved} lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+
+                <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+
                 <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} cart={this.props.cart} onLessonReserve={this.props.onLessonReserve} />
               </div>
             </div>

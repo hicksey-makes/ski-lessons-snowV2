@@ -33,26 +33,28 @@ export default function Cart(props) {
         </thead>
         <tbody>
         {cart.map(product => {
-          return (<tr className="row mt-0">
+          return (
+          <tr className="row mt-0">
             <td className="font-weight-bold col-sm-2">
               {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
               {product.instructorName}
             </td>
             <td className="col-sm-2">{product.lsnType}</td>
-          <td className="font-italic col-sm-3" style={{fontSize:'17px'}}><pre><Moment
-            date={product.lessonDate}
-            format="MM-DD"
-          /> <Moment
-            date={product.lsnTime}
-            format="hh:mm a"
-          /></pre>
-          </td>
-        <td className="col-sm-2">{Math.round(product.lessonCost)}</td>
+            <td className="font-italic col-sm-3" style={{fontSize:'17px'}}>
+              <pre><Moment
+              date={product.lessonDate}
+              format="MM-DD"
+              /> <Moment
+              date={product.lsnTime}
+              format="hh:mm a"
+              /></pre>
+            </td>
+            <td className="col-sm-2">{Math.round(product.lessonCost)}</td>
             <td className="col-sm-1">{product.quantity}</td>
             <td className="col-sm-2 text-info">
               <div className="pos-rel">
                 <strong>$ {Math.round(product.lessonCost * product.quantity)}</strong>
-                  <button className="btn btn-sm btn-danger ml-4 pb-2 right-align" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
+                <button className="btn btn-sm btn-danger ml-4 pb-2 right-align" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
                 </div>
             </td>
           </tr>)

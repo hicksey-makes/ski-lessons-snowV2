@@ -20,7 +20,7 @@ class AddLessons extends Component {
           <h6 className="d-inline ml-2 text-monospace">Book:</h6>
         </div>
         <div className="card-body">
-          <form className="" onSubmit={(event) => {this.props.onFormSubmit(event); this.props.toggleAdd(); this.props.onLessonAdd(this.props.selectedLsn); this.props.onLessonReserve(this.props.selectedLsn)}}>
+          <form className="" onSubmit={(event) => {this.props.onFormSubmit(event); this.props.toggleAdd(); this.props.onLessonAdd(this.props.selectedLsn); }}>
             <div className="form-group form-row mb-md-5">
               <label className="col-md-2 mt-2 text-md-right" htmlFor="riderName">Rider Name:</label>
               <div className="col-md-5 mt-2 mt-md-0 mb-2">
