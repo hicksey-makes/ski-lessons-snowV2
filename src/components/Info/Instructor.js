@@ -20,7 +20,7 @@ export default function Instructor() {
     <div className="container-fluid">
       <div className="btn-group btn-group-justified" style={{width:100 + "%"}}>
         {instructors.map((instructor) => (
-            <Link className="btn btn-secondary "  key={instructor.id} to={`instructors/${instructor.id}`}>
+            <Link className="btn btn-secondary sun"  key={instructor.id} to={`instructors/${instructor.id}`}>
               {instructor.name}
             </Link>
         ))}

@@ -16,6 +16,26 @@
 
 }
 
+.hot {
+  color: var(--red);
+  opacity: 0.8;
+}
+.cool {
+  color: indigo;
+  opacity: 0.7;
+}
+
+.sun {
+  background-color: var(--teal);
+  opacity: 0.8;
+}
+
+.purp {
+  background-color: var(--purple);
+  border: 1px solid var(--yellow);
+  opacity: 0.7;
+}
+
 .btn-shadow{
   box-shadow: 12px 12px 40px rgba(0,0,0,0.2), 12px 12px 40px rgba(0,0,0,0.19);
 }
@@ -33,7 +53,8 @@
 }
 
 .highlight {
-  background-color: rgba(250, 235, 109, .6);
+  background-color: var(--smooth-yellow);
+  /* rgba(250, 235, 109, .6); */
   padding: 5px 0;
 }
 

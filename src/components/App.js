@@ -53,8 +53,8 @@ export default function App() {
                     <Link className="btn btn-warning text-dark mt-3 mr-md-3 ml-md-auto btn-shadow" role="button" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
                   </div>
                   <div className="d-flex justify-content-center grow">
-                    <Link className="btn btn-info mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/">About Instructors</Link>
-                    <Link className="btn btn-info ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/">See Schedule</Link>
+                    <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/">About Instructors</Link>
+                    <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/">See Schedule</Link>
                   </div>
               </div>
             </Route>
