@@ -25,6 +25,10 @@
   opacity: 0.7;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .sun {
   background-color: var(--teal);
   opacity: 0.8;

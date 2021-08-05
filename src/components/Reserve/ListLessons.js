@@ -5,7 +5,7 @@ import ListLesson from './ListLesson.js';
 class ListLessons extends Component {
   render() {
     return ( <>
-      <div className="bg-secondary text-white text-center py-3 rounded" onClick={this.props.toggleAdd}>
+      <div className="bg-secondary text-white text-center  pointer py-3 rounded" onClick={this.props.toggleAdd}>
         <span className={(this.props.formDisplay ? '' : 'show-hide')}>
         <FaPlus  />
         </span>
