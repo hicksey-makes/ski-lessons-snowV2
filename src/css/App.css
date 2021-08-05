@@ -6,6 +6,7 @@
   max-height: 1604px;
   max-width: 1600px;
 }
+
 .grow {
   height: 1100px;
 }
@@ -13,13 +14,13 @@
 .shrink {
   align-self: center;
   opacity: 0.8;
-
 }
 
 .hot {
   color: var(--red);
   opacity: 0.8;
 }
+
 .cool {
   color: indigo;
   opacity: 0.7;
@@ -36,7 +37,7 @@
 
 .purp {
   background-color: var(--purple);
-  border: 1px solid var(--yellow);
+  border: 1px solid var(--smooth-yellow);
   opacity: 0.7;
 }
 
