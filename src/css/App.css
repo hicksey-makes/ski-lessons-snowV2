@@ -102,8 +102,8 @@
 }
 
 .photo-generic {
-  max-width: 450px;
-  height: 450px;
+  max-width: 650px;
+  height: 650px;
 }
 
 .ins-bg{
@@ -118,10 +118,10 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .photo-generic {
-    max-width: 300px;
-    height: 300px;
+    max-width: 375px;
+    height: 375px;
   }
 }
 
