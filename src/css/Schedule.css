@@ -72,6 +72,10 @@
   box-shadow: 12px 12px 40px rgba(0,0,0,0.2), 12px 12px 40px rgba(0,0,0,0.19);
 }
 
+.contrast {
+  color: var(--smooth-yellow);
+}
+
 @media only screen and (min-width: 768px) {
   #sphere {
   width: 30px;

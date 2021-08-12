@@ -17,7 +17,7 @@
 }
 
 .hot {
-  color: var(--red);
+  color: var(--tangerine);
   opacity: 0.8;
 }
 
@@ -25,6 +25,8 @@
   color: indigo;
   opacity: 0.7;
 }
+
+
 
 .pointer {
   cursor: pointer;
@@ -88,9 +90,6 @@
     top: 0;
 }
 
-.relative {
-  position: relative;
-}
 .pos-abs {
   position: absolute;
   right: 0px;
@@ -118,6 +117,7 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 @media screen and (max-width: 800px) {
   .photo-generic {
     max-width: 375px;

@@ -25,7 +25,7 @@ export default function Instructor() {
             </Link>
         ))}
       </div>
-      <div className="bg-dark text-center text-light mb-n2 container-fluid ins-bg grow relative">
+      <div className="bg-dark text-center text-light mb-n2 container-fluid ins-bg grow pos-rel">
         <div className="ins-content mt-5 pt-1">
         <h3 className=" pt-5 pb-2 mb-4 mint-spice">Find the right instructor</h3>
           <img className="img-rounded rounded-circle photo-generic p-1" id="photo-gen" src="../images/powder_freshies_a.stock.jpeg"  alt="snowboarder icon"/>

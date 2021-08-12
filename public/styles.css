@@ -27,6 +27,7 @@
   --cg-red: hsl(1, 77%, 54%);
   --silver-chal: #ACABA0;
   --grey-davey: #555;
+  --tangerine: rgb(255, 155, 126);
 }
 
 * {
@@ -79,7 +80,6 @@ html, body {
 .contact-info {
   display: inline-block;
   position: relative;
-
 }
 
 /* style contact info link */
@@ -197,7 +197,6 @@ html, body {
 .rowing.footline {
   background-color: var(--soft-blue);
   overflow: auto;
-
 }
 
 .column.social {
