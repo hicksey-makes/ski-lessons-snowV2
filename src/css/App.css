@@ -88,6 +88,9 @@
     top: 0;
 }
 
+.relative {
+  position: relative;
+}
 .pos-abs {
   position: absolute;
   right: 0px;
@@ -107,6 +110,14 @@
   max-height: 1604px;
 }
 
+.ins-content{
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 @media screen and (max-width: 768px) {
   .photo-generic {
     max-width: 300px;
