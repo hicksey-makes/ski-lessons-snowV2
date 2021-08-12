@@ -25,9 +25,12 @@ export default function Instructor() {
             </Link>
         ))}
       </div>
-      <div className="bg-dark text-center text-light mb-n2">
-        <h3 className="margin pt-4 pb-2 mint-spice">Find the right instructor</h3>
-        <img className="img-rounded p-1" src="../images/powder_freshies_a.stock.jpeg" style={{width:450 + "px", height:450 + "px"}} alt="snowboarder icon"/>
+      <div className="bg-dark text-center text-light mb-n2 container-fluid ins-bg">
+        <h3 className=" pt-4 pb-2 mint-spice">Find the right instructor</h3>
+
+          <img className="img-rounded rounded-circle photo-generic p-1" id="photo-gen" src="../images/powder_freshies_a.stock.jpeg"  alt="snowboarder icon"/>
+
+
         <h3 className="pb-4 pt-2 mint-spice">for your desires and abilities.</h3>
       </div>
     </div>

@@ -97,3 +97,26 @@
 .no-coll {
   border-collapse: inherit;
 }
+
+.photo-generic {
+  max-width: 450px;
+  height: 450px;
+}
+
+.ins-bg{
+  max-height: 1604px;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-generic {
+    max-width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .photo-generic {
+    max-width: 250px;
+    height: 250px;
+  }
+}
