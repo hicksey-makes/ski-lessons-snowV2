@@ -17,7 +17,6 @@
 * Render the App component in index.js.
 * Use state variables and effects to track/update lesson preferences. 
 * Utilize react-router-dom library to create about pages for the instructors.
-* 
 ## Next Steps
 * Integrate Stripe checkout functionality.
 
