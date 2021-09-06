@@ -63,6 +63,9 @@
   display: none;
 }
 
+#sphere {
+width: 30px;
+}
 .remove-lsn-list {
   display: none;
 }
@@ -118,11 +121,15 @@
     }
   }
 }
+
 @media only screen and (min-width: 768px) {
-  #sphere {
-  width: 30px;
-  }
   .lg-inline {
     display: inline !important;
   }
 }
+
+/* @media only screen and (max-width: 567px) {
+  .drop-text {
+    padding-top: 1.5rem;
+  }
+} */
