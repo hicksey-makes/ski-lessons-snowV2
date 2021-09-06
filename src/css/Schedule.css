@@ -28,12 +28,11 @@
 
 .lesson-quantity-container {
   position: absolute;
-  top: 18px;
-  right: 15px;
+  top: 2px;
+  right: 5px;
   background-color: white;
   border-radius: 50%;
   padding: 3px;
-  width: 37%;
 }
 
 .lesson-quantity {
@@ -101,13 +100,6 @@ width: 30px;
 }
 
 @media only screen and (max-width: 767px) {
-  .lesson-quantity-container {
-    position: absolute;
-    left: 50px;
-    top: 20px;
-    border-radius: 50%;
-    width: 37%;
-  }
 
   @media only screen and (min-width: 781px) {
     .container {
@@ -115,11 +107,6 @@ width: 30px;
     }
   }
 
-  @media screen and (min-width: 950px) {
-    .lesson-quantity {
-      width: 21px;
-    }
-  }
 }
 
 @media only screen and (min-width: 768px) {

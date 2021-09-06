@@ -17,7 +17,7 @@ class ListLesson extends Component {
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
           <div className="row bg-dark">
-            <div className="col-2 col-md-1 brd ">
+            <div className="col-2 col-md-1 brd pt-4 pt-md-3">
               <span className="lsn-date text-white">
               <Moment
                 date={this.props.lsns.lessonDate}
@@ -25,7 +25,7 @@ class ListLesson extends Component {
               />
               </span>
             </div>
-            <div className="col-2 col-md-2 brd">
+            <div className="col-2 col-md-2 brd pt-4 pt-md-3">
               <span className="lsn-date text-white">
               <Moment
                 date={this.props.lsns.lsnTime}
@@ -33,7 +33,7 @@ class ListLesson extends Component {
               />
               </span>
             </div>
-            <div className="col-3 col-md-3 brd">
+            <div className="col-3 col-md-3 brd pt-4 pt-md-3">
               <span className="board-name contrast">
               {this.props.lsns.instructorName}
               </span>
@@ -45,7 +45,7 @@ class ListLesson extends Component {
                 </div>
               }
             </div>
-            <div className="col-3 col-md-3 hot brd">
+            <div className="col-3 col-md-3 hot brd pt-4 pt-md-3">
               {this.props.lsns.lsnType}
             </div>
             <div className="col-2 col-md-3 pl-2 label-item brd text-white text-break">
