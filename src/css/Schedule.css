@@ -25,6 +25,7 @@
   right: 9px;
 
 }
+
 .lesson-quantity-container {
   position: absolute;
   top: 18px;
@@ -88,11 +89,7 @@
   color: var(--smooth-yellow);
 }
 
-@media only screen and (min-width: 768px) {
-  #sphere {
-  width: 30px;
-  }
-}
+
 
 @media (min-width: 1200px) {
   .container {
@@ -119,5 +116,13 @@
     .lesson-quantity {
       width: 21px;
     }
+  }
+}
+@media only screen and (min-width: 768px) {
+  #sphere {
+  width: 30px;
+  }
+  .lg-inline {
+    display: inline !important;
   }
 }
