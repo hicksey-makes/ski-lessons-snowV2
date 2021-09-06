@@ -9,10 +9,22 @@
 .brd {
   /* border-bottom: dotted 1px #6c757d; */
   /* background-color: #b75757; */
-  padding: 20px 0px 20px 13px;
+  padding: 15px 0px 15px 0px;
   /* margin-left: 6px; */
 }
 
+.row .brd:first-of-type {
+  padding: 15px 0 15px 5px;
+}
+
+.price-align {
+  position: relative;
+}
+.price-align2 {
+  position: absolute;
+  right: 9px;
+
+}
 .lesson-quantity-container {
   position: absolute;
   top: 18px;
