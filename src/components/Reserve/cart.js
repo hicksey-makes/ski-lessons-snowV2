@@ -61,8 +61,10 @@ export default function Cart(props) {
           <tfoot>
             <tr className="">
               <th className=" mr-sm-n2"></th>
-              <th className="cart-highlight col-1 mx-sm-2 ml-sm-2">Total</th>
-              <th className="cart-highlight col-2" style={{fontSize: "18px"}}>${totalCart}</th>
+              <th className=" mr-sm-n2"></th>
+
+              <th className="cart-highlight col-1 pl-4 mx-sm-2 ml-sm-2">Total</th>
+              <th className="cart-highlight col-2 pr-4" style={{fontSize: "18px"}}>${totalCart}</th>
             </tr>
           </tfoot>
         </table>
