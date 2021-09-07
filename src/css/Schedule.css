@@ -25,6 +25,9 @@
   right: 9px;
 
 }
+.table-cart {
+  width: 100%;
+}
 
 .lesson-quantity-container {
   position: absolute;

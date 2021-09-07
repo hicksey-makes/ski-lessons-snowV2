@@ -19,28 +19,27 @@ export default function Cart(props) {
     <h1 className="text-center">Your Cart</h1>
     {cart.length === 0 && <p className="text-center">You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
-      <div className="container">
-        <div className="table-responsive">
-          <table className="table table-cart table-striped table-sm">
+      <div className="table-responsive container">
+        <table className="table table-cart table-striped table-sm">
           <thead className="table-bordered">
             <tr className=" sm-aside bg-secondary">
-              <th width="20%" className="text-warning">Instructor</th>
-              <th width="20%" className="text-warning">Type</th>
-              <th width="20%" className="text-warning">Date</th>
-              <th width="25%" className="text-warning">Price</th>
-              <th width="15%" className="text-info">Total</th>
+              <th className="text-warning col-2">Instructor</th>
+              <th className="text-warning col-2">Type</th>
+              <th className="text-warning col-2">Date</th>
+              <th className="text-warning col-2">Price</th>
+              <th className="text-info col-2">Total</th>
             </tr>
           </thead>
           <tbody>
           {cart.map(product => {
             return (
             <tr className="mt-0" id="cart-row">
-              <td className="font-weight-bold col-2">
+              <td className="col-3 font-weight-bold">
                 {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
                 {product.instructorName}
               </td>
-              <td className="col-2">{product.lsnType}</td>
-              <td className="font-italic col-3" style={{fontSize:'17px'}}>
+              <td className="col-1">{product.lsnType}</td>
+              <td className="col-3 font-italic " style={{fontSize:'17px'}}>
                 <pre><Moment
                 date={product.lessonDate}
                 format="MM-DD"
@@ -49,8 +48,8 @@ export default function Cart(props) {
                 format="hh:mm a"
                 /></pre>
               </td>
-              <td className="col-2">{Math.round(product.lessonCost)}x{product.quantity}</td>
-              <td className="col-3">
+              <td className="col-1">{Math.round(product.lessonCost)}x{product.quantity}</td>
+              <td className="col">
                 <div className="mt-n2 mb-2 mb-md-0 lg-inline">
                   {product.quantity * product.lessonCost}
                 </div>
@@ -61,13 +60,12 @@ export default function Cart(props) {
           </tbody>
           <tfoot>
             <tr className="">
-              <th className="col-8 mr-sm-n2"></th>
+              <th className=" mr-sm-n2"></th>
               <th className="cart-highlight col-1 mx-sm-2 ml-sm-2">Total</th>
               <th className="cart-highlight col-2" style={{fontSize: "18px"}}>${totalCart}</th>
             </tr>
           </tfoot>
-          </table>
-        </div>
+        </table>
       </div>
 
       }
