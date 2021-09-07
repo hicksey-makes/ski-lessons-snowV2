@@ -34,12 +34,12 @@ export default function Cart(props) {
           {cart.map(product => {
             return (
             <tr className="mt-0" id="cart-row">
-              <td className="col-3 font-weight-bold">
+              <td className="col-3 pt-3 pt-md-2 font-weight-bold">
                 {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
                 {product.instructorName}
               </td>
-              <td className="col-1">{product.lsnType}</td>
-              <td className="col-3 font-italic " style={{fontSize:'17px'}}>
+              <td className="col-1 pt-3 pt-md-2">{product.lsnType}</td>
+              <td className="col-3 pt-3 pt-md-2 font-italic " style={{fontSize:'17px'}}>
                 <pre><Moment
                 date={product.lessonDate}
                 format="MM-DD"
@@ -48,12 +48,12 @@ export default function Cart(props) {
                 format="hh:mm a"
                 /></pre>
               </td>
-              <td className="col-1">{Math.round(product.lessonCost)}x{product.quantity}</td>
+              <td className="col-1 pt-3 pt-md-2">{Math.round(product.lessonCost)}x{product.quantity}</td>
               <td className="col">
-                <div className="mt-n2 mb-2 mb-md-0 lg-inline">
-                  {product.quantity * product.lessonCost}
+                <div className="mb-2 mb-md-0 ml-sm-2 lg-inline">
+                  {Math.round(product.quantity * product.lessonCost)}
                 </div>
-                <button className="btn btn-sm btn-danger px-1 px-sm-2 mt-md-0 mr-n1 ml-sm-1 ml-md-3 px-lg-3 d-block lg-inline" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
+                <button className="btn btn-sm btn-danger px-1 px-sm-2 mb-2 mt-md-0 mr-n1 ml-sm-1 ml-md-3 px-lg-3 d-block lg-inline" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus /></button>
               </td>
             </tr>)
           })}
