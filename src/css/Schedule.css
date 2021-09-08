@@ -17,6 +17,21 @@
   padding: 15px 0 15px 5px;
 }
 
+.pos-rel {
+  position: relative;
+}
+
+.cal-pos {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.pos-abs {
+  positon: absolute;
+  right: 15px;
+  top: 0;
+}
 .price-align {
   position: relative;
 }
@@ -102,6 +117,10 @@ width: 30px;
 }
 
 @media only screen and (max-width: 767px) {
+
+  .cal-pos {
+    position: static;
+  }
 
   @media only screen and (min-width: 781px) {
     .container {
