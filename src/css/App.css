@@ -80,6 +80,10 @@
   color: rgb(174, 224, 229);
 }
 
+.pos-rel {
+  position: relative;
+}
+
 .right-align {
     position: absolute;
     right: 0;
