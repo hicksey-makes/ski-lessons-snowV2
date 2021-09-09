@@ -1,6 +1,6 @@
 # Ski Lessons App
 
-**A one-page-React application (built with Create React App) to browse instructors then book and purchase a snowboarding lesson.**
+**A React application (Create React App) to browse instructors and then book and purchase a snowboarding lesson.**
 
 ## Implementation
 * Single page application: one index.html file, whereby Javascript rewrites the content based on the url.
@@ -17,7 +17,6 @@
 * Render the App component in index.js.
 * Use state variables and effects to track/update lesson preferences. 
 * Utilize react-router-dom library to create about pages for the instructors.
-* 
 ## Next Steps
 * Integrate Stripe checkout functionality.
 
