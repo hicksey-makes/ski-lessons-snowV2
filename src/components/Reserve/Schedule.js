@@ -3,7 +3,9 @@ import '../../css/Schedule.css';
 import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
+import ScrollToTop from './ScrollToTop.js';
 import {Link} from 'react-router-dom';
+import "../../css/weather-icons.css";
 
 class Schedule extends Component {
   constructor() {
@@ -30,6 +32,7 @@ class Schedule extends Component {
     this.handleLessonSelect = this.handleLessonSelect.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleNotesChange = this.handleNotesChange.bind(this);
+    this.createFlake = this.createFlake.bind(this);
   }
 
   componentDidMount() {
@@ -127,7 +130,24 @@ class Schedule extends Component {
     });
   }
 
+  createFlake() {
+    const flake = document.querySelector(".flake");
+    const contain = document.querySelector(".contain");
+    const snow = document.querySelector(".snow-contain");
+    const clone = flake.cloneNode(true);
+    clone.style.paddingLeft = Math.random() * 10 + "px";
+    clone.style.animationDuration = Math.random() * 5 + 3 + "s";
+    clone.style.opacity = Math.random() * 1;
+    snow.append(clone);
+  }
+
  render() {
+   const s = setInterval(this.createFlake, 600);
+
+   setTimeout(() => {
+     clearInterval(s);
+   }, 2000);
+
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -161,27 +181,32 @@ class Schedule extends Component {
     return quantity += lesson.quantity;
   })
 
+
    return (<>
-     <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
-     <div className="d-block ml-auto mt-n5" style={{width: 150 + "px"}}>
-        <Link className="btn btn-warning text-white mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
-     </div>
-      <main className="" id="  ">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="container">
-                <p className="hint text-center text-monospace mt-1 small text-dark mb-n2">search by date: YYYY-M-D H:M; instructor; price</p>
-                <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
-                <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+       <div className="snow-contain">
+         <i className="wi wi-snowflake-cold flake"></i>
+       </div>
+       <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
+       <div className="d-block ml-auto mt-n5" style={{width: 150 + "px"}}>
+          <Link className="btn btn-warning text-white mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
+       </div>
+        <main className="" id="  ">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="container">
+                  <p className="hint text-center text-monospace mt-1 small text-dark mb-n2">search by date: YYYY-M-D H:M; instructor; price</p>
+                  <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
-                <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} />
+                  <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
+
+                  <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
   </>);
  }
 };

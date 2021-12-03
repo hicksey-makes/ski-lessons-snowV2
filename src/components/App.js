@@ -3,6 +3,8 @@ import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Schedule from './Reserve/Schedule';
 import About from './Info/About';
 import Cart from './Reserve/cart.js';
+import ScrollToTop from './Reserve/ScrollToTop.js';
+import { WiSnowflakeCold } from "weather-icons-react";
 import '../css/App.css';
 
 
@@ -46,6 +48,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <main>
+          <ScrollToTop  />
           <Switch>
             <Route className="backdrop" exact path="/">
               <div className="img-snow">
@@ -53,8 +56,8 @@ export default function App() {
                     <Link className="btn btn-warning text-dark mt-3 mr-md-3 ml-md-auto btn-shadow" role="button" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
                   </div>
                   <div className="d-flex justify-content-center grow">
-                    <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/">About Instructors</Link>
-                    <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/">See Schedule</Link>
+                    <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
+                    <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
                   </div>
               </div>
             </Route>

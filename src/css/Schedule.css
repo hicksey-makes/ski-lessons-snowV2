@@ -109,6 +109,26 @@ width: 30px;
   color: var(--smooth-yellow);
 }
 
+.flake {
+  font-size: 1rem;
+  padding: 0;
+  animation: fall 40s linear forwards infinite;
+
+}
+
+.snow-contain {
+  height: 12px;
+  z-index: -1;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-10vh);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
 
 @media (min-width: 1200px) {
   .container {

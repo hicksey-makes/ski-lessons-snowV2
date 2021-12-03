@@ -8,7 +8,7 @@ export default function About({cart}) {
   let quantity = 0;
   cart.forEach(lesson => {
     return quantity += lesson.quantity;
-  })
+  });
   return (<>
     <div className="pos-rel">
       <Link className="btn blendin mb-3 mt-3 ml-4" style={{width:80 + "px"}} to="/">Home</Link>
