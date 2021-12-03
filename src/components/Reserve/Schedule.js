@@ -132,13 +132,13 @@ class Schedule extends Component {
 
   createFlake() {
     const flake = document.querySelector(".flake");
-    const contain = document.querySelector(".contain");
     const snow = document.querySelector(".snow-contain");
     const clone = flake.cloneNode(true);
     clone.style.paddingLeft = Math.random() * 10 + "px";
     clone.style.animationDuration = Math.random() * 5 + 3 + "s";
     clone.style.opacity = Math.random() * 1;
-    snow.append(clone);
+    clone.style.fontSize = Math.random() * 4 + 15 + "px";
+    snow.appendChild(clone);
   }
 
  render() {

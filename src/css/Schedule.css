@@ -112,12 +112,15 @@ width: 30px;
 .flake {
   font-size: 1rem;
   padding: 0;
+  /*dark grey blue*/
+  color: #5A5F8C;
   animation: fall 40s linear forwards infinite;
-
+  animation-delay: -6s;
 }
 
 .snow-contain {
   height: 12px;
+  position: relative;
   z-index: -1;
 }
 
@@ -126,7 +129,7 @@ width: 30px;
     transform: translateY(-10vh);
   }
   to {
-    transform: translateY(100vh);
+    transform: translateY(140vh);
   }
 }
 
