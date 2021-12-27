@@ -27,7 +27,7 @@ class ListLessons extends Component {
                 <th className="col-3 col-md-3">Price $</th>
               </tr>
             </thead>
-          </table>
+        </table>
           {this.props.lessons.map(item => {
             return <ListLesson  key={item.lsnId} lsns={item} toggleAdd={this.props.toggleAdd} reserveLsn={this.props.reserveLsn} onLessonSelect={this.props.onLessonSelect} lessonLength={this.props.lessonLength} cart={this.props.cart} />
         })}

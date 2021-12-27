@@ -256,7 +256,7 @@ html, body {
 
   .sale-info {
     position: relative;
-    left: 20px;
+    left: 0;
   }
 
   .contact-info a {

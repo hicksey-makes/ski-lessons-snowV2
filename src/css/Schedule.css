@@ -109,6 +109,11 @@ width: 30px;
   color: var(--smooth-yellow);
 }
 
+.table {
+  position: relative;
+  z-index: 2;
+}
+/***   Snowflake Animation   ***/
 .flake {
   font-size: 1rem;
   padding: 0;
@@ -129,7 +134,7 @@ width: 30px;
     transform: translateY(-10vh);
   }
   to {
-    transform: translateY(140vh);
+    transform: translateY(800px);
   }
 }
 
