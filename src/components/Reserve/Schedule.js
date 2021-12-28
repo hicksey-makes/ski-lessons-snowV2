@@ -189,7 +189,7 @@ class Schedule extends Component {
        </div>
        <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
        <div className="d-block ml-auto mt-n5" style={{width: 150 + "px"}}>
-          <Link className="btn btn-warning text-white mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
+          <Link className="btn btn-warning text-dark mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
        </div>
         <main className="" id="  ">
           <div className="container">
