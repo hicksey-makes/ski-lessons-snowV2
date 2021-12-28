@@ -138,6 +138,17 @@ width: 30px;
   }
 }
 
+/* @media only screen and (min-height: 800px) {
+  @keyframes fall {
+    from {
+      transform: translateY(-10vh);
+    }
+    to {
+      transform: translateY(1000px);
+    }
+  }
+} */
+
 @media (min-width: 1200px) {
   .container {
     max-width: 960px;

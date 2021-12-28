@@ -61,7 +61,8 @@
 .highlight {
   background-color: var(--smooth-yellow);
   /* rgba(250, 235, 109, .6); */
-  padding: 5px 0;
+  padding: 10px 0;
+  /* height: 1280px; */
 }
 
 .blendin {
@@ -71,8 +72,8 @@
 }
 
 .btn-outer {
-  border: 1px solid gray;
-  /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+  /* border: 1px solid gray; */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .mint-spice {
