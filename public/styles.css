@@ -139,6 +139,9 @@ html, body {
   margin-top: 0;
 }
 
+.brand-icon {
+  max-height: 150px;
+}
 /* position navbar */
 .navbar {
   display: inline-block;
@@ -247,7 +250,7 @@ html, body {
 }
 
 /* responsive layout - makes two columns stack when screen is small */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 801px) {
   .column {
     width: 100%;
     text-align: center;
@@ -268,8 +271,11 @@ html, body {
    .brand-img, .brand-url {
      position: relative;
      left: 0px;
+     top: 20px;
     }
-
+    .brand-img {
+      top: 20px;
+    }
     .navbar ul{
        width: 50%;
        position: relative;
