@@ -110,7 +110,7 @@ width: 30px;
 
 .table {
   position: relative;
-  z-index: 2;
+  z-index: 99999;
 }
 
 .card-body {
@@ -127,11 +127,17 @@ width: 30px;
 }
 
 .snow-contain {
-  height: 12px;
+  /* overflow: hidden; */
+  /* height: 12px; */
   position: relative;
-  z-index: -1;
+  z-index: -9999;
+
 }
 
+.positive-z {
+  z-index: 99999;
+  position: relative;
+}
 @keyframes fall {
   from {
     transform: translateY(-10vh);
@@ -178,6 +184,11 @@ width: 30px;
   }
 }
 
+@media only screen and (max-width: 415px) {
+  .table-active {
+    font-size: 0.75rem;
+  }
+}
 /* @media only screen and (max-width: 567px) {
   .drop-text {
     padding-top: 1.5rem;
