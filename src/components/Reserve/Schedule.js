@@ -131,23 +131,26 @@ class Schedule extends Component {
   }
 
   createFlake() {
-    const flake = document.querySelector(".flake");
-    const snow = document.querySelector(".snow-contain");
-    const clone = flake.cloneNode(true);
-    clone.style.paddingLeft = Math.random() * 10 + "px";
-    clone.style.animationDuration = Math.random() * 5 + 3 + "s";
-    clone.style.opacity = Math.random() * 1;
-    clone.style.fontSize = Math.random() * 4 + 15 + "px";
-    snow.appendChild(clone);
+    const style = {
+      paddingLeft: Math.random() *10 + "px",
+      animationDuration: Math.random() * 5 + 3 + "s",
+      opacity: Math.random()*1,
+      fontSize: Math.random() * 4 + 15 + "px",
+    };
+    const flake = <i className="wi wi-snowflake-cold flake"></i>;
+    const snow = <div className="snow-contain"></div>;
+    const clone = React.cloneElement(flake, {style: style});
+    console.log(clone);
+    let snowInner = [];
+    snowInner.push(clone);
+    return snowInner;
   }
 
  render() {
-   const s = setInterval(this.createFlake, 600);
-
+   const s = setInterval(this.createFlake, 40);
    setTimeout(() => {
      clearInterval(s);
    }, 2000);
-
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -183,10 +186,11 @@ class Schedule extends Component {
 
 
    return (<>
+     <div className="snow-contain">
+       {this.createFlake()}
+     </div>
 
-       <div className="snow-contain">
-         <i className="wi wi-snowflake-cold flake"></i>
-       </div>
+
        <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
        <div className="d-block ml-auto mt-n5" style={{width: 150 + "px"}}>
           <Link className="btn btn-warning text-dark mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
@@ -207,6 +211,7 @@ class Schedule extends Component {
             </div>
           </div>
         </main>
+
   </>);
  }
 };
