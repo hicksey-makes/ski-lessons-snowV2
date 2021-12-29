@@ -123,6 +123,9 @@
     max-width: 375px;
     height: 375px;
   }
+  .purp {
+    margin-top: -300px;
+  }
 }
 
 @media screen and (max-width: 415px) {
