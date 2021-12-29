@@ -36,7 +36,7 @@ class Schedule extends Component {
   }
 
   componentDidMount() {
-    fetch('../data.json')
+    fetch('../lessons_details.json')
     .then(response => response.json())
     .then(result => {
       const lsns = result.map(item => {

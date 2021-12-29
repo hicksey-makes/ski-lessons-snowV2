@@ -1,20 +1,6 @@
-.lesson-list {
-  overflow: scroll;
-}
-
+/***   Global/Schedule   ***/
 .row {
   margin-top: 15px;
-}
-
-.brd {
-  /* border-bottom: dotted 1px #6c757d; */
-  /* background-color: #b75757; */
-  padding: 15px 0px 15px 0px;
-  /* margin-left: 6px; */
-}
-
-.row .brd:first-of-type {
-  padding: 15px 0 15px 5px;
 }
 
 .pos-rel {
@@ -26,20 +12,33 @@
   top: 10px;
   right: 20px;
 }
+/***   ListLessons   ***/
+.lesson-list {
+  overflow: scroll;
+}
 
+.brd {
+  /* border-bottom: dotted 1px #6c757d; */
+  /* background-color: #b75757; */
+  padding: 15px 0px 15px 0px;
+}
+
+.row .brd:first-of-type {
+  padding: 15px 0 15px 5px;
+}
+
+/***   SearchLessons   ***/
+
+
+/***   AddLessons   ***/
+
+/***   Cart   ***/
 .pos-abs {
   positon: absolute;
   right: 15px;
   top: 0;
 }
-.price-align {
-  position: relative;
-}
-.price-align2 {
-  position: absolute;
-  right: 9px;
 
-}
 .table-cart {
   width: 100%;
 }
@@ -113,6 +112,10 @@ width: 30px;
   position: relative;
   z-index: 2;
 }
+
+.card-body {
+  padding: 4rem 1.25rem;
+}
 /***   Snowflake Animation   ***/
 .flake {
   font-size: 1rem;
@@ -138,16 +141,16 @@ width: 30px;
   }
 }
 
-/* @media only screen and (min-height: 800px) {
+@media only screen and (min-height: 712px) {
   @keyframes fall {
     from {
       transform: translateY(-10vh);
     }
     to {
-      transform: translateY(1000px);
+      transform: translateY(900px);
     }
   }
-} */
+}
 
 @media (min-width: 1200px) {
   .container {
