@@ -3,7 +3,6 @@ import '../../css/Schedule.css';
 import AddLessons from './AddLessons.js';
 import SearchLessons from './SearchLessons.js';
 import ListLessons from './ListLessons.js';
-import ScrollToTop from './ScrollToTop.js';
 import {Link} from 'react-router-dom';
 import "../../css/weather-icons.css";
 import Snow from './snow.js';

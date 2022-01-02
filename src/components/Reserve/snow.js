@@ -1,6 +1,4 @@
 import Particles from 'react-tsparticles';
-import snowConfig from './snow.json';
-import { WiSnowflakeCold } from "weather-icons-react";
 
 const Snow = () => {
   return (
@@ -8,7 +6,7 @@ const Snow = () => {
       {
         "particles": {
           "color": {
-            "value": "#5A5F8C"
+            "value": "#53687e"
           },
           "move": {
             "direction": "bottom",
@@ -19,19 +17,19 @@ const Snow = () => {
           "shape": {
                 "options": {
                   "image": {
-                    "height": 182,
-                    "src":"",
-                    "width": 143
+                    "height": 55,
+                    "src": "https://www.emoji.co.uk/files/phantom-open-emojis/animals-nature-phantom/12526-snowflake.png",
+                    "width": 55
                   }
                 },
-                "type": "circle"
+                "type": "image"
               },
           "number": {
             "density": {
               "enable": true,
               "area": 800
             },
-            "value": 200
+            "value": 300
           },
           "opacity": {
             "value": 0.5
