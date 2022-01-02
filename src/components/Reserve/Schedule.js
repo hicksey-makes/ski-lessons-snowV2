@@ -6,6 +6,7 @@ import ListLessons from './ListLessons.js';
 import ScrollToTop from './ScrollToTop.js';
 import {Link} from 'react-router-dom';
 import "../../css/weather-icons.css";
+import Snow from './snow.js';
 
 class Schedule extends Component {
   constructor() {
@@ -32,7 +33,6 @@ class Schedule extends Component {
     this.handleLessonSelect = this.handleLessonSelect.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleNotesChange = this.handleNotesChange.bind(this);
-    this.createFlake = this.createFlake.bind(this);
   }
 
   componentDidMount() {
@@ -130,27 +130,7 @@ class Schedule extends Component {
     });
   }
 
-  createFlake() {
-    const style = {
-      paddingLeft: Math.random() *10 + "px",
-      animationDuration: Math.random() * 5 + 3 + "s",
-      opacity: Math.random()*1,
-      fontSize: Math.random() * 4 + 15 + "px",
-    };
-    const flake = <i className="wi wi-snowflake-cold flake"></i>;
-    const snow = <div className="snow-contain"></div>;
-    const clone = React.cloneElement(flake, {style: style});
-    console.log(clone);
-    let snowInner = [];
-    snowInner.push(clone);
-    return snowInner;
-  }
-
  render() {
-   const s = setInterval(this.createFlake, 40);
-   setTimeout(() => {
-     clearInterval(s);
-   }, 2000);
    let order;
    let filteredLsns = this.state.myLessons;
    // console.log(filteredLsns);
@@ -186,15 +166,11 @@ class Schedule extends Component {
 
 
    return (<>
-     <div className="snow-contain">
-       {this.createFlake()}
-     </div>
-
-
-       <Link className="btn blendin mb-1 mt-3 ml-4" style={{width: 80 + "px"}}  to="/">Home</Link>
-       <div className="d-block ml-auto mt-n5" style={{width: 150 + "px"}}>
+       <Link className="btn blendin mb-1 mt-3 ml-4 front" style={{width: 80 + "px"}}  to="/">Home</Link>
+       <div className="d-block ml-auto mt-n5 front" style={{width: 150 + "px"}}>
           <Link className="btn btn-warning text-dark mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
        </div>
+       <Snow  />
         <main className="" id="  ">
           <div className="container">
             <div className="row">
@@ -206,13 +182,13 @@ class Schedule extends Component {
                   <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
 
                   <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} />
+
                 </div>
               </div>
             </div>
           </div>
         </main>
-
-  </>);
+      </>)
  }
 };
 

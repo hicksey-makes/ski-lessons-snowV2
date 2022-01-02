@@ -12,6 +12,12 @@
   top: 10px;
   right: 20px;
 }
+
+.front {
+  position: relative;
+  z-index: 9999;
+}
+
 /***   ListLessons   ***/
 .lesson-list {
   overflow: scroll;

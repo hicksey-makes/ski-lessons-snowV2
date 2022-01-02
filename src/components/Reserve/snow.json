@@ -1,0 +1,40 @@
+{
+  "particles": {
+    "color": {
+      "value": "#5A5F8C"
+    },
+    "move": {
+      "direction": "bottom",
+      "enable": true,
+      "outModes": "out",
+      "speed": 3
+    },
+    "number": {
+      "density": {
+        "enable": true,
+        "area": 800
+      },
+      "value": 200
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "size": {
+      "value": 8
+    },
+    "wobble": {
+      "enable": true,
+      "distance": 10,
+      "speed": 10
+    },
+    "zIndex": {
+      "value": {
+        "min": 0,
+        "max": 100
+      }
+    }
+  }
+}
