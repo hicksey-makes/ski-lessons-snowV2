@@ -29,10 +29,10 @@ const Snow = () => {
               "enable": true,
               "area": 800
             },
-            "value": 300
+            "value": 150
           },
           "opacity": {
-            "value": 0.5
+            "value": 0.6
           },
           "size": {
             "value": 8
