@@ -27,13 +27,13 @@ class AddLessons extends Component {
                 <input type="text" className="form-control" name="riderName" id="riderName" value={this.props.riderName} onChange={event => this.props.onRiderAdd(event)} placeholder="Rider's Name" />
               </div>
               <label className="col-md-2 mt-2 text-md-right" htmlFor="lsnLength">Instructor:</label>
-              <h5 className="col-md-3 mt-0 mt-md-2  font-weight-light font-italic cool">
+              <h5 className="col-md-3 mt-0 mt-md-2 font-italic cool">
                 {this.props.selectedLsn.instructorName}
               </h5>
             </div>
             <div className="form-group form-row mb-md-5 mb-1">
               <label className="col-md-1 ml-md-4 mt-0 mt-md-2 text-md-right" htmlFor="lsnType">Type:</label>
-              <h5 className="col-md-2 mt-0 mt-md-2 font-weight-light font-italic cool">
+              <h5 className="col-md-2 mt-0 mt-md-2 font-italic cool">
                 {this.props.selectedLsn.lsnType}
               </h5>
                 <div className="col-6 col-md-2 mb-2 mt-4 mt-md-1 ml-md-0 ml-1">
@@ -44,7 +44,7 @@ class AddLessons extends Component {
                 </div>
               <label className="ml-md-2 col-md-1 mt-3 mt-md-2 text-md-right">Price:</label>
               <div className=" col-md-2  mt-md-2 text-dark">
-              <h5 className="font-weight-light font-italic cool font-weight-bold">
+              <h5 className=" font-italic cool font-weight-bold">
               $ {Math.round(this.props.selectedLsn.lessonCost)}
               </h5>
               </div>

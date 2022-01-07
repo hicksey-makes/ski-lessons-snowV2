@@ -53,7 +53,7 @@ export default function Cart(props) {
                 <div className="mb-2 mb-md-0 ml-sm-2 lg-inline">
                   {Math.round(product.quantity * product.lessonCost)}
                 </div>
-                <button className="btn btn-sm btn-info px-1 px-sm-2 mb-2 mt-md-n1 mr-n1 ml-sm-1 ml-md-3 px-lg-3 d-block lg-inline cal-pos" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus className="mt-n1" /></button>
+                <button className="btn btn-sm btn-info px-1 px-sm-2 mb-2 mt-md-n1 mr-n1 ml-sm-1 ml-md-3 d-block lg-inline cal-pos" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus className="mt-n1" /></button>
               </td>
             </tr>)
           })}

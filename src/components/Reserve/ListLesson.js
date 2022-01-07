@@ -34,7 +34,7 @@ class ListLesson extends Component {
               </span>
             </div>
             <div className="col-3 col-md-3 brd pt-4 pt-md-3">
-              <span className="board-name contrast">
+              <span className="board-name bulk contrast">
               {this.props.lsns.instructorName}
               </span>
               {quantity > 0 &&
@@ -45,7 +45,7 @@ class ListLesson extends Component {
                 </div>
               }
             </div>
-            <div className="col-3 col-md-3 hot brd pt-4 pt-md-3">
+            <div className="col-3 col-md-3 hot brd bulk pt-4 pt-md-3">
               {this.props.lsns.lsnType}
             </div>
             <div className="col-2 col-md-3 pl-2 label-item brd text-white text-break pos-rel">
