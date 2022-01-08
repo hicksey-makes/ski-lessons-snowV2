@@ -83,7 +83,9 @@
 .add-lesson .card-body {
   display: none;
 }
-
+#thin {
+  max-width: 32px;
+}
 .show-hide {
   display: none;
 }
@@ -178,7 +180,9 @@ width: 30px;
   .cal-pos {
     position: static;
   }
-
+  .d-flex {
+    flex-direction: column;
+  }
   @media only screen and (min-width: 781px) {
     .container {
       max-width: 100px;
