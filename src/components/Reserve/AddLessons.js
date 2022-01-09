@@ -77,7 +77,7 @@ class AddLessons extends Component {
             </div>
             <div className="form-group form-row">
               <div className="col-md-12">
-                <button className="btn btn-primary btn-danger ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
+                <button className="btn btn-lg btn-primary btn-danger mt-2 ml-md-auto mr-md-0 mx-auto d-block" type="submit">Reserve
                 </button>
               </div>
             </div>
