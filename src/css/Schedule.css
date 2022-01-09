@@ -176,11 +176,10 @@ width: 30px;
 }
 
 @media only screen and (max-width: 767px) {
-
   .cal-pos {
     position: static;
   }
-  .d-flex {
+  .flex-coll {
     flex-direction: column;
   }
   @media only screen and (min-width: 781px) {

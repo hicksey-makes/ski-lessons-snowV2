@@ -49,7 +49,7 @@ export default function Cart(props) {
                 /></pre>
               </td>
               <td className="col-1 pt-3 pt-md-2">{`${Math.round(product.lessonCost)} x ${product.quantity}`}</td>
-              <td className="col pos-rel pt-md-2 d-flex justify-content-around">
+              <td className="col pos-rel pt-md-2 d-flex flex-coll justify-content-around">
                 <div className="mb-2 mb-md-0 ml-sm-2">
                   {Math.round(product.quantity * product.lessonCost)}
                 </div>
