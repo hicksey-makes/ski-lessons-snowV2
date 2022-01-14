@@ -45,7 +45,7 @@ export default function Cart(props) {
                 format="MM-DD"
                 /> <Moment
                 date={product.lsnTime}
-                format="hh:mm a" true
+                format="hh:mm a"
                 /></pre>
               </td>
               <td className="col-1 pt-3 pt-md-2">{`${Math.round(product.lessonCost)} x ${product.quantity}`}</td>
