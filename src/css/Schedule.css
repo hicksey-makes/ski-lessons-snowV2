@@ -121,7 +121,6 @@ width: 30px;
 
 .table {
   position: relative;
-  z-index: 99999;
 }
 
 .card-body {

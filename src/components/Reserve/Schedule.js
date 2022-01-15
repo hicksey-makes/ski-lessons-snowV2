@@ -169,7 +169,9 @@ class Schedule extends Component {
        <div className="d-block ml-auto mt-n5 front" style={{width: 150 + "px"}}>
           <Link className="btn btn-warning text-dark mt-1 btn-shadow" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
        </div>
+
        <Snow  />
+
         <main className="" id="  ">
           <div className="container">
             <div className="row">

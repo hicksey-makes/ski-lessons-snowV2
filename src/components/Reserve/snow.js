@@ -5,6 +5,9 @@ const Snow = () => {
     <Particles id="tsparticles" options={
       {
         "particles": {
+          "fullScreen": {
+            "enable": false
+          },
           "color": {
             "value": "#53687e"
           },
@@ -49,6 +52,7 @@ const Snow = () => {
             }
           }
         }
+
       }
 
     }  />

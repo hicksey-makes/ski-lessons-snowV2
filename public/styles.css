@@ -247,6 +247,7 @@ html, body {
   position: relative;
   height: 59px;
   margin-top: -59px;
+  z-index: 999;
 }
 
 /* responsive layout - makes two columns stack when screen is small */
