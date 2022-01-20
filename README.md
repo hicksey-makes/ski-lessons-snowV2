@@ -1,6 +1,6 @@
 # Snowboard Lessons App
 
-**A React application (Create React App) to browse instructors and then book and purchase a snowboarding lesson.**
+**A React frontend application (Create React App) to browse instructors and then book and purchase a snowboarding lesson.**
 
 ## Implementation
 * Single page application: one index.html file, whereby Javascript rewrites the content based on the url.
