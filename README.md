@@ -5,18 +5,13 @@
 ## Implementation
 * Single page application: one index.html file, whereby Javascript rewrites the content based on the url.
 * Create React App sets up the build system (Webpack) and handles configuration.
-* Create React App handles development vs production versions.
+* Use git for version control.
 * Served by the Netlify serverless platform *(www.netlify.com)*.
 
-## Steps Involved
-* Use node.js to install create-react-app
-* Use git for version control.
-* Use a webserver provided by webpack throughout development. 
-* Use reactDOM.render() to render React's virtual DOM to the browser's.
-* Build components and import them to the app component. 
-* Render the App component in index.js.
-* Use state variables and effects to track/update lesson preferences. 
-* Utilize react-router-dom library to create about pages for the instructors.
+## Steps Involved 
+* Begin as appointment list component as part of the course: React.JS: Building An Interface (https://www.linkedin.com/learning/react-js-building-an-interface-2019).
+* Build form component to add client details to the lesson. 
+* Create instructor, instructor details and cart pages with React Router.
 ## Next Steps
 * Integrate Stripe checkout functionality.
 
