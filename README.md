@@ -1,4 +1,4 @@
-# Ski Lessons App
+# Snowboard Lessons App
 
 **A React application (Create React App) to browse instructors and then book and purchase a snowboarding lesson.**
 
