@@ -1,3 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.shaun-img {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.info-card {
+  height: 503px;
+}
+
+.topnav a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: grey;
+}
+
+#branding {
+  margin-left: -20px;
+  font-size: 17px;
+  color: white;
+}
+
+#navbar {
+  padding: 5px 0;
+  background-color: #53687e;
+}
+
+
 .img-snow {
   background-image: url("../snow_dust_bg.jpg");
   background-repeat: no-repeat;
@@ -118,6 +154,16 @@
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 415px) {
+  .photo-generic {
+    max-width: 250px;
+    height: 250px;
+  }
+  .purp {
+    margin-top: -579px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .photo-generic {
     max-width: 375px;
@@ -128,12 +174,41 @@
   }
 }
 
-@media screen and (max-width: 415px) {
-  .photo-generic {
-    max-width: 250px;
-    height: 250px;
+@media (max-width: 820px) {
+  .nav-link {
+    padding-right: 0.2rem;
   }
-  .purp {
-    margin-top: -579px;
+}
+
+@media (min-width: 576px) {
+  #nav-contain {
+    justify-content: end !important;
+  }
+  #navbar {
+    flex-direction: row !important;
+  }
+  #branding {
+    padding: 2px 0;
+    font-size: 20px;
+    position: absolute;
+    left: 4vw;
+  }
+  .topnav a {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #cart {
+    margin-left: auto;
+  }
+  #navbar {
+    justify-content: start;
+  }
+  #branding {
+    margin-left: 0px;
+    position: static;
   }
 }

@@ -4,6 +4,7 @@ import Schedule from './Reserve/Schedule';
 import About from './Info/About';
 import Cart from './Reserve/cart.js';
 import ScrollToTop from './Reserve/ScrollToTop.js';
+import SkiNavbar from './SkiNavbar.js';
 import { WiSnowflakeCold } from "weather-icons-react";
 import '../css/App.css';
 
@@ -51,10 +52,9 @@ export default function App() {
           <ScrollToTop  />
           <Switch>
             <Route className="backdrop" exact path="/">
+              <SkiNavbar  />
               <div className="img-snow">
-                  <div className="d-flex justify-content-center mr-md-5">
-                    <Link className="btn btn-warning text-dark mt-3 mr-md-3 ml-md-auto btn-shadow" role="button" style={{width: 80 + "px"}} to="/cart/">Cart({quantity})</Link>
-                  </div>
+                  
                   <div className="d-flex justify-content-center grow">
                     <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
                     <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
@@ -62,12 +62,15 @@ export default function App() {
               </div>
             </Route>
             <Route path="/cart/">
+              <SkiNavbar  />
               <Cart  onLessonDelete={handleLessonDelete} cart={cart}  />
             </Route>
             <Route path="/about/">
+              <SkiNavbar  />
               <About cart={cart} />
             </Route>
             <Route exact path="/schedule/">
+              <SkiNavbar  />
               <Schedule  cart={cart}  onLessonAdd={handleLessonAdd} />
             </Route>
           </Switch>
