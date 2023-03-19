@@ -43,7 +43,9 @@
 
 .yellow {
   background-color: var(--smooth-yellow);
+  min-height: 575px;
   height: 100vh;
+  padding: 25px;
 }
 
 .img-snow {
