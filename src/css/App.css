@@ -51,7 +51,8 @@
 .img-snow {
   background-image: url("../snow_dust_bg.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 24% 50%;
+  background-size: cover;
   opacity: 0.9;
   max-height: 1604px;
   max-width: 1600px;
@@ -224,5 +225,20 @@
   #branding {
     margin-left: 0px;
     position: static;
+  }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-height:1000px),
+only screen and (   min--moz-device-pixel-ratio: 2) and (min-height:1000px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (min-height:1000px),
+only screen and (        min-device-pixel-ratio: 2) and (min-height:1000px),
+only screen and (                min-resolution: 192dpi) and (min-height:1000px),
+only screen and (                min-resolution: 2dppx) and (min-height:1000px) {
+  .img-snow {
+    background-image: url("../../public/images/winter_snow_nature_landscape_3840x2400.jpg");
+    background-size: cover;
+    background-position: 30% 50%;
+    opacity: 0.95;
   }
 }
