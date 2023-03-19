@@ -11,6 +11,8 @@ export default function About({cart}) {
     return quantity += lesson.quantity;
   });
   return (<>
-    <CardCarousel  />
+    <div className="yellow">
+      <CardCarousel  />
+    </div>
   </>);
 }

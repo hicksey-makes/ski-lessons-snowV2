@@ -19,7 +19,15 @@
 .topnav a {
   padding-top: 5px;
   padding-bottom: 5px;
-  color: grey;
+  color: white;
+}
+
+.topnav a:hover {
+  color: var(--smooth-yellow);
+}
+
+.topnav a.active {
+  color: var(--smooth-yellow);
 }
 
 #branding {
@@ -33,6 +41,9 @@
   background-color: #53687e;
 }
 
+.yellow {
+  background-color: var(--smooth-yellow);
+}
 
 .img-snow {
   background-image: url("../snow_dust_bg.jpg");
