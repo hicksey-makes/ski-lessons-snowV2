@@ -43,6 +43,7 @@
 
 .yellow {
   background-color: var(--smooth-yellow);
+  height: 100vh;
 }
 
 .img-snow {

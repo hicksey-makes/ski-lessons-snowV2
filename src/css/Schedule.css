@@ -123,9 +123,6 @@ width: 30px;
   position: relative;
 }
 
-.card-body {
-  padding: 4rem 1.25rem;
-}
 /***   Snowflake Animation   ***/
 .flake {
   font-size: 1rem;
