@@ -19,9 +19,9 @@ class ListLessons extends Component {
         (this.props.formDisplay ? 'remove-lsn-list' : '')
       }>
       <div className="table">
-        <table className="table table-bordered mt-2 mb-n3">
+        <table id="color-info" className="table table-bordered table-info mt-2 mb-n3">
               <thead>
-                <tr className="table-active row">
+                <tr className=" row">
                   <th className="col-4 col-md-3 pl-4">Date</th>
                   <th className="col-3 col-md-3 text-break">Instructor</th>
                   <th className="col-2 col-md-3">Type</th>

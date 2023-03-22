@@ -32,13 +32,13 @@ const Snow = () => {
               "enable": true,
               "area": 800
             },
-            "value": 150
+            "value": 500
           },
           "opacity": {
-            "value": 0.6
+            "value": 0.8
           },
           "size": {
-            "value": 8
+            "value": 7
           },
           "wobble": {
             "enable": true,

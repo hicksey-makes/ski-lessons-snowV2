@@ -18,6 +18,11 @@
   z-index: 9999;
 }
 
+#snow {
+  z-index: -1;
+  position: fixed;
+}
+
 /***   ListLessons   ***/
 .lesson-list {
   overflow: scroll;
@@ -36,6 +41,8 @@
 .bulk {
   font-weight: 500 !important;
 }
+
+
 /***   SearchLessons   ***/
 
 

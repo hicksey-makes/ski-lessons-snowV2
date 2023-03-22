@@ -11,7 +11,6 @@ import '../css/App.css';
 
 export default function App() {
   const [cart, setCart] = useState([]);
-
   function handleLessonAdd(newProduct) {
     const existingProduct = cart.find(product => {
       return product.lsnId === newProduct.lsnId && product.lessonCost === newProduct.lessonCost;
@@ -54,7 +53,7 @@ export default function App() {
             <Route className="backdrop" exact path="/">
               <SkiNavbar  />
               <div className="img-snow">
-                  
+
                   <div className="d-flex justify-content-center grow">
                     <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
                     <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>

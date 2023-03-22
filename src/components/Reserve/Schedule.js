@@ -165,9 +165,11 @@ class Schedule extends Component {
 
 
    return (<>
-       
 
-       <Snow  />
+
+     <div id="snow">
+      <Snow  />
+     </div>
 
         <main className="" id="  ">
           <div className="container">
