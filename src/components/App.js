@@ -52,13 +52,23 @@ export default function App() {
           <Switch>
             <Route className="backdrop" exact path="/">
               <SkiNavbar  />
-              <div className="img-snow">
-
-                  <div className="d-flex justify-content-center grow">
-                    <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
-                    <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
+              <div className="h-fixed-bg">
+                <div className="bg-wrap">
+                  <div className="bg"></div>
+                </div>
+                <div className="h-container">
+                  <div className="img-snow">
+                      <div className="d-flex justify-content-center grow">
+                        <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
+                        <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
+                      </div>
                   </div>
+                </div>
+
+
+
               </div>
+
             </Route>
             <Route path="/cart/">
               <SkiNavbar  />
