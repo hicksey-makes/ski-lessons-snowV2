@@ -206,8 +206,10 @@
   #branding {
     padding: 2px 0;
     font-size: 20px;
-    position: absolute;
-    left: 4vw;
+    margin-left: -30%;
+    margin-right: 3%;
+    /* position: absolute; */
+    /* left: 4vw; */
   }
   .topnav a {
     padding-top: 7px;
@@ -216,7 +218,26 @@
   }
 }
 
+@media (min-width: 650px) {
+  #branding {
+    margin-left: -34%;
+    margin-right: 7%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #branding {
+    margin-left: -35%;
+    margin-right: 14%;
+  }
+}
+
 @media (min-width: 992px) {
+  #branding {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
   #cart {
     margin-left: auto;
   }
