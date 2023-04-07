@@ -48,6 +48,21 @@
 
 /***   AddLessons   ***/
 
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radios {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+#radios-label {
+  align-self: center;
+}
+
 /***   Cart   ***/
 .pos-abs {
   positon: absolute;
@@ -196,6 +211,14 @@ width: 30px;
 @media only screen and (min-width: 768px) {
   .lg-inline {
     display: inline !important;
+  }
+  .row-flex {
+    justify-content: flex-end;
+  }
+  .form-name {
+    width: 70%;
+    display: inline-block;
+    margin-left: 5px;
   }
 }
 

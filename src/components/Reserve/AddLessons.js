@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Moment from 'react-moment';
+import LessonForm from './LessonForm.js';
 
 class AddLessons extends Component {
   render() {
@@ -19,6 +20,7 @@ class AddLessons extends Component {
           </span>
           <h6 className="d-inline ml-2 text-monospace">Book:</h6>
         </div>
+        <LessonForm  />
         <div className="card-body">
           <form className="" onSubmit={(event) => {this.props.onFormSubmit(event); this.props.toggleAdd(); this.props.onLessonAdd(this.props.selectedLsn); }}>
             <div className="form-group form-row mb-md-5">
