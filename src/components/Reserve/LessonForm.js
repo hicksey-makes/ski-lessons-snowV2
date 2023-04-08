@@ -30,17 +30,13 @@ function LessonForm() {
         </div>
         </Col>
         <Col md={5}>
-
-          <Form.Group className="mb-3 d-flex" key="lesson-length">
-
-            <Form.Label id="radios-label">Lesson Length:</Form.Label>
-
+          <Form.Group className="mb-3 radio-group" key="lesson-length">
+            <Form.Label>Lesson Length:</Form.Label>
             <div className="radios">
             <Form.Check type="radio" id="full-day-radio" label="Full Day"  />
             <Form.Check type="radio" id="half-day-radio" label="Half Day"  />
             </div>
           </Form.Group>
-
         </Col>
         <Col md={3}>
         <div>
