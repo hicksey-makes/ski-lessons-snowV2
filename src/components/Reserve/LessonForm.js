@@ -8,7 +8,7 @@ function LessonForm() {
   return (
     <Container fluid>
     <Form>
-      <Row>
+      <Row className="form-rows">
         <Col md={6}>
         <Form.Group className="mb-3" controlId="formGroupFirstName">
             <Form.Label htmlFor="inputFirstName">First Name:</Form.Label>
@@ -22,44 +22,52 @@ function LessonForm() {
         </Form.Group>
         </Col>
       </Row>
-      <Row>
+      <Row className="form-rows">
         <Col md={4}>
         <div>
-          <Form.Label htmlFor="">Instructor: </Form.Label>
-          <span className=""> Lorem ips</span>
+          <Form.Label  htmlFor="">Instructor: </Form.Label>
+          <span className="font-italic font-weight-bold"> Lorem ips</span>
+        </div>
+        </Col>
+        <Col md={3}>
+        <div>
+          <Form.Label  htmlFor="">Type: </Form.Label>
+          <span> Lorem ips</span>
         </div>
         </Col>
         <Col md={5}>
           <Form.Group className="mb-3 radio-group" key="lesson-length">
-            <Form.Label>Lesson Length:</Form.Label>
+            <Form.Label >Lesson Length:</Form.Label>
             <div className="radios">
             <Form.Check type="radio" id="full-day-radio" label="Full Day"  />
             <Form.Check type="radio" id="half-day-radio" label="Half Day"  />
             </div>
           </Form.Group>
         </Col>
-        <Col md={3}>
-        <div>
-          <Form.Label htmlFor="">Price: </Form.Label>
-          <span> Lorem ips</span>
-        </div>
-        </Col>
+
       </Row>
-      <Row>
-        <Col md={3}>
-        <Form.Label>Date:</Form.Label>
+      <Row className="form-rows">
+      <Col md={4}>
+      <div>
+        <Form.Label  htmlFor="">Price: </Form.Label>
+        <span> Lorem ips</span>
+      </div>
+      </Col>
+        <Col md={4}>
+        <Form.Label >Date:</Form.Label>
         <span> Nov 4 </span>
         </Col>
-        <Col md={3}>
-        <Form.Label>Time:</Form.Label>
+        <Col md={4}>
+        <Form.Label >Time:</Form.Label>
         <span> 11:30 a.m. </span>
         </Col>
-        <Col md={6}>
-          <Form.Group className="mb-3 form-row" key="">
-            <Form.Label>Lesson Notes:</Form.Label>
-            <Form.Control as="textarea" rows={3} />
-          </Form.Group>
-        </Col>
+
+      </Row>
+      <Row className="form-rows">
+        <Form.Group className="mb-3 form-row" key="">
+          <Form.Label >Lesson Notes:</Form.Label>
+          <Form.Control as="textarea" rows={3} />
+        </Form.Group>
       </Row>
       <div className="row-flex">
       <Form.Group as="row">
