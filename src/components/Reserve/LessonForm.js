@@ -26,13 +26,13 @@ function LessonForm() {
         <Col md={4}>
         <div>
           <Form.Label  htmlFor="">Instructor: </Form.Label>
-          <span className="font-italic font-weight-bold"> Lorem ips</span>
+          <span className="purp"> Lorem ips</span>
         </div>
         </Col>
         <Col md={3}>
         <div>
           <Form.Label  htmlFor="">Type: </Form.Label>
-          <span> Lorem ips</span>
+          <span className="purp"> Lorem ips</span>
         </div>
         </Col>
         <Col md={5}>
@@ -50,7 +50,7 @@ function LessonForm() {
       <Col md={4}>
       <div>
         <Form.Label  htmlFor="">Price: </Form.Label>
-        <span> Lorem ips</span>
+        <span className="purp"> Lorem ips</span>
       </div>
       </Col>
         <Col md={4}>
