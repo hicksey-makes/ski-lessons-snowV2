@@ -17,14 +17,14 @@ class ListLesson extends Component {
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
           <div className="row bg-dark">
-            <div className="col-4 col-md-3 brd pt-4 pt-md-3 text-white lsn-date">
+            <div className="col-3 col-md-3 brd pt-4 pt-md-3 text-white lsn-date pos-rel">
 
             {`${((new Date(this.props.lsns.lsnTime)).toDateString()).substring(3,10)}`}
             <div className="cal-pos">
               {`${((new Date(this.props.lsns.lsnTime)).toTimeString()).substring(0,5)}am`}
             </div>
             </div>
-            <div className="col-3 col-md-3 brd pt-4 pt-md-3">
+            <div className="col-4 col-md-3 brd pt-4 pt-md-3">
               <span className="board-name bulk contrast">
               {this.props.lsns.instructorName}
               </span>
