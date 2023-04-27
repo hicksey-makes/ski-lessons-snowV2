@@ -8,7 +8,7 @@
 }
 
 .cal-pos {
-  position: absolute;
+  position: static;
   top: 10px;
   right: 20px;
 }
@@ -69,12 +69,18 @@
   margin-top: 50px;
 }
 
-
+.purp {
+  color: indigo;
+}
 /***   Cart   ***/
 .pos-abs {
   positon: absolute;
   right: 15px;
   top: 0;
+}
+
+.flex-coll {
+  flex-direction: column;
 }
 
 .table-cart {
@@ -167,13 +173,13 @@ width: 30px;
   /* height: 12px; */
   position: relative;
   z-index: -9999;
-
 }
 
 .positive-z {
   z-index: 99999;
   position: relative;
 }
+
 @keyframes fall {
   from {
     transform: translateY(-10vh);
@@ -183,6 +189,7 @@ width: 30px;
   }
 }
 
+/***    Media Queries   ***/
 @media only screen and (min-height: 712px) {
   @keyframes fall {
     from {
@@ -194,25 +201,16 @@ width: 30px;
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 960px;
+@media only screen and (max-width: 415px) {
+  .table-active {
+    font-size: 0.75rem;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .cal-pos {
-    position: static;
-  }
-  .flex-coll {
-    flex-direction: column;
-  }
-  @media only screen and (min-width: 781px) {
-    .container {
-      max-width: 100px;
+@media only screen and (min-width: 414px) {
+    .board-name {
+      margin-left: -20px;
     }
-  }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -227,11 +225,22 @@ width: 30px;
     display: inline-block;
     margin-left: 5px;
   }
+  .board-name {
+    margin-left: 20px;
+  }
+  .cal-pos {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  .flex-coll {
+    flex-direction: row;
+  }
 }
 
-@media only screen and (max-width: 415px) {
-  .table-active {
-    font-size: 0.75rem;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 960px;
   }
 }
 /* @media only screen and (max-width: 567px) {
