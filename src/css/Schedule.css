@@ -7,12 +7,6 @@
   position: relative;
 }
 
-.cal-pos {
-  position: static;
-  top: 10px;
-  right: 20px;
-}
-
 .front {
   position: relative;
   z-index: 9999;
@@ -31,18 +25,24 @@
 .brd {
   /* border-bottom: dotted 1px #6c757d; */
   /* background-color: #b75757; */
-  padding: 15px 0px 15px 0px;
+  padding: 12px 0px 15px 0px;
 }
 
 .row .brd:first-of-type {
-  padding: 15px 0 15px 5px;
+  padding: 16px 0 15px 10px;
 }
 
 .bulk {
   font-weight: 500 !important;
 }
 
+.board-name {
+  margin-left: 10px;
+}
 
+.type-pos {
+  padding-right: 7px;
+}
 /***   SearchLessons   ***/
 
 
@@ -207,12 +207,6 @@ width: 30px;
   }
 }
 
-@media only screen and (min-width: 414px) {
-    .board-name {
-      margin-left: -20px;
-    }
-}
-
 @media only screen and (min-width: 768px) {
   .lg-inline {
     display: inline !important;
@@ -225,17 +219,25 @@ width: 30px;
     display: inline-block;
     margin-left: 5px;
   }
-  .board-name {
-    margin-left: 20px;
-  }
   .cal-pos {
     position: absolute;
     top: 10px;
     right: 20px;
   }
+  .time-pos {
+    position: absolute;
+    top: 17px;
+    right: 30px;
+  }
   .flex-coll {
     flex-direction: row;
   }
+}
+
+@media only screen and (min-width: 992px) {
+    .time-pos {
+      right: 64px;
+    }
 }
 
 @media (min-width: 1200px) {
