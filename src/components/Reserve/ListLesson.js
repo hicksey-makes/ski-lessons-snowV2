@@ -16,7 +16,7 @@ class ListLesson extends Component {
 
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
-          <div className="row bg-dark">
+          <div className="row bg-dark pt-md-3 pb-md-3 pb-lg-4">
             <div className="col-3 col-md-3 brd pt-md-3  text-white lsn-date pos-rel">
 
             {`${((new Date(this.props.lsns.lsnTime)).toDateString()).substring(3,10)}`}
