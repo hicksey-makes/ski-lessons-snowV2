@@ -24,8 +24,8 @@ class ListLesson extends Component {
               {`${((new Date(this.props.lsns.lsnTime)).toTimeString()).substring(0,5)}am`}
             </div>
             </div>
-            <div className="col-4 col-md-3 brd pt-4 pt-md-3">
-              <span className="board-name bulk contrast">
+            <div className="push-r col-4 col-md-3 brd vert-c pt-md-3">
+              <span className="bulk contrast">
               {this.props.lsns.instructorName}
               </span>
               {quantity > 0 &&
@@ -36,14 +36,14 @@ class ListLesson extends Component {
                 </div>
               }
             </div>
-            <div className="col-3 col-md-3 hot brd bulk type-pos pt-4 pt-md-3">
+            <div className="push-r col-3 col-md-3 hot brd bulk type-pos vert-c pt-md-3">
               {this.props.lsns.lsnType}
             </div>
-            <div className="col-2 col-md-3 pl-2 label-item brd text-white text-break pos-rel">
-              <div className="mt-n2 mb-2 mb-md-0 lg-inline ml-1 ml-sm-2 ml-md-3 mr-md-4">
+            <div className="col-2 col-md-3 pl-2 pt-md-3 label-item brd text-white text-break pos-rel">
+              <div className="push-r mt-n2 mb-2 mb-md-0 lg-inline ml-1 ml-sm-2 ml-md-3 mr-md-4">
                 {this.props.lsns.lessonCost}
               </div>
-              <button className="btn btn-sm btn-warning px-sm-2 mt-md-0 mr-n1 ml-sm-1 ml-md-5 px-md-3 d-block lg-inline cal-pos" id="" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck className="mt-n1"/></button>
+              <button className="btn btn-sm btn-warning px-sm-2 mt-md-0 mr-n1 ml-sm-1 ml-md-5 px-md-3 pb-md-2 d-block lg-inline cal-pos" id="" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}><FaRegCalendarCheck className="mt-n1"/></button>
             </div>
 
           </div>

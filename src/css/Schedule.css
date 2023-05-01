@@ -43,6 +43,10 @@
 .type-pos {
   padding-right: 7px;
 }
+
+.vert-c {
+  padding-top: 2rem;
+}
 /***   SearchLessons   ***/
 
 
@@ -232,6 +236,9 @@ width: 30px;
   .flex-coll {
     flex-direction: row;
   }
+  .push-r {
+    padding-left: 10px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -240,6 +247,9 @@ width: 30px;
     }
     .board-item {
       font-size: 1.2rem;
+    }
+    .cal-pos {
+      top: 13px;
     }
 }
 
