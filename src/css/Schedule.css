@@ -47,6 +47,14 @@
 .vert-c {
   padding-top: 2rem;
 }
+
+.lsn-row {
+  margin-top: 10px;
+}
+
+button svg {
+  font-size: 1.1rem;
+}
 /***   SearchLessons   ***/
 
 
@@ -238,6 +246,9 @@ width: 30px;
   }
   .push-r {
     padding-left: 10px;
+  }
+  button svg {
+    font-size: 1.4rem;
   }
 }
 
