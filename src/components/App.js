@@ -11,6 +11,7 @@ import '../css/App.css';
 
 export default function App() {
   const [cart, setCart] = useState([]);
+
   function handleLessonAdd(newProduct) {
     const existingProduct = cart.find(product => {
       return product.lsnId === newProduct.lsnId && product.lessonCost === newProduct.lessonCost;
