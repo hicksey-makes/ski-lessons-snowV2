@@ -55,6 +55,10 @@
 button svg {
   font-size: 1.1rem;
 }
+
+#iName {
+  padding-left: 15px;
+}
 /***   SearchLessons   ***/
 
 
@@ -81,8 +85,10 @@ button svg {
   margin-top: 50px;
 }
 
-.purp {
+.indigo {
   color: indigo;
+  opacity: .7;
+  font-family: "Helvetica Neue";
 }
 /***   Cart   ***/
 .pos-abs {
@@ -220,9 +226,6 @@ width: 30px;
 }
 
 @media only screen and (min-width: 768px) {
-  .lg-inline {
-    display: inline !important;
-  }
   .row-flex {
     justify-content: flex-end;
   }
@@ -234,7 +237,7 @@ width: 30px;
   .cal-pos {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 30px;
   }
   .time-pos {
     position: absolute;
@@ -248,7 +251,10 @@ width: 30px;
     padding-left: 10px;
   }
   button svg {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  #iName {
+    padding-left: 20px;
   }
 }
 
