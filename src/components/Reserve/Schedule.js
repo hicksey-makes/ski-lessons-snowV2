@@ -15,7 +15,7 @@ class Schedule extends Component {
       riderName: "",
       lessonLength: "Half Day",
       lessonNotes: "",
-      orderBy: 'instructorName',
+      orderBy: 'lsnTime',
       orderDir: 'asc',
       queryText: "",
       formDisplay: false,
@@ -38,12 +38,14 @@ class Schedule extends Component {
     fetch('../lessons_details.json')
     .then(response => response.json())
     .then(result => {
+      console.log(result);
       const lsns = result.map(item => {
         item.lsnId = this.state.lastIndex;
         this.setState({lastIndex: this.state.lastIndex + 1 });
         item.lessonDate = Date.parse(item.lessonDate);
         return item;
       });
+
       this.setState({
         myLessons: lsns,
       });
@@ -71,14 +73,15 @@ class Schedule extends Component {
 
   handleLessonSelect(lsn) {
     this.setState({
-      selectedLsn: lsn
+      selectedLsn: lsn,
+      lessonLength: "Half Day"
     });
   }
 
   toggleAdd() {
     this.setState({
       formDisplay: !this.state.formDisplay,
-      lessonLength: 'Half Day',
+
       riderName: "",
       lessonNotes: ""
     });
@@ -125,7 +128,8 @@ class Schedule extends Component {
     this.setState({
       lessonLength: 'Half Day',
       riderName: "",
-      lessonNotes: ""
+      lessonNotes: "",
+      selectedLsn: {}
     });
   }
 
