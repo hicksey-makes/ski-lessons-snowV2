@@ -13,30 +13,33 @@ function LessonForm(props) {
     <Container fluid>
       <Form onSubmit={(event) => {props.onFormSubmit(event); props.toggleAdd(); props.onLessonAdd(props.selectedLsn); }}>
         <Row className="form-rows mt-5 mb-4 my-md-5">
-          <Col md={6} className="mb-4  ps-md-3 pe-md-0 ps-lg-4">
-            <Form.Group className="" controlId="formLessonFName">
+          <Col md={6} className="mb-4 ps-md-3 pe-md-0 ps-lg-4">
+            <Form.Group controlId="formLessonFName">
                 <Form.Label>Name:</Form.Label>
-                <Form.Control autofocus className="form-name" type="text" required value={props.riderName}
+                <Form.Control className="form-name" type="text" required value={props.riderName}
                 onChange={event => props.onRiderAdd(event)} placeholder="First & Last Name"  />
             </Form.Group>
           </Col>
           <Col md={6} className="mb-5 mt-1">
-            <Form.Group className="" controlId="formLessonLName">
-                <Form.Label className="">Email:</Form.Label>
+            <Form.Group controlId="formLessonLName">
+                <Form.Label>Email:</Form.Label>
                 <Form.Control className="form-name" type="email" required placeholder="Enter Email"  />
             </Form.Group>
           </Col>
         </Row>
         <Row className="form-rows mb-3 mb-md-5">
-          <Col md={6} className="mb-5">
+          <Col md={6} className="mb-5 ps-md-3 ps-lg-4">
             <Form.Group className="radio-group" key="lesson-length" controlId="formLessonRadio">
               <Form.Label>Lesson Length:</Form.Label>
-              <div className="radios" id="formLessonRadio">
-                <Form.Check type="radio" className="no-vald-style fs-5" id="full-day-radio"  checked={props.lessonLength === "Full Day"} name="lesson length"
+              <div className="radios">
+              <Form.Group controlId="fullDayRadio">
+                <Form.Check type="radio" className="no-vald-style fs-5" checked={props.lessonLength === "Full Day"} name="lesson length"
                 label="Full Day" value="Full Day" disabled={props.lessonLength === "Full Day"} onChange={event => props.setFullPrice(event)} />
-
-                <Form.Check type="radio" className="no-vald-style fs-5" id="half-day-radio" checked={props.lessonLength === "Half Day"} name="lesson length"
+              </Form.Group>
+              <Form.Group controlId="halfDayRadio">
+                <Form.Check type="radio" className="no-vald-style fs-5" checked={props.lessonLength === "Half Day"} name="lesson length"
                 label="Half Day" value="Half Day" disabled={props.lessonLength === "Half Day"} onChange={event => props.setHalfPrice(event)} />
+              </Form.Group>
               </div>
             </Form.Group>
           </Col>
