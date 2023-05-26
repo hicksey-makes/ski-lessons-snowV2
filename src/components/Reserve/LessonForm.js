@@ -72,20 +72,22 @@ function LessonForm(props) {
             </div>
           </Col>
           <Col md={{ span: 4, offset: 2 }} className="mb-5">
-            <div className="form-r3 ">
+            <div className="form-r3 ps-md-1">
               <Form.Label >Time:</Form.Label>{` `}
                 <mark className="py-2 px-1"><span className="fs-5 fw-bold text-danger">{((new Date(props.selectedLsn.lsnTime)).toTimeString()).substring(0,5) + "am"}</span></mark>
             </div>
           </Col>
         </Row>
-        <Row className="form-rows mb-2 mb-md-4">
-          <Col md={{ span: 10, offset: 2 }}>
-            <Form.Group className="mb-5 form-row" key="" controlId="formLessonLNotes">
-              <Form.Label>Lesson Notes:</Form.Label>
-              <Form.Control as="textarea" value={props.lessonNotes} onChange={event => props.onNotesChange(event)} rows={5} placeholder="Lesson Notes" />
+
+
+            <Form.Group as={Row} className="mb-5 form-row" key="" controlId="formLessonLNotes">
+              <Form.Label column md={{ span: 3, offset: 1 }} className="">Lesson Notes:</Form.Label>
+              <Col >
+                <Form.Control as="textarea" value={props.lessonNotes} onChange={event => props.onNotesChange(event)} rows={5} placeholder="Lesson Notes" />
+              </Col>
             </Form.Group>
-          </Col>
-        </Row>
+
+
         <div className="form-r5">
             <Row className="justify-content-end mb-4 mb-md-3">
               <Col sm={{ span: 4, offset: 8 }} md={{ span: 3, offset: 9 }}>
