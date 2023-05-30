@@ -51,7 +51,7 @@ function LessonForm(props) {
           </Col>
         </Row>
         <Row className="mb-3 mb-md-5">
-          <Col md={{span: 5, offset: 1}} className="mb-5">
+          <Col md={{ span: 5, offset: 1 }} className="mb-5">
             <div>
               <Form.Label>Type: </Form.Label>
               <span className="indigo fs-3 fst-italic text-opacity-75"> {props.selectedLsn.lsnType}</span>
@@ -78,16 +78,12 @@ function LessonForm(props) {
             </div>
           </Col>
         </Row>
-
-
-            <Form.Group as={Row} className="mb-5 form-row" key="" controlId="formLessonLNotes">
-              <Form.Label column md={{ span: 3, offset: 1 }} className="">Lesson Notes:</Form.Label>
-              <Col >
-                <Form.Control as="textarea" value={props.lessonNotes} onChange={event => props.onNotesChange(event)} rows={5} placeholder="Lesson Notes" />
-              </Col>
-            </Form.Group>
-
-
+        <Form.Group as={Row} className="mb-5 form-row" key="" controlId="formLessonLNotes">
+          <Form.Label column md={{ span: 3, offset: 1 }} className="">Lesson Notes:</Form.Label>
+          <Col >
+            <Form.Control as="textarea" value={props.lessonNotes} onChange={event => props.onNotesChange(event)} rows={5} placeholder="Lesson Notes" />
+          </Col>
+        </Form.Group>
         <div className="form-r5">
             <Row className="justify-content-end mb-4 mb-md-3">
               <Col sm={{ span: 4, offset: 8 }} md={{ span: 3, offset: 9 }}>
