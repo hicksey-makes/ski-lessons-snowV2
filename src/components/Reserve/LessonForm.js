@@ -12,7 +12,7 @@ function LessonForm(props) {
   return (
     <Container fluid>
       <Form onSubmit={(event) => {props.onFormSubmit(event); props.toggleAdd(); props.onLessonAdd(props.selectedLsn); }}>
-        <Row className="form-rows mt-5 mb-4 my-md-5">
+        <Row className="mt-5 mb-4 my-md-5">
           <Col md={6} className="mb-4 ps-md-3 pe-md-0 ps-lg-4">
             <Form.Group controlId="formLessonFName">
                 <Form.Label>Name:</Form.Label>
@@ -27,7 +27,7 @@ function LessonForm(props) {
             </Form.Group>
           </Col>
         </Row>
-        <Row className="form-rows mb-3 mb-md-5">
+        <Row className="mb-3 mb-md-5">
           <Col md={6} className="mb-5 ps-md-3  ps-lg-4">
             <Form.Group className="radio-group" key="lesson-length" controlId="formLessonRadios">
               <Form.Label>Lesson Length:</Form.Label>
@@ -64,7 +64,7 @@ function LessonForm(props) {
             </div>
           </Col>
         </Row>
-        <Row className="form-rows mb-3 mb-md-4">
+        <Row className="mb-3 mb-md-5">
           <Col md={{ span: 3, offset: 1 }} className="mb-5">
             <div className="form-r3">
               <Form.Label>Date:</Form.Label>{` `}
