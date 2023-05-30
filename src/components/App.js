@@ -34,11 +34,21 @@ export default function App() {
     const prodToDelete = cart.find(product => {
       return product.lsnId === existingProduct.lsnId && product.lessonCost === existingProduct.lessonCost;
     });
-    const updatedCart = cart.filter(product => {
-      return (product !== prodToDelete);
-    });
-    console.log(updatedCart);
-    setCart(updatedCart);
+    console.log(prodToDelete);
+    if (prodToDelete.quantity > 1) {
+      const updatedCart = cart.map(product => {
+        if (product.lsnId === existingProduct.lsnId && product.lessonCost === existingProduct.lessonCost) {
+          return {...product, quantity: product.quantity - 1};
+        }
+        return product;
+      });
+      setCart(updatedCart);
+    } else {
+      const reupdatedCart = cart.filter(product => {
+        return (product !== prodToDelete);
+      });
+      setCart(reupdatedCart);
+    }
   }
 
   let quantity = 0;
