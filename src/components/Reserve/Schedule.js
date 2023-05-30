@@ -13,6 +13,7 @@ class Schedule extends Component {
     this.state = {
       myLessons: [],
       riderName: "",
+      riderEmail: "",
       lessonLength: "Half Day",
       lessonNotes: "",
       orderBy: 'lsnTime',
@@ -25,6 +26,7 @@ class Schedule extends Component {
     this.toggleAdd = this.toggleAdd.bind(this);
     this.hideForm = this.hideForm.bind(this);
     this.handleRiderAdd = this.handleRiderAdd.bind(this);
+    this.handleRiderEChange = this.handleRiderEChange.bind(this);
     this.setFullPrice = this.setFullPrice.bind(this);
     this.setHalfPrice = this.setHalfPrice.bind(this);
     this.changeOrder = this.changeOrder.bind(this);
@@ -81,7 +83,7 @@ class Schedule extends Component {
   toggleAdd() {
     this.setState({
       formDisplay: !this.state.formDisplay,
-
+      riderEmail: "",
       riderName: "",
       lessonNotes: ""
     });
@@ -111,6 +113,14 @@ class Schedule extends Component {
     let newLesson = {...this.state.selectedLsn, riderName: event.target.value};
     this.setState({
       riderName: event.target.value,
+      selectedLsn: newLesson
+    });
+  }
+
+  handleRiderEChange(event) {
+    let newLesson = {...this.state.selectedLsn, riderEmail: event.target.value};
+    this.setState({
+      riderEmail: event.target.value,
       selectedLsn: newLesson
     });
   }
@@ -177,15 +187,15 @@ class Schedule extends Component {
 
         <main className="" id="  ">
           <div className="container">
-            <div className="row">
+            <div className="row row-margin">
               <div className="col-md-12">
                 <div className="container">
-                  <p className="hint text-center text-monospace mt-1 small text-dark mb-n2">search by date: YYYY-M-D H:M; instructor; price</p>
+                  <p className="hint text-center font-monospace mt-1 small text-dark mb-n2">search by date: YYYY-M-D H:M; instructor; price</p>
                   <SearchLessons searchLsns={this.searchLsns} orderBy={this.state.orderBy} orderDir={this.state.orderDir} changeOrder={this.changeOrder} hideForm={this.hideForm} />
 
                   <ListLessons lessonLength={this.state.lessonLength} onLessonSelect={this.handleLessonSelect} lessons={filteredLsns} toggleAdd={this.toggleAdd} formDisplay={this.state.formDisplay} onProductDelete={this.props.onProductDelete} cart={this.props.cart}/>
 
-                  <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} />
+                  <AddLessons onNotesChange={this.handleNotesChange} lessonNotes={this.state.lessonNotes} riderName={this.state.riderName} onRiderAdd={this.handleRiderAdd} riderEmail={this.state.riderEmail} onRiderEChange={this.handleRiderEChange} onFormSubmit={this.handleFormSubmit} onLessonAdd={this.props.onLessonAdd} selectedLsn={this.state.selectedLsn} formDisplay={this.state.formDisplay} toggleAdd={this.toggleAdd} lessonLength={this.state.lessonLength} setFullPrice={this.setFullPrice} setHalfPrice={this.setHalfPrice} />
 
                 </div>
               </div>

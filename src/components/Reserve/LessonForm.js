@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 function LessonForm(props) {
 
 
-  console.log(props.lessonLength);
+  console.log(props);
   return (
     <Container fluid>
       <Form onSubmit={(event) => {props.onFormSubmit(event); props.toggleAdd(); props.onLessonAdd(props.selectedLsn); }}>
@@ -23,7 +23,8 @@ function LessonForm(props) {
           <Col md={6} className="mb-5 mt-1">
             <Form.Group controlId="formLessonLName">
                 <Form.Label>Email:</Form.Label>
-                <Form.Control className="form-name" type="email" required placeholder="Enter Email"  />
+                <Form.Control className="form-name" type="email" required value={props.riderEmail}
+                onChange={event => props.onRiderEChange(event)} placeholder="Enter Email"  />
             </Form.Group>
           </Col>
         </Row>
