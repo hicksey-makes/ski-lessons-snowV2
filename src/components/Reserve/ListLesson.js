@@ -16,7 +16,7 @@ class ListLesson extends Component {
 
     return (
         <div className="container board-item" key={this.props.lsns.lsnId}>
-          <div className="row lsn-row bg-dark bg-gradient pb-1 pt-md-3 pb-md-3 pb-lg-4">
+          <div className="row row-margin lsn-row bg-dark bg-gradient pb-1 pt-md-3 pb-md-3 pb-lg-4">
             <div className="text-white lsn-date pos-rel brd col-3 col-md-3 pt-md-3">
               {`${((new Date(this.props.lsns.lsnTime)).toDateString()).substring(3,10)}`}
               <div className="time-pos">
@@ -42,7 +42,8 @@ class ListLesson extends Component {
               <div className="push-r mb-2 mb-md-1 ms-1 ms-sm-2">
                 {this.props.lsns.lessonCost}
               </div>
-              <button className="btn btn-sm btn-warning cal-pos d-block text-black text-opacity-75 pb-2 py-md-2 px-sm-2 px-lg-3" onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}>
+              <button className="btn btn-sm btn-warning cal-pos d-block text-black text-opacity-75 pb-2 py-md-2 px-sm-2 px-lg-3"
+              onClick={() => {this.props.toggleAdd(); this.props.onLessonSelect(this.props.lsns)}}>
                 <FaRegCalendarCheck />
               </button>
             </div>

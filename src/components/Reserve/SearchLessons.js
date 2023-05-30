@@ -4,7 +4,7 @@ class SearchLessons extends Component {
   render() {
 
     return (
-        <div className="row justify-content-center">
+        <div className="row row-margin justify-content-center">
           <div className="col-md-12">
             <div className="input-group">
               <input type="text" className="form-control" onFocus={() => this.props.hideForm()} onChange={e => this.props.searchLsns(e.target.value)} />
