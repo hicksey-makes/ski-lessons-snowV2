@@ -1,6 +1,6 @@
 /***   Global/Schedule   ***/
-.row {
-  margin-top: 15px;
+.row-margin {
+    margin-top: 15px;
 }
 
 .pos-rel {
@@ -63,6 +63,9 @@ button svg {
 
 
 /***   AddLessons   ***/
+#book-ptop {
+  padding-top: 0;
+}
 
 .row-flex {
   display: flex;
@@ -81,15 +84,28 @@ button svg {
     position: relative;
 }
 
-.form-rows {
+/* .form-rows {
   margin-top: 50px;
-}
+} */
 
 .indigo {
   color: indigo;
   opacity: .7;
-  font-family: "Helvetica Neue";
+  font-family: Geneva, Verdana, serif;
 }
+
+.radio-group label:first-child {
+  margin-top: 0.75rem;
+}
+
+.form-r3 {
+  width: 175px;
+}
+
+.form-r5 Button {
+  width: 100%;
+}
+
 /***   Cart   ***/
 .pos-abs {
   positon: absolute;
