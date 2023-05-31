@@ -70,16 +70,12 @@ export default function App() {
                 <div className="h-container">
                   <div className="img-snow">
                       <div className="d-flex justify-content-center grow">
-                        <Link className="btn btn-info purp mr-md-3 mr-2 mr-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
-                        <Link className="btn btn-info purp ml-md-3 ml-2 ml-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
+                        <Link className="btn btn-info text-white purp me-2 me-md-3 me-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
+                        <Link className="btn btn-info text-white purp ms-2 ms-md-3 ms-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
                       </div>
                   </div>
                 </div>
-
-
-
               </div>
-
             </Route>
             <Route path="/cart/">
               <SkiNavbar  />
