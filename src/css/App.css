@@ -28,6 +28,7 @@
 
 .topnav a.active {
   color: var(--smooth-yellow);
+  font-weight: 600;
 }
 
 #branding {

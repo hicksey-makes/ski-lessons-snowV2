@@ -62,7 +62,7 @@ export default function App() {
           <ScrollToTop  />
           <Switch>
             <Route className="backdrop" exact path="/">
-              <SkiNavbar  />
+              <SkiNavbar  quantity={quantity} />
               <div className="h-fixed-bg">
                 <div className="bg-wrap">
                   <div className="bg"></div>
@@ -70,23 +70,25 @@ export default function App() {
                 <div className="h-container">
                   <div className="img-snow">
                       <div className="d-flex justify-content-center grow">
-                        <Link className="btn btn-info text-white purp me-2 me-md-3 me-lg-4 shrink btn-shadow" role="button" to="/about/"><WiSnowflakeCold  size={26}/>About Instructors</Link>
-                        <Link className="btn btn-info text-white purp ms-2 ms-md-3 ms-lg-4 shrink btn-shadow" role="button" to="/schedule/"><WiSnowflakeCold  size={26}/>See Schedule</Link>
+                        <Link className="btn btn-info text-white purp me-2 me-md-3 me-lg-4 shrink btn-shadow" role="button" to="/about/">
+                        <WiSnowflakeCold  size={26}/>About Instructors</Link>
+                        <Link className="btn btn-info text-white purp ms-2 ms-md-3 ms-lg-4 shrink btn-shadow" role="button" to="/schedule/">
+                        <WiSnowflakeCold  size={26}/>See Schedule</Link>
                       </div>
                   </div>
                 </div>
               </div>
             </Route>
             <Route path="/cart/">
-              <SkiNavbar  />
+              <SkiNavbar quantity={quantity} />
               <Cart  onLessonDelete={handleLessonDelete} cart={cart}  />
             </Route>
             <Route path="/about/">
-              <SkiNavbar  />
+              <SkiNavbar quantity={quantity} />
               <About cart={cart} />
             </Route>
             <Route exact path="/schedule/">
-              <SkiNavbar  />
+              <SkiNavbar quantity={quantity} />
               <Schedule  cart={cart}  onLessonAdd={handleLessonAdd} />
             </Route>
           </Switch>

@@ -2,8 +2,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {NavLink} from 'react-router-dom';
 
-function SkiNavbar() {
-
+function SkiNavbar(props) {
+  console.log(props);
   return (<>
     <Nav id="navbar" className="justify-content-center flex-column text-center">
 
@@ -27,7 +27,7 @@ function SkiNavbar() {
         <NavLink to="/schedule/" className="nav-link">Schedule</NavLink>
       </Nav.Item>
       <Nav.Item className="topnav ml-auto" id="cart">
-        <NavLink to="/cart/" className="nav-link">Cart</NavLink>
+        <NavLink to="/cart/" className="nav-link">{`Cart (${props.quantity})`}</NavLink>
       </Nav.Item>
     </Nav>
   </>)
