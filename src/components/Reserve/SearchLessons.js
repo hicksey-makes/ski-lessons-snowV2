@@ -9,7 +9,7 @@ class SearchLessons extends Component {
             <div className="input-group">
               <input type="text" className="form-control" onFocus={() => this.props.hideForm()} onChange={e => this.props.searchLsns(e.target.value)} />
               <div className="input-group-append">
-                <button className="btn btn-info dropdown-toggle" data-toggle="dropdown" type="button">Sort by: <span className="caret"/>
+                <button className="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" type="button">Sort by: <span className="caret"/>
                 </button>
                 <div className="dropdown-menu">
                   <button className={
