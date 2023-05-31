@@ -22,6 +22,11 @@ class SearchLessons extends Component {
                     (this.props.orderBy === 'instructorName' ? 'active' : '')} href="#" onClick={(e) => this.props.changeOrder('instructorName', this.props.orderDir)}>
                     Instructor
                   </button>
+                  <button className={
+                    'dropdown-item ' +
+                    (this.props.orderBy === 'lessonCost' ? 'active' : '')} href="#" onClick={(e) => this.props.changeOrder('lessonCost', this.props.orderDir)}>
+                    Price
+                  </button>
                   <div className="dropdown-divider">
                   </div>
                   <button className={
