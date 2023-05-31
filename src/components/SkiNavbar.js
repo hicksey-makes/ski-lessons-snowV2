@@ -5,9 +5,9 @@ import {NavLink} from 'react-router-dom';
 function SkiNavbar(props) {
   console.log(props);
   return (<>
-    <Nav id="navbar" className="justify-content-center flex-column text-center">
+    <Nav id="navbar" className=" flex-column text-center px-3 py-2">
 
-    <NavLink exact to="/" id="branding" className="nav-link">
+    <NavLink exact to="/" id="branding" className="ps-sm-2 ps-md-4 ps-lg-2">
       <Navbar.Brand  className="">
         <img
           src="/images/snowboard_icon75-75.png"
@@ -27,7 +27,7 @@ function SkiNavbar(props) {
         <NavLink to="/schedule/" className="nav-link">Schedule</NavLink>
       </Nav.Item>
       <Nav.Item className="topnav ml-auto" id="cart">
-        <NavLink to="/cart/" className="nav-link">{`Cart (${props.quantity})`}</NavLink>
+        <NavLink to="/cart/" className="nav-link pe-lg-4">{`Cart (${props.quantity})`}</NavLink>
       </Nav.Item>
     </Nav>
   </>)

@@ -31,10 +31,15 @@
   font-weight: 600;
 }
 
+#navbar a.active {
+  font-weight: 600;
+}
+
 #branding {
   margin-left: -20px;
   font-size: 17px;
   color: white;
+  text-decoration: none;
 }
 
 #navbar {
@@ -207,7 +212,7 @@
   #branding {
     padding: 2px 0;
     font-size: 20px;
-    margin-left: -30%;
+
     margin-right: 3%;
     /* position: absolute; */
     /* left: 4vw; */
@@ -215,28 +220,32 @@
   .topnav a {
     padding-top: 7px;
     padding-bottom: 9px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (min-width: 650px) {
   #branding {
-    margin-left: -34%;
+
     margin-right: 7%;
   }
 }
 
 @media only screen and (min-width: 768px) {
+  #navbar {
+    justify-content: center;
+  }
   #branding {
     margin-left: -35%;
-    margin-right: 14%;
+    margin-right: 12%;
   }
 }
 
 @media (min-width: 992px) {
   #branding {
-    margin-left: 0;
+    margin-left: -5px;
     margin-right: 0;
+    position: static;
   }
 
   #cart {
@@ -244,10 +253,6 @@
   }
   #navbar {
     justify-content: start;
-  }
-  #branding {
-    margin-left: 0px;
-    position: static;
   }
 }
 
