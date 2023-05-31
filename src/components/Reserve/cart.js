@@ -10,8 +10,8 @@ export default function Cart(props) {
   },0);
 
   return (<>
-    
-    <h1 className="text-center">Your Cart</h1>
+
+    <h1 className="text-center mt-3 mb-3">Your Cart</h1>
     {cart.length === 0 && <p className="text-center">You have not added any product to your cart yet.</p>}
     {cart.length > 0 &&
       <div className="table-responsive container">
@@ -30,7 +30,7 @@ export default function Cart(props) {
             return (
             <tr className="mt-0" id="cart-row">
               <td className="col-3 pt-3 pt-md-2 font-weight-bold">
-                {/*<img width="40" height="40" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="mr-1"/>*/}
+                {<img id="pow-man" width="41" height="41" alt="" src="/images/snowboard_icon_colorpow200-200.png" className="me-1"/>}
                 {product.instructorName}
               </td>
               <td className="col-1 pt-3 pt-md-2">{product.lsnType}</td>
@@ -45,10 +45,11 @@ export default function Cart(props) {
               </td>
               <td className="col-1 pt-3 pt-md-2">{`${Math.round(product.lessonCost)} x ${product.quantity}`}</td>
               <td className="col pos-rel pt-md-2 d-flex flex-coll justify-content-around">
-                <div className="mb-2 mb-md-0 ml-sm-2">
+                <div className="mb-2 mb-md-0 ms-3 ms-md-2">
                   {Math.round(product.quantity * product.lessonCost)}
                 </div>
-                <button id="thin" className="btn btn-sm btn-info px-1 px-sm-2 mb-2 mt-md-n1 mr-n1 ml-sm-1 ml-md-3 d-block" onClick={() => onLessonDelete(product)}><FaRegCalendarMinus className="mt-n1" /></button>
+                <button id="thin" className="btn  btn-info pb-1 pt-0 pe-4 ps-2 px-md-2 pt-md-1 pb-md-2 mb-2 mt-md-n1 me-n1 ms-2 ms-md-3 d-block"
+                onClick={() => onLessonDelete(product)}><FaRegCalendarMinus className="mt-n1" /></button>
               </td>
             </tr>)
           })}
@@ -57,14 +58,12 @@ export default function Cart(props) {
             <tr className="">
               <th className=" mr-sm-n2"></th>
               <th className=" mr-sm-n2"></th>
-
-              <th className="cart-highlight col-1 pl-4 mx-sm-2 ml-sm-2">Total</th>
-              <th className="cart-highlight col-2 pr-4" style={{fontSize: "18px"}}>${totalCart}</th>
+              <th className="cart-highlight col-1 ps-4 mx-sm-2 ms-sm-2">Total</th>
+              <th className="cart-highlight col-2 pe-4" style={{fontSize: "18px"}}>${totalCart}</th>
             </tr>
           </tfoot>
         </table>
       </div>
-
       }
 </>)
 }

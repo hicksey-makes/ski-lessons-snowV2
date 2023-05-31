@@ -61,7 +61,7 @@ function LessonForm(props) {
           <Col md={{ span: 4, offset: 0 }} className="mb-5">
             <div className="form-r3">
               <Form.Label>Price: </Form.Label>
-              <span className="indigo fs-4 fw-bold fst-italic text-opacity-75"> ${props.selectedLsn.lessonCost}</span>
+              <span className="indigo fs-4 fw-bold fst-italic text-opacity-75"> ${Math.round(props.selectedLsn.lessonCost)}</span>
             </div>
           </Col>
         </Row>

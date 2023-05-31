@@ -108,6 +108,10 @@ button svg {
 }
 
 /***   Cart   ***/
+#pow-man {
+  display: none;
+}
+
 .pos-abs {
   positon: absolute;
   right: 15px;
@@ -276,6 +280,12 @@ width: 30px;
   .lesson-quantity-container {
     top: 13px;
     right: 0;
+  }
+  #thin {
+    max-width: 46px;
+  }
+  #pow-man {
+    display: inline-block;
   }
 }
 
