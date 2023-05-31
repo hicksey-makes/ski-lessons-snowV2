@@ -58,6 +58,7 @@ button svg {
 
 #iName {
   padding-left: 15px;
+  position: relative;
 }
 /***   SearchLessons   ***/
 
@@ -123,7 +124,7 @@ button svg {
 
 .lesson-quantity-container {
   position: absolute;
-  top: 2px;
+  top: 27px;
   right: 5px;
   background-color: white;
   border-radius: 50%;
@@ -272,6 +273,10 @@ width: 30px;
   #iName {
     padding-left: 20px;
   }
+  .lesson-quantity-container {
+    top: 13px;
+    right: 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -283,6 +288,10 @@ width: 30px;
     }
     .cal-pos {
       top: 13px;
+    }
+    .lesson-quantity-container {
+      top: 15px;
+      right: 0;
     }
 }
 
