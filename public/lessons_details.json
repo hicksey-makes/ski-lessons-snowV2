@@ -1,7 +1,7 @@
 [{
 "instructorName": "Tim",
-"lessonDate": "2024-01-04",
-"lsnTime": "2024-01-04T08:30:00",
+"lessonDate": "2024-01-05",
+"lsnTime": "2024-01-05T08:30:00",
 "lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 1
@@ -16,59 +16,67 @@
 },
 {
 "instructorName": "Kyle",
-"lessonDate": "2024-01-04",
-"lsnTime": "2024-01-04T11:00:00",
-"lessonCost": 100,
-"lsnType": "All Mtn",
-"id": 1,
+"lessonDate": "2024-01-06",
+"lsnTime": "2024-01-06T11:00:00",
+"lessonCost": 75,
+"lsnType": "Terrain Park",
+"id": 4,
 "img": "./images/snowboard_icon_colorpow125-125.png"
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2024-01-05",
-"lsnTime": "2024-01-05T08:30:00",
+"lessonDate": "2024-01-06",
+"lsnTime": "2024-01-06T08:30:00",
 "lessonCost": 150,
-"lsnType": "Freeride",
+"lsnType": "Back-country",
 "id": 3
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2024-01-10",
-"lsnTime": "2024-01-10T08:30:00",
+"lessonDate": "2024-01-12",
+"lsnTime": "2024-01-12T08:30:00",
 "lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 1
 },
 {
 "instructorName": "Kyle",
-"lessonDate": "2024-01-10",
-"lsnTime": "2024-01-10T11:00:00",
-"lessonCost": 75,
-"lsnType": "Terrain Park",
-"id": 4
+"lessonDate": "2024-01-07",
+"lsnTime": "2024-01-07T11:00:00",
+"lessonCost": 100,
+"lsnType": "All Mtn",
+"id": 6
 },
 {
 "instructorName": "Kyle",
 "lessonDate": "2024-01-11",
-"lsnTime": "2021-04-11T08:30:00",
+"lsnTime": "2024-01-11T08:30:00",
 "lessonCost": 75,
 "lsnType": "Terrain Park",
 "id": 4
 },
 {
 "instructorName": "Tim",
-"lessonDate": "2024-01-11",
-"lsnTime": "2021-04-11T11:00:00",
+"lessonDate": "2024-01-13",
+"lsnTime": "2024-01-13T11:00:00",
 "lessonCost": 150,
-"lsnType": "Freeride",
+"lsnType": "Back-country",
 "id": 3
 },
 {
 "instructorName": "Sam",
-"lessonDate": "2024-01-17",
-"lsnTime": "2021-04-17T11:00:00",
+"lessonDate": "2024-01-14",
+"lsnTime": "2024-01-14T11:00:00",
 "lessonCost": 100,
 "lsnType": "All Mtn",
 "id": 5
+},
+{
+"instructorName": "Sam",
+"lessonDate": "2024-01-13",
+"lsnTime": "2024-01-13T11:00:00",
+"lessonCost": 75,
+"lsnType": "Terrain Park",
+"id": 2
 }
 ]
